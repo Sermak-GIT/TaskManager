@@ -8,6 +8,7 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 
+
 class Ui_New(object):
     def setupUi(self, New):
         New.setObjectName("New")
@@ -92,10 +93,10 @@ class Ui_New(object):
 
 if __name__ == "__main__":
     import sys
+
     app = QtWidgets.QApplication(sys.argv)
     New = QtWidgets.QWidget()
     ui = Ui_New()
     ui.setupUi(New)
     New.show()
     sys.exit(app.exec_())
-
