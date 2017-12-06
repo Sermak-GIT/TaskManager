@@ -7,6 +7,8 @@
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtCore import Qt
+
 
 class Ui_FTPConnect(object):
     def setupUi(self, FTPConnect):
@@ -27,7 +29,8 @@ class Ui_FTPConnect(object):
         self.lineEdit_2 = QtWidgets.QLineEdit(FTPConnect)
         self.lineEdit_2.setObjectName("lineEdit_2")
         self.gridLayout.addWidget(self.lineEdit_2, 4, 0, 1, 1)
-        spacerItem1 = QtWidgets.QSpacerItem(20, 20, QtWidgets.QSizePolicy.MinimumExpanding, QtWidgets.QSizePolicy.Minimum)
+        spacerItem1 = QtWidgets.QSpacerItem(20, 20, QtWidgets.QSizePolicy.MinimumExpanding,
+                                            QtWidgets.QSizePolicy.Minimum)
         self.gridLayout.addItem(spacerItem1, 3, 0, 1, 1)
         spacerItem2 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         self.gridLayout.addItem(spacerItem2, 1, 0, 1, 1)
@@ -41,7 +44,7 @@ class Ui_FTPConnect(object):
         self.lineEdit_3.setObjectName("lineEdit_3")
         self.gridLayout.addWidget(self.lineEdit_3, 4, 1, 1, 1)
         self.gridLayout_2.addLayout(self.gridLayout, 0, 0, 1, 1)
-
+        self.pushButton.clicked.connect(self.connect)
         self.retranslateUi(FTPConnect)
         QtCore.QMetaObject.connectSlotsByName(FTPConnect)
 
@@ -55,13 +58,23 @@ class Ui_FTPConnect(object):
         self.checkBox.setText(_translate("FTPConnect", "Remember"))
         self.lineEdit_3.setPlaceholderText(_translate("FTPConnect", "Password"))
 
+    def connect(self):
+        from src import ftpmanager
+        ftp = ftpmanager.connect(self.lineEdit.text(), self.lineEdit_4.text(), self.lineEdit_2.text(),
+                                 self.lineEdit_4.text())
+        if ftp is None:
+            self.pushButton.setStyleSheet('QPushButton {background-color: red; color: white;}')
+        else:
+            pass
+            #self.pushButton.setStyleSheet('QPushButton {background-color: green; color: white;}')
+
 
 if __name__ == "__main__":
     import sys
+
     app = QtWidgets.QApplication(sys.argv)
     FTPConnect = QtWidgets.QWidget()
     ui = Ui_FTPConnect()
     ui.setupUi(FTPConnect)
     FTPConnect.show()
     sys.exit(app.exec_())
-

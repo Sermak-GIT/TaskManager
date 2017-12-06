@@ -1,13 +1,8 @@
 import pysftp
-import sys
-
-host = "sermak-v.goip.de"  # hard-coded
-password = "mM32582657!"  # hard-coded
-user = "taskmanager"  # hard-coded
-
-sftp = pysftp.Connection(host, username=user, password=password)
-
-print(sftp.lstat(sftp.pwd))
 
 
-print('Upload done.')
+def connect(host, user, passwd, port):
+    if host != "" and user != "" and passwd != "" and port != 0:
+        return pysftp.Connection(host=host, username=user, password=passwd, port=port)
+    else:
+        return None
