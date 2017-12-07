@@ -6,8 +6,7 @@
 #
 # WARNING! All changes made in this file will be lost!
 
-from PyQt5 import QtCore, QtGui, QtWidgets
-from PyQt5.QtCore import Qt
+from PyQt5 import QtCore, QtWidgets
 
 
 class Ui_FTPConnect(object):
@@ -59,7 +58,7 @@ class Ui_FTPConnect(object):
         self.lineEdit_3.setPlaceholderText(_translate("FTPConnect", "Password"))
 
     def connect(self):
-        from src import ftpmanager
+        from src.manager import ftpmanager
         ftp = ftpmanager.connect(self.lineEdit.text(), self.lineEdit_4.text(), self.lineEdit_2.text(),
                                  self.lineEdit_4.text())
         if ftp is None:
