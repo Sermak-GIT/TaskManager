@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="81e7f3b0-ebf6-4028-ae76-2d6b41f523c2" name="Default" comment="" />
+    <list default="true" id="81e7f3b0-ebf6-4028-ae76-2d6b41f523c2" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/manager/sqlmanager.py" afterPath="$PROJECT_DIR$/src/manager/sqlmanager.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/manager/taskmanager.db" afterPath="$PROJECT_DIR$/src/manager/taskmanager.db" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,7 +16,7 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Taskmanager$ftpconnect.coverage" NAME="ftpconnect Coverage Results" MODIFIED="1512671319219" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/Taskmanager$new.coverage" NAME="new Coverage Results" MODIFIED="1512600676651" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
-    <SUITE FILE_PATH="coverage/Taskmanager$sqlmanager.coverage" NAME="sqlmanager Coverage Results" MODIFIED="1512674055063" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/manager" />
+    <SUITE FILE_PATH="coverage/Taskmanager$sqlmanager.coverage" NAME="sqlmanager Coverage Results" MODIFIED="1512687601180" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/manager" />
     <SUITE FILE_PATH="coverage/Taskmanager$main.coverage" NAME="main Coverage Results" MODIFIED="1512600628839" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/Taskmanager$ftpmanager.coverage" NAME="ftpmanager Coverage Results" MODIFIED="1512601457512" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
   </component>
@@ -39,6 +43,12 @@
         <item name="taskmanager.db" type="e3449647:DbNodeDescriptor" />
         <item name="main" type="e3449647:DbNodeDescriptor" />
         <item name="Entries" type="e3449647:DbNodeDescriptor" />
+      </path>
+      <path>
+        <item name="" type="eadb38e5:DatabaseStructure$Root" />
+        <item name="taskmanager.db" type="e3449647:DbNodeDescriptor" />
+        <item name="main" type="e3449647:DbNodeDescriptor" />
+        <item name="sqlite_master" type="e3449647:DbNodeDescriptor" />
       </path>
     </expand>
     <select />
@@ -78,46 +88,33 @@
       <file leaf-file-name="sqlmanager.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/manager/sqlmanager.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="17" column="19" lean-forward="true" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+            <state relative-caret-position="1666">
+              <caret line="107" column="20" lean-forward="false" selection-start-line="107" selection-start-column="20" selection-end-line="107" selection-end-column="20" />
               <folding>
                 <element signature="e#43#65#0" expanded="true" />
-                <marker date="1512674091686" expanded="true" signature="625:762" ph="CREATE TABLE... Entries" />
-                <marker date="1512674091686" expanded="true" signature="625:798" ph="CREATE TABLE... Cars" />
-                <marker date="1512674091686" expanded="true" signature="921:968" ph="CREATE TABLE... Cars" />
-                <marker date="1512674091686" expanded="true" signature="988:1020" ph="INSERT INTO Cars... " />
-                <marker date="1512674091686" expanded="true" signature="1099:1146" ph="CREATE TABLE... Cars" />
-                <marker date="1512674091686" expanded="true" signature="1170:1202" ph="INSERT INTO Cars... " />
-                <marker date="1512674091686" expanded="true" signature="1293:1311" ph="SELECT * FRO... Cars" />
+                <element signature="e#907#1361#0" expanded="false" />
+                <marker date="1512687601108" expanded="true" signature="600:632" ph="SELECT * FRO... Entries" />
+                <marker date="1512687601108" expanded="true" signature="600:633" ph="SELECT * FRO... Entries" />
+                <marker date="1512687601108" expanded="true" signature="1050:1187" ph="CREATE TABLE... Entries" />
+                <marker date="1512687601108" expanded="true" signature="1050:1223" ph="CREATE TABLE... Cars" />
+                <marker date="1512687601108" expanded="true" signature="1569:1596" ph="INSERT INTO Entries... " />
+                <marker date="1512687601108" expanded="true" signature="1569:1607" ph="INSERT INTO Entries... " />
+                <marker date="1512687601108" expanded="true" signature="1569:1625" ph="INSERT INTO Entries... " />
+                <marker date="1512687601108" expanded="true" signature="1821:1852" ph="SELECT * FRO... Entries" />
+                <marker date="1512687601108" expanded="true" signature="2384:2425" ph="UPDATE Entri... " />
+                <marker date="1512687601108" expanded="true" signature="2384:2533" ph="UPDATE Entri... " />
+                <marker date="1512687601108" expanded="true" signature="2384:2534" ph="UPDATE Entri... " />
+                <marker date="1512687601108" expanded="true" signature="2384:2575" ph="UPDATE Entri... " />
+                <marker date="1512687601108" expanded="true" signature="2384:2576" ph="UPDATE Entri... " />
+                <marker date="1512687601108" expanded="true" signature="2797:2818" ph="SELECT * FRO... Entriesmissing_value" />
+                <marker date="1512687601108" expanded="true" signature="3235:3264" ph="DELETE FROM " />
+                <marker date="1512687601108" expanded="true" signature="3490:3509" ph="DELETE FROM " />
+                <marker date="1512687601108" expanded="true" signature="3757:3804" ph="CREATE TABLE... Cars" />
+                <marker date="1512687601108" expanded="true" signature="3824:3856" ph="INSERT INTO Cars... " />
+                <marker date="1512687601108" expanded="true" signature="3935:3982" ph="CREATE TABLE... Cars" />
+                <marker date="1512687601108" expanded="true" signature="4006:4038" ph="INSERT INTO Cars... " />
+                <marker date="1512687601108" expanded="true" signature="4129:4147" ph="SELECT * FRO... Cars" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Entries" pinned="false" current-in-tab="false">
-        <entry file="das://table:/1696d3db/02e4d316-d5e9-4f39-ad3d-14fae46cc7cd/main.Entries">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sqlite_master" pinned="false" current-in-tab="false">
-        <entry file="das://table:/1696d3db/02e4d316-d5e9-4f39-ad3d-14fae46cc7cd/main.sqlite_master">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="console.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/02e4d316-d5e9-4f39-ad3d-14fae46cc7cd/console.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -138,6 +135,15 @@
             <state relative-caret-position="612">
               <caret line="36" column="56" lean-forward="false" selection-start-line="36" selection-start-column="56" selection-end-line="36" selection-end-column="56" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Entries" pinned="false" current-in-tab="false">
+        <entry file="das://table:/1696d3db/02e4d316-d5e9-4f39-ad3d-14fae46cc7cd/main.Entries">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
             </state>
           </provider>
         </entry>
@@ -172,7 +178,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="260" />
     <option name="y" value="40" />
     <option name="width" value="1400" />
@@ -428,14 +434,13 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1096" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919955" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960325" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20956257" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20956257" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18020834" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -487,7 +492,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="3" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -587,11 +592,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ui/main.py">
+    <entry file="file://$PROJECT_DIR$/src/manager/taskmanager.db">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" column="56" lean-forward="false" selection-start-line="36" selection-start-column="56" selection-end-line="36" selection-end-column="56" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2017.2/system/python_stubs/-1968956070/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="224" column="4" lean-forward="false" selection-start-line="224" selection-start-column="4" selection-end-line="224" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://src:table:/1696d3db/02e4d316-d5e9-4f39-ad3d-14fae46cc7cd/main.Entries">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="17" lean-forward="true" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/1696d3db/02e4d316-d5e9-4f39-ad3d-14fae46cc7cd/main.sqlite_master">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -603,10 +631,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/manager/taskmanager.db">
+    <entry file="file://$PROJECT_DIR$/src/ui/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="612">
+          <caret line="36" column="56" lean-forward="false" selection-start-line="36" selection-start-column="56" selection-end-line="36" selection-end-column="56" />
           <folding />
         </state>
       </provider>
@@ -619,13 +647,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://table:/1696d3db/02e4d316-d5e9-4f39-ad3d-14fae46cc7cd/main.sqlite_master">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://table:/1696d3db/02e4d316-d5e9-4f39-ad3d-14fae46cc7cd/main.Entries">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -633,27 +654,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2017.2/system/python_stubs/-1968956070/builtins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="224" column="4" lean-forward="false" selection-start-line="224" selection-start-column="4" selection-end-line="224" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/manager/sqlmanager.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="17" column="19" lean-forward="true" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+        <state relative-caret-position="1666">
+          <caret line="107" column="20" lean-forward="false" selection-start-line="107" selection-start-column="20" selection-end-line="107" selection-end-column="20" />
           <folding>
             <element signature="e#43#65#0" expanded="true" />
-            <marker date="1512674091686" expanded="true" signature="625:762" ph="CREATE TABLE... Entries" />
-            <marker date="1512674091686" expanded="true" signature="625:798" ph="CREATE TABLE... Cars" />
-            <marker date="1512674091686" expanded="true" signature="921:968" ph="CREATE TABLE... Cars" />
-            <marker date="1512674091686" expanded="true" signature="988:1020" ph="INSERT INTO Cars... " />
-            <marker date="1512674091686" expanded="true" signature="1099:1146" ph="CREATE TABLE... Cars" />
-            <marker date="1512674091686" expanded="true" signature="1170:1202" ph="INSERT INTO Cars... " />
-            <marker date="1512674091686" expanded="true" signature="1293:1311" ph="SELECT * FRO... Cars" />
+            <element signature="e#907#1361#0" expanded="false" />
+            <marker date="1512687601108" expanded="true" signature="600:632" ph="SELECT * FRO... Entries" />
+            <marker date="1512687601108" expanded="true" signature="600:633" ph="SELECT * FRO... Entries" />
+            <marker date="1512687601108" expanded="true" signature="1050:1187" ph="CREATE TABLE... Entries" />
+            <marker date="1512687601108" expanded="true" signature="1050:1223" ph="CREATE TABLE... Cars" />
+            <marker date="1512687601108" expanded="true" signature="1569:1596" ph="INSERT INTO Entries... " />
+            <marker date="1512687601108" expanded="true" signature="1569:1607" ph="INSERT INTO Entries... " />
+            <marker date="1512687601108" expanded="true" signature="1569:1625" ph="INSERT INTO Entries... " />
+            <marker date="1512687601108" expanded="true" signature="1821:1852" ph="SELECT * FRO... Entries" />
+            <marker date="1512687601108" expanded="true" signature="2384:2425" ph="UPDATE Entri... " />
+            <marker date="1512687601108" expanded="true" signature="2384:2533" ph="UPDATE Entri... " />
+            <marker date="1512687601108" expanded="true" signature="2384:2534" ph="UPDATE Entri... " />
+            <marker date="1512687601108" expanded="true" signature="2384:2575" ph="UPDATE Entri... " />
+            <marker date="1512687601108" expanded="true" signature="2384:2576" ph="UPDATE Entri... " />
+            <marker date="1512687601108" expanded="true" signature="2797:2818" ph="SELECT * FRO... Entriesmissing_value" />
+            <marker date="1512687601108" expanded="true" signature="3235:3264" ph="DELETE FROM " />
+            <marker date="1512687601108" expanded="true" signature="3490:3509" ph="DELETE FROM " />
+            <marker date="1512687601108" expanded="true" signature="3757:3804" ph="CREATE TABLE... Cars" />
+            <marker date="1512687601108" expanded="true" signature="3824:3856" ph="INSERT INTO Cars... " />
+            <marker date="1512687601108" expanded="true" signature="3935:3982" ph="CREATE TABLE... Cars" />
+            <marker date="1512687601108" expanded="true" signature="4006:4038" ph="INSERT INTO Cars... " />
+            <marker date="1512687601108" expanded="true" signature="4129:4147" ph="SELECT * FRO... Cars" />
           </folding>
         </state>
       </provider>
