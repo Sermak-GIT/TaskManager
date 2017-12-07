@@ -1,0 +1,4 @@
+CREATE TABLE Entries(Id INT, NextAction TEXT, Notes INT, Icon BLOB, Deadline DATE, Time TIME, Setting TEXT,
+                        Willpower INT, Audio INT, Prio INT)
+
+Setting = where can i do this action
