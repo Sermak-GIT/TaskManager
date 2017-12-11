@@ -7,6 +7,8 @@
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+import PyQt5
+from src.ui_handler.new_handler import save
 
 
 class Ui_New(object):
@@ -29,14 +31,6 @@ class Ui_New(object):
         self.textEdit.setFont(font)
         self.textEdit.setObjectName("textEdit")
         self.gridLayout_2.addWidget(self.textEdit, 1, 2, 5, 1)
-        self.graphicsView = QtWidgets.QGraphicsView(New)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.graphicsView.sizePolicy().hasHeightForWidth())
-        self.graphicsView.setSizePolicy(sizePolicy)
-        self.graphicsView.setObjectName("graphicsView")
-        self.gridLayout_2.addWidget(self.graphicsView, 0, 0, 1, 1)
         self.nextAction = QtWidgets.QLineEdit(New)
         font = QtGui.QFont()
         font.setFamily("Arial")
@@ -47,9 +41,6 @@ class Ui_New(object):
         self.nextAction.setText("")
         self.nextAction.setObjectName("nextAction")
         self.gridLayout_2.addWidget(self.nextAction, 0, 2, 1, 1)
-        self.timeEdit = QtWidgets.QTimeEdit(New)
-        self.timeEdit.setObjectName("timeEdit")
-        self.gridLayout_2.addWidget(self.timeEdit, 5, 0, 1, 1)
         self.groupBox = QtWidgets.QGroupBox(New)
         self.groupBox.setObjectName("groupBox")
         self.gridLayout = QtWidgets.QGridLayout(self.groupBox)
@@ -73,9 +64,30 @@ class Ui_New(object):
         self.checkBox_6.setObjectName("checkBox_6")
         self.gridLayout.addWidget(self.checkBox_6, 0, 2, 1, 1)
         self.gridLayout_2.addWidget(self.groupBox, 3, 0, 2, 1)
+        self.pushButton = QtWidgets.QPushButton(New)
+        self.pushButton.setObjectName("save_button")
+        self.gridLayout_2.addWidget(self.pushButton, 6, 2, 1, 1)
+        self.graphicsView = QtWidgets.QGraphicsView(New)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.graphicsView.sizePolicy().hasHeightForWidth())
+        self.graphicsView.setSizePolicy(sizePolicy)
+        self.graphicsView.setObjectName("graphicsView")
+        self.gridLayout_2.addWidget(self.graphicsView, 0, 0, 1, 1)
+        self.timeEdit = QtWidgets.QTimeEdit(New)
+        self.timeEdit.setObjectName("timeEdit")
+        self.gridLayout_2.addWidget(self.timeEdit, 5, 0, 1, 1)
 
         self.retranslateUi(New)
         QtCore.QMetaObject.connectSlotsByName(New)
+
+        self.init_buttons()
+
+    def save_entry(self):
+        #next_action = self.nextAction.text()
+        print(self.textEdit.text())
+        #save(next_action, notes)
 
     def retranslateUi(self, New):
         _translate = QtCore.QCoreApplication.translate
@@ -89,14 +101,20 @@ class Ui_New(object):
         self.checkBox.setText(_translate("New", "CheckBox"))
         self.checkBox_4.setText(_translate("New", "CheckBox"))
         self.checkBox_6.setText(_translate("New", "CheckBox"))
+        self.pushButton.setText(_translate("New", "Save"))
 
+    def init_buttons(self):
+        self.pushButton.clicked.connect(self.save_entry)
+
+
+text_thing = ""
 
 if __name__ == "__main__":
     import sys
-
     app = QtWidgets.QApplication(sys.argv)
     New = QtWidgets.QWidget()
     ui = Ui_New()
     ui.setupUi(New)
     New.show()
     sys.exit(app.exec_())
+

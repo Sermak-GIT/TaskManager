@@ -112,7 +112,7 @@ def delete_everything():
         cur.execute("DELETE FROM Entries")
         rows = cur.fetchall()
 
-
+'''
 init()
 
 pprint.pprint(read_entry(1))
@@ -120,7 +120,7 @@ update_entry((1, 'Do #3', 'Hello', 324, '23.03.12', '23:22', 'pc', 100, 0, 12))
 pprint.pprint(read_entry(1))
 delete_everything()
 pprint.pprint(read_entry(1))
-
+'''
 '''
 cur.execute("CREATE TABLE Cars(Id INT, Name TEXT, Price INT)")
 cur.executemany("INSERT INTO Cars VALUES(?, ?, ?)", cars)

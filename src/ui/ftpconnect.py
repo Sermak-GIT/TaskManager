@@ -57,7 +57,7 @@ class Ui_FTPConnect(object):
         self.checkBox.setText(_translate("FTPConnect", "Remember"))
         self.lineEdit_3.setPlaceholderText(_translate("FTPConnect", "Password"))
 
-    def connect(self):
+    def connect(self) -> object:
         from src.manager import ftpmanager
         ftp = ftpmanager.connect(self.lineEdit.text(), self.lineEdit_4.text(), self.lineEdit_2.text(),
                                  self.lineEdit_4.text())
