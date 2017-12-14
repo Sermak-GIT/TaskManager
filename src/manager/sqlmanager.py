@@ -5,6 +5,7 @@ import sqlite3 as lite
 import sys
 import logging
 import pprint
+from src.reference.reference import db_path
 
 logging.basicConfig(level=logging.INFO, format=' %(asctime)s - %(levelname)s- %(message)s')
 
@@ -21,7 +22,7 @@ def issue_new_id():
 
 def is_id_in_use(to_check_id):
     logging.debug("is_id_in_use() checks id " + to_check_id.__str__())
-    con = lite.connect("taskmanager.db")
+    con = lite.connect(db_path)
     with con:
         ret_id = con.cursor().execute("SELECT * FROM Entries WHERE Id = " + to_check_id.__str__()).fetchone()
         if ret_id is None:
@@ -32,7 +33,7 @@ def is_id_in_use(to_check_id):
 
 
 def init():
-    connection = lite.connect("taskmanager.db")
+    connection = lite.connect(db_path)
     with connection:
         cursor = connection.cursor()
         try:
@@ -45,7 +46,7 @@ def init():
 
 def add_entry(entry):
     logging.info("Adding entry: " + entry.__str__())
-    connection = lite.connect("taskmanager.db")
+    connection = lite.connect(db_path)
     with connection:
         cursor = connection.cursor()
         cursor.execute("INSERT INTO Entries VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", entry)
@@ -53,7 +54,7 @@ def add_entry(entry):
 
 def read_entry(entryid):
     logging.info("Reading entry: " + entryid.__str__())
-    con = lite.connect('taskmanager.db')
+    con = lite.connect(db_path)
     with con:
         cur = con.cursor()
         cur.execute("SELECT * FROM Entries WHERE Id=" + entryid.__str__())
@@ -70,7 +71,7 @@ def update_entry(entry):
     entryid = entry[0]
     entry = entry[1:]
     logging.info("Updating entry: " + entryid.__str__())
-    con = lite.connect('taskmanager.db')
+    con = lite.connect(db_path)
     with con:
         cur = con.cursor()
         cur.execute("UPDATE Entries "
@@ -82,7 +83,7 @@ def update_entry(entry):
 
 def get_all_entries():
     logging.info("Reading all entries")
-    con = lite.connect('taskmanager.db')
+    con = lite.connect(db_path)
     with con:
         cur = con.cursor()
         cur.execute("SELECT * FROM Entries")
@@ -97,7 +98,7 @@ def get_all_entries():
 
 def delete_entry(entryid):
     logging.info("Deleting entry " + entryid.__str__())
-    con = lite.connect('taskmanager.db')
+    con = lite.connect(db_path)
     with con:
         cur = con.cursor()
         cur.execute("DELETE FROM Entries WHERE Id=" + entryid.__str__())
@@ -106,15 +107,15 @@ def delete_entry(entryid):
 
 def delete_everything():
     logging.warning("Deleting EVERYTHING")
-    con = lite.connect('taskmanager.db')
+    con = lite.connect(db_path)
     with con:
         cur = con.cursor()
         cur.execute("DELETE FROM Entries")
         rows = cur.fetchall()
 
-'''
-init()
 
+init()
+'''
 pprint.pprint(read_entry(1))
 update_entry((1, 'Do #3', 'Hello', 324, '23.03.12', '23:22', 'pc', 100, 0, 12))
 pprint.pprint(read_entry(1))

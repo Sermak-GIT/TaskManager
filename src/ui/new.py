@@ -8,6 +8,8 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 import PyQt5
+from PyQt5.QtWidgets import QWidget
+
 from src.ui_handler.new_handler import save
 
 
@@ -85,9 +87,9 @@ class Ui_New(object):
         self.init_buttons()
 
     def save_entry(self):
-        #next_action = self.nextAction.text()
-        print(self.textEdit.text())
-        #save(next_action, notes)
+        next_action = self.nextAction.text()
+        notes = self.textEdit.toPlainText()
+        save(next_action, notes)
 
     def retranslateUi(self, New):
         _translate = QtCore.QCoreApplication.translate

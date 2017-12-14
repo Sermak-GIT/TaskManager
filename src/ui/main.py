@@ -7,8 +7,16 @@
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtCore import Qt, pyqtSlot
+from PyQt5.QtGui import QKeySequence
+from PyQt5.QtWidgets import QShortcut, QWidget
 
-class Ui_TaskManagerMainWindow(object):
+from src.ui.new import Ui_New
+
+new_ui = Ui_New()
+
+
+class Ui_TaskManagerMainWindow(QWidget):
     def setupUi(self, TaskManagerMainWindow):
         TaskManagerMainWindow.setObjectName("TaskManagerMainWindow")
         TaskManagerMainWindow.resize(982, 473)
@@ -25,8 +33,12 @@ class Ui_TaskManagerMainWindow(object):
         self.stackedWidget.setMouseTracking(True)
         self.stackedWidget.setAutoFillBackground(False)
         self.stackedWidget.setObjectName("stackedWidget")
-        self.page = QtWidgets.QWidget()
-        self.page.setObjectName("page")
+
+        New = QtWidgets.QWidget()
+        new_ui.setupUi(New)
+        New.show()
+        self.page = New
+
         self.stackedWidget.addWidget(self.page)
         self.page_2 = QtWidgets.QWidget()
         self.page_2.setObjectName("page_2")
@@ -49,13 +61,22 @@ class Ui_TaskManagerMainWindow(object):
         _translate = QtCore.QCoreApplication.translate
         TaskManagerMainWindow.setWindowTitle(_translate("TaskManagerMainWindow", "TaskManager"))
 
+    def keyPressEvent(self, QKeyEvent):
+        # TODO
+        if QKeyEvent.key() == Qt.Key_W:
+            self.close()
+
+    def change_ui(self):
+        i = (self.stackedWidget.currentIndex() + 1) % (self.stackedWidget.count())
+        self.stackedWidget.setCurrentIndex(i)
+
 
 if __name__ == "__main__":
     import sys
+
     app = QtWidgets.QApplication(sys.argv)
     TaskManagerMainWindow = QtWidgets.QMainWindow()
     ui = Ui_TaskManagerMainWindow()
     ui.setupUi(TaskManagerMainWindow)
     TaskManagerMainWindow.show()
     sys.exit(app.exec_())
-

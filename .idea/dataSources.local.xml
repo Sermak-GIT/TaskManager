@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="taskmanager.db" uuid="02e4d316-d5e9-4f39-ad3d-14fae46cc7cd">
+    <data-source name="taskmanager.db" uuid="45303de4-0e9d-47c7-b932-1cdd4fda1df0">
       <database-info product="SQLite" version="3.16.1" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native" />
       <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
       <secret-storage>master_key</secret-storage>

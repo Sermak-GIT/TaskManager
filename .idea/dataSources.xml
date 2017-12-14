@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="taskmanager.db" uuid="02e4d316-d5e9-4f39-ad3d-14fae46cc7cd">
+    <data-source source="LOCAL" name="taskmanager.db" uuid="45303de4-0e9d-47c7-b932-1cdd4fda1df0">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:C:\Users\egidi\Documents\Taskmanager\src\manager\taskmanager.db</jdbc-url>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/src/db/taskmanager.db</jdbc-url>
       <driver-properties>
         <property name="enable_load_extension" value="true" />
       </driver-properties>
