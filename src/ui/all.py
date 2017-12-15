@@ -7,12 +7,6 @@
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-from PyQt5.QtCore import QAbstractItemModel
-from PyQt5.QtGui import QStandardItemModel, QStandardItem
-from PyQt5.QtWidgets import QListWidgetItem, QWidget, QLabel, QPushButton, QHBoxLayout, QLayout
-
-from src.ui.entry_widget import Ui_EntryWidget
-
 
 class Ui_Form(object):
     def setupUi(self, Form):
@@ -65,20 +59,19 @@ class Ui_Form(object):
         self.gridLayout.addWidget(self.groupBox, 1, 0, 1, 1)
         self.verticalLayout.addLayout(self.gridLayout)
 
-        self.listView = QtWidgets.QListView(Form)
-        self.listView.setMinimumSize(QtCore.QSize(0, 0))
-        self.listView.setFrameShadow(QtWidgets.QFrame.Sunken)
-        self.listView.setTabKeyNavigation(True)
-        self.listView.setObjectName("listView")
+        self.scrollArea = QtWidgets.QScrollArea(Form)
+        self.scrollArea.setWidgetResizable(True)
+        self.scrollArea.setObjectName("scrollArea")
+        self.scrollAreaWidgetContents_2 = QtWidgets.QWidget()
 
-        self.model = QStandardItemModel(self.listView)
-        self.listView.setModel(self.model)
+        self.scrollAreaWidgetContents_2.setGeometry(QtCore.QRect(0, 0, 1002, 309))
+        self.scrollAreaWidgetContents_2.setObjectName("scrollAreaWidgetContents_2")
+        self.scrollArea.setWidget(self.scrollAreaWidgetContents_2)
+        self.verticalLayout.addWidget(self.scrollArea)
 
-        self.verticalLayout.addWidget(self.listView)
+        self.add_widget("")
+
         self.retranslateUi(Form)
-
-        self.init_listview()
-
         QtCore.QMetaObject.connectSlotsByName(Form)
 
     def retranslateUi(self, Form):
@@ -89,25 +82,13 @@ class Ui_Form(object):
         self.pushButton.setText(_translate("Form", "PushButton"))
         self.groupBox.setTitle(_translate("Form", "Filters"))
 
-    def init_listview(self):
-
-        new_ui = Ui_EntryWidget()
+    def add_widget(self, next_action):
+        from src.ui.new import Ui_New
+        new_ui = Ui_New()
         New = QtWidgets.QWidget()
         new_ui.setupUi(New)
-        New.show()
-
-
-        itemN = QListWidgetItem()
-        self.listView.addItem(itemN)
-        self.listView.setItemWidget(New, Ui_EntryWidget)
-
-
-        """new_ui = Ui_EntryWidget()
-        New = QtWidgets.QWidget()
-        new_ui.setupUi(New)
-        New.show()
-        self.listView."""
-
+        #New.show()
+        self.scrollAreaWidgetContents_2 = New
 
 if __name__ == "__main__":
     import sys

@@ -1,17 +1,55 @@
-def __init__(self, completer_widget, max_visible_items=7, sort_func=sort_key):
-    QListView.__init__(self)
-    self.disable_popup = False
-    self.completer_widget = weakref.ref(completer_widget)
-    self.setWindowFlags(Qt.Popup)
-    self.max_visible_items = max_visible_items
-    self.setEditTriggers(self.NoEditTriggers)
-    self.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
-    self.setSelectionBehavior(self.SelectRows)
-    self.setSelectionMode(self.SingleSelection)
-    self.setAlternatingRowColors(True)
-    self.setModel(CompleteModel(self, sort_func=sort_func))
-    self.setMouseTracking(True)
-    self.entered.connect(self.item_entered)
-    self.activated.connect(self.item_chosen)
-    self.pressed.connect(self.item_chosen)
-    self.installEventFilter(self)
+from PyQt5 import QtGui, QtCore
+import sys
+
+from PyQt5.QtWidgets import *
+
+
+class Main(QMainWindow):
+    def __init__(self, parent = None):
+        super(Main, self).__init__(parent)
+
+        # main button
+        self.addButton = QPushButton('button to add other widgets')
+        self.addButton.clicked.connect(self.addWidget)
+
+        # scroll area widget contents - layout
+        self.scrollLayout = QFormLayout()
+
+        # scroll area widget contents
+        self.scrollWidget = QWidget()
+        self.scrollWidget.setLayout(self.scrollLayout)
+
+        # scroll area
+        self.scrollArea = QScrollArea()
+        self.scrollArea.setWidgetResizable(True)
+        self.scrollArea.setWidget(self.scrollWidget)
+
+        # main layout
+        self.mainLayout = QVBoxLayout()
+
+        # add all main to the main vLayout
+        self.mainLayout.addWidget(self.addButton)
+        self.mainLayout.addWidget(self.scrollArea)
+
+        # central widget
+        self.centralWidget = QWidget()
+        self.centralWidget.setLayout(self.mainLayout)
+
+        # set central widget
+        self.setCentralWidget(self.centralWidget)
+
+    def addWidget(self):
+        self.scrollLayout.addRow(TestButton())
+
+
+class TestButton(QPushButton):
+  def __init__( self, parent=None):
+      super(TestButton, self).__init__(parent)
+      self.setText("I am in Test widget")
+      self.clicked.connect(self.deleteLater)
+
+
+app = QApplication(sys.argv)
+myWidget = Main()
+myWidget.show()
+app.exec_()
