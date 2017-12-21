@@ -1,18 +1,22 @@
-from PyQt5 import QtGui, QtCore
 import sys
+from PyQt5 import QtWidgets
 
 from PyQt5.QtWidgets import *
 
 
 class Main(QMainWindow):
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         super(Main, self).__init__(parent)
 
-        # main button
-        self.addButton = QPushButton('button to add other widgets')
-        self.addButton.clicked.connect(self.addWidget)
+        # top button to add more buttons
+        self.addButton = QPushButton('Add button')
+        self.addButton.clicked.connect(self.add_button)
 
-        # scroll area widget contents - layout
+        # top button to add more widgets
+        self.addWidget = QPushButton('Add widget')
+        self.addWidget.clicked.connect(self.add_widget)
+
+        # scroll area widget
         self.scrollLayout = QFormLayout()
 
         # scroll area widget contents
@@ -27,8 +31,9 @@ class Main(QMainWindow):
         # main layout
         self.mainLayout = QVBoxLayout()
 
-        # add all main to the main vLayout
+        # add all upper controls to the main vLayout
         self.mainLayout.addWidget(self.addButton)
+        self.mainLayout.addWidget(self.addWidget)
         self.mainLayout.addWidget(self.scrollArea)
 
         # central widget
@@ -38,16 +43,56 @@ class Main(QMainWindow):
         # set central widget
         self.setCentralWidget(self.centralWidget)
 
-    def addWidget(self):
+    # adds a button to the scroll area
+    def add_button(self):
+        # from test.test_button import TestButton  # this somehow closes the program when clicking the main button
         self.scrollLayout.addRow(TestButton())
 
+    # adds a widget to the scroll area
+    def add_widget(self):
+        # from test.test_button import TestButton  # this somehow closes the program when clicking the main button
+        widget = TestWidget()
+        self.scrollLayout.addRow(widget)
 
+
+# Copy pasted from other file. This is just a test to see what can be added to a layout
 class TestButton(QPushButton):
-  def __init__( self, parent=None):
-      super(TestButton, self).__init__(parent)
-      self.setText("I am in Test widget")
-      self.clicked.connect(self.deleteLater)
+    def __init__(self, parent=None):
+        super(TestButton, self).__init__(parent)
+        self.setText("When I grow up, I wanna be a real QWidget")
+        self.clicked.connect(self.deleteLater)  # delete button from layout
 
+
+# Copy pasted from other file. As the Widget can get pretty big, I ideally want it in its own file.
+class TestWidget(QWidget):
+
+    def __init__(self, flags, *args, **kwargs):
+        super().__init__(flags, *args, **kwargs)
+        print("Init called")
+
+        # main horizontal layout
+        self.horizontalLayout = QtWidgets.QHBoxLayout()
+
+        # test label
+        self.label = QtWidgets.QLabel()
+        self.label.setText("Label")
+        self.horizontalLayout.addWidget(self.label)
+
+        # test checkbox
+        self.checkBox = QtWidgets.QCheckBox()
+        self.checkBox.setText("Checkbox")
+        self.horizontalLayout.addWidget(self.checkBox)
+
+
+# show the TestWidget on its own (uncomment)
+"""
+app = QtWidgets.QApplication(sys.argv)
+Form = QtWidgets.QWidget()
+ui = TestWidget()
+ui.setupUi(Form)
+Form.show()
+sys.exit(app.exec_())
+"""
 
 app = QApplication(sys.argv)
 myWidget = Main()
