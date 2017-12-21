@@ -51,8 +51,7 @@ class Main(QMainWindow):
     # adds a widget to the scroll area
     def add_widget(self):
         # from test.test_button import TestButton  # this somehow closes the program when clicking the main button
-        widget = TestWidget()
-        self.scrollLayout.addRow(widget)
+        self.scrollLayout.addRow(TestWidget())
 
 
 # Copy pasted from other file. This is just a test to see what can be added to a layout
@@ -65,33 +64,24 @@ class TestButton(QPushButton):
 
 # Copy pasted from other file. As the Widget can get pretty big, I ideally want it in its own file.
 class TestWidget(QWidget):
+    def setupUi(self, Form):
+        self.horizontalLayout = QtWidgets.QHBoxLayout(Form)
 
-    def __init__(self, flags, *args, **kwargs):
-        super().__init__(flags, *args, **kwargs)
-        print("Init called")
-
-        # main horizontal layout
-        self.horizontalLayout = QtWidgets.QHBoxLayout()
-
-        # test label
-        self.label = QtWidgets.QLabel()
+        self.label = QtWidgets.QLabel(Form)
         self.label.setText("Label")
         self.horizontalLayout.addWidget(self.label)
 
-        # test checkbox
-        self.checkBox = QtWidgets.QCheckBox()
+        self.checkBox = QtWidgets.QCheckBox(Form)
         self.checkBox.setText("Checkbox")
         self.horizontalLayout.addWidget(self.checkBox)
 
-
-# show the TestWidget on its own (uncomment)
 """
 app = QtWidgets.QApplication(sys.argv)
 Form = QtWidgets.QWidget()
 ui = TestWidget()
 ui.setupUi(Form)
-Form.show()
-sys.exit(app.exec_())
+#Form.show()
+#sys.exit(app.exec_())
 """
 
 app = QApplication(sys.argv)
