@@ -59,7 +59,8 @@ class Main(QMainWindow):
     # adds a widget from another file to the scroll area
     def add_widget_from_another_file(self):
         from test_area.test_widget import TestWidgetFile
-        self.scrollLayout.addRow(TestWidgetFile())
+        from src.ui.entry_widget import Ui_EntryWidget
+        self.scrollLayout.addRow(Ui_EntryWidget())
 
 
 # This is just a test to see what can be added to a layout

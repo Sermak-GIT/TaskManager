@@ -8,18 +8,19 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 import PyQt5
+from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QWidget
 
 from src.ui_handler.new_handler import save
 
 
-class Ui_New(object):
-    def setupUi(self, New):
-        New.setObjectName("New")
-        New.resize(1100, 817)
-        self.gridLayout_2 = QtWidgets.QGridLayout(New)
+class Ui_New(QWidget):
+    def __init__(self):
+        QWidget.__init__(self)
+        self.resize(1100, 817)
+        self.gridLayout_2 = QtWidgets.QGridLayout(self)
         self.gridLayout_2.setObjectName("gridLayout_2")
-        self.calendarWidget = QtWidgets.QCalendarWidget(New)
+        self.calendarWidget = QtWidgets.QCalendarWidget(self)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -27,13 +28,13 @@ class Ui_New(object):
         self.calendarWidget.setSizePolicy(sizePolicy)
         self.calendarWidget.setObjectName("calendarWidget")
         self.gridLayout_2.addWidget(self.calendarWidget, 1, 0, 2, 1)
-        self.textEdit = QtWidgets.QTextEdit(New)
+        self.textEdit = QtWidgets.QTextEdit(self)
         font = QtGui.QFont()
         font.setPointSize(12)
         self.textEdit.setFont(font)
         self.textEdit.setObjectName("textEdit")
         self.gridLayout_2.addWidget(self.textEdit, 1, 2, 5, 1)
-        self.nextAction = QtWidgets.QLineEdit(New)
+        self.nextAction = QtWidgets.QLineEdit(self)
         font = QtGui.QFont()
         font.setFamily("Arial")
         font.setPointSize(36)
@@ -43,7 +44,7 @@ class Ui_New(object):
         self.nextAction.setText("")
         self.nextAction.setObjectName("nextAction")
         self.gridLayout_2.addWidget(self.nextAction, 0, 2, 1, 1)
-        self.groupBox = QtWidgets.QGroupBox(New)
+        self.groupBox = QtWidgets.QGroupBox(self)
         self.groupBox.setObjectName("groupBox")
         self.gridLayout = QtWidgets.QGridLayout(self.groupBox)
         self.gridLayout.setObjectName("gridLayout")
@@ -66,10 +67,10 @@ class Ui_New(object):
         self.checkBox_6.setObjectName("checkBox_6")
         self.gridLayout.addWidget(self.checkBox_6, 0, 2, 1, 1)
         self.gridLayout_2.addWidget(self.groupBox, 3, 0, 2, 1)
-        self.pushButton = QtWidgets.QPushButton(New)
+        self.pushButton = QtWidgets.QPushButton(self)
         self.pushButton.setObjectName("save_button")
         self.gridLayout_2.addWidget(self.pushButton, 6, 2, 1, 1)
-        self.graphicsView = QtWidgets.QGraphicsView(New)
+        self.graphicsView = QtWidgets.QGraphicsView(self)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -77,12 +78,11 @@ class Ui_New(object):
         self.graphicsView.setSizePolicy(sizePolicy)
         self.graphicsView.setObjectName("graphicsView")
         self.gridLayout_2.addWidget(self.graphicsView, 0, 0, 1, 1)
-        self.timeEdit = QtWidgets.QTimeEdit(New)
+        self.timeEdit = QtWidgets.QTimeEdit(self)
         self.timeEdit.setObjectName("timeEdit")
         self.gridLayout_2.addWidget(self.timeEdit, 5, 0, 1, 1)
 
-        self.retranslateUi(New)
-        QtCore.QMetaObject.connectSlotsByName(New)
+        self.retranslateUi(self)
 
         self.init_buttons()
 
@@ -109,14 +109,10 @@ class Ui_New(object):
         self.pushButton.clicked.connect(self.save_entry)
 
 
-text_thing = ""
-
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
-    New = QtWidgets.QWidget()
     ui = Ui_New()
-    ui.setupUi(New)
-    New.show()
+    ui.show()
     sys.exit(app.exec_())
 

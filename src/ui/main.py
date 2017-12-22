@@ -11,9 +11,8 @@ from PyQt5.QtCore import Qt, pyqtSlot
 from PyQt5.QtGui import QKeySequence
 from PyQt5.QtWidgets import QShortcut, QWidget
 
+from src.ui.all import Ui_All
 from src.ui.new import Ui_New
-
-new_ui = Ui_New()
 
 
 class Ui_TaskManagerMainWindow(QWidget):
@@ -34,15 +33,12 @@ class Ui_TaskManagerMainWindow(QWidget):
         self.stackedWidget.setAutoFillBackground(False)
         self.stackedWidget.setObjectName("stackedWidget")
 
-        New = QtWidgets.QWidget()
-        new_ui.setupUi(New)
-        New.show()
-        self.page = New
+        self.page = Ui_New()
+        self.page_2 = Ui_All()
 
         self.stackedWidget.addWidget(self.page)
-        self.page_2 = QtWidgets.QWidget()
-        self.page_2.setObjectName("page_2")
         self.stackedWidget.addWidget(self.page_2)
+
         self.gridLayout.addWidget(self.stackedWidget, 0, 0, 1, 1)
         TaskManagerMainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(TaskManagerMainWindow)
@@ -61,14 +57,16 @@ class Ui_TaskManagerMainWindow(QWidget):
         _translate = QtCore.QCoreApplication.translate
         TaskManagerMainWindow.setWindowTitle(_translate("TaskManagerMainWindow", "TaskManager"))
 
-    def keyPressEvent(self, QKeyEvent):
-        # TODO
-        if QKeyEvent.key() == Qt.Key_W:
-            self.close()
-
     def change_ui(self):
         i = (self.stackedWidget.currentIndex() + 1) % (self.stackedWidget.count())
         self.stackedWidget.setCurrentIndex(i)
+
+    def eventFilter(self, event):
+        if event.type() == QtCore.QEvent.KeyPress:
+            # do some stuff ...
+            return True  # means stop event propagation
+        else:
+            return QtGui.QDialog.eventFilter(self, event)
 
 
 if __name__ == "__main__":
