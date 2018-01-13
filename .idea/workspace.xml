@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="81e7f3b0-ebf6-4028-ae76-2d6b41f523c2" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/db/taskmanager.db" afterPath="$PROJECT_DIR$/src/db/taskmanager.db" />
-      <change beforePath="$PROJECT_DIR$/src/ui/all.py" afterPath="$PROJECT_DIR$/src/ui/all.py" />
-      <change beforePath="$PROJECT_DIR$/src/ui/entry_widget.py" afterPath="$PROJECT_DIR$/src/ui/entry_widget.py" />
-      <change beforePath="$PROJECT_DIR$/src/ui/main.py" afterPath="$PROJECT_DIR$/src/ui/main.py" />
-      <change beforePath="$PROJECT_DIR$/src/ui/new.py" afterPath="$PROJECT_DIR$/src/ui/new.py" />
-      <change beforePath="$PROJECT_DIR$/src/ui_handler/all_handler.py" afterPath="$PROJECT_DIR$/src/ui_handler/all_handler.py" />
-      <change beforePath="$PROJECT_DIR$/test_area/test.py" afterPath="$PROJECT_DIR$/test_area/test.py" />
+      <change beforePath="$PROJECT_DIR$/test_area/tray.py" afterPath="$PROJECT_DIR$/test_area/tray.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,7 +14,7 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Taskmanager$test_widget.coverage" NAME="test_widget Coverage Results" MODIFIED="1513883503936" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/Taskmanager$line.coverage" NAME="line Coverage Results" MODIFIED="1513906376510" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
-    <SUITE FILE_PATH="coverage/Taskmanager$all.coverage" NAME="all Coverage Results" MODIFIED="1513908451911" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/ui" />
+    <SUITE FILE_PATH="coverage/Taskmanager$all.coverage" NAME="all Coverage Results" MODIFIED="1514149372557" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/ui" />
     <SUITE FILE_PATH="coverage/Taskmanager$new__1_.coverage" NAME="new (1) Coverage Results" MODIFIED="1513211255638" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/ui" />
     <SUITE FILE_PATH="coverage/Taskmanager$entry_widget.coverage" NAME="entry_widget Coverage Results" MODIFIED="1513907396269" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/ui" />
     <SUITE FILE_PATH="coverage/Taskmanager$ftpconnect.coverage" NAME="ftpconnect Coverage Results" MODIFIED="1512671319219" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
@@ -30,8 +23,10 @@
     <SUITE FILE_PATH="coverage/Taskmanager$sqlmanager.coverage" NAME="sqlmanager Coverage Results" MODIFIED="1512687601180" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/manager" />
     <SUITE FILE_PATH="coverage/Taskmanager$test2.coverage" NAME="test2 Coverage Results" MODIFIED="1513902055503" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_area" />
     <SUITE FILE_PATH="coverage/Taskmanager$new.coverage" NAME="new Coverage Results" MODIFIED="1513895761802" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/ui" />
-    <SUITE FILE_PATH="coverage/Taskmanager$main.coverage" NAME="main Coverage Results" MODIFIED="1513908508949" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/ui" />
+    <SUITE FILE_PATH="coverage/Taskmanager$main.coverage" NAME="main Coverage Results" MODIFIED="1514156994356" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/ui" />
     <SUITE FILE_PATH="coverage/Taskmanager$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1513211282555" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/ui" />
+    <SUITE FILE_PATH="coverage/Taskmanager$tray.coverage" NAME="tray Coverage Results" MODIFIED="1515810475939" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_area" />
+    <SUITE FILE_PATH="coverage/Taskmanager$threading_helper.coverage" NAME="threading_helper Coverage Results" MODIFIED="1514151314807" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/helper" />
     <SUITE FILE_PATH="coverage/Taskmanager$test.coverage" NAME="test Coverage Results" MODIFIED="1513883517152" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/Taskmanager$test_widget__1_.coverage" NAME="test_widget (1) Coverage Results" MODIFIED="1513883724598" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_area" />
   </component>
@@ -71,146 +66,83 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="sqlmanager.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/manager/sqlmanager.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                  <folding>
-                    <marker date="1513881356027" expanded="true" signature="635:668" ph="SELECT * FRO... Entries" />
-                    <marker date="1513881356027" expanded="true" signature="1076:1249" ph="CREATE TABLE... Entries" />
-                    <marker date="1513881356027" expanded="true" signature="1586:1642" ph="INSERT INTO Entries... " />
-                    <marker date="1513881356027" expanded="true" signature="1829:1860" ph="SELECT * FRO... Entries" />
-                    <marker date="1513881356027" expanded="true" signature="2383:2575" ph="UPDATE Entries... " />
-                    <marker date="1513881356027" expanded="true" signature="2787:2808" ph="SELECT * FRO... Entries" />
-                    <marker date="1513881356027" expanded="true" signature="3216:3245" ph="DELETE FROM Entries... " />
-                    <marker date="1513881356027" expanded="true" signature="3462:3481" ph="DELETE FROM Entries... " />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="test_widget.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/test_area/test_widget.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="136">
-                  <caret line="8" column="8" lean-forward="true" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="30" />
-                  <folding>
-                    <element signature="e#0#10#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="main_handler.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/ui_handler/main_handler.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="0" column="14" lean-forward="true" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/ui/main.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="179">
-                  <caret line="38" column="7" lean-forward="false" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="7" />
-                  <folding>
-                    <element signature="e#230#272#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="entry_widget.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/ui/entry_widget.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="102">
-                  <caret line="15" column="40" lean-forward="false" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
-                  <folding>
-                    <element signature="e#213#255#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="all_handler.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/ui_handler/all_handler.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="60">
-                  <caret line="50" column="46" lean-forward="false" selection-start-line="50" selection-start-column="46" selection-end-line="50" selection-end-column="46" />
-                  <folding>
-                    <element signature="e#0#35#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="all.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/ui/all.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="298">
-                  <caret line="72" column="47" lean-forward="false" selection-start-line="72" selection-start-column="47" selection-end-line="72" selection-end-column="47" />
-                  <folding>
-                    <element signature="e#229#271#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="new.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/ui/new.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="522">
-                  <caret line="115" column="13" lean-forward="false" selection-start-line="115" selection-start-column="13" selection-end-line="115" selection-end-column="13" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/test_area/test.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="544">
-                  <caret line="92" column="19" lean-forward="false" selection-start-line="92" selection-start-column="19" selection-end-line="92" selection-end-column="19" />
-                  <folding>
-                    <element signature="e#0#10#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="sqlmanager.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/manager/sqlmanager.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="204">
-                  <caret line="73" column="28" lean-forward="false" selection-start-line="73" selection-start-column="28" selection-end-line="73" selection-end-column="28" />
-                  <folding>
-                    <marker date="1513881356027" expanded="true" signature="635:668" ph="SELECT * FRO... Entries" />
-                    <marker date="1513881356027" expanded="true" signature="1076:1249" ph="CREATE TABLE... Entries" />
-                    <marker date="1513881356027" expanded="true" signature="1586:1642" ph="INSERT INTO Entries... " />
-                    <marker date="1513881356027" expanded="true" signature="1829:1860" ph="SELECT * FRO... Entries" />
-                    <marker date="1513881356027" expanded="true" signature="2383:2575" ph="UPDATE Entries... " />
-                    <marker date="1513881356027" expanded="true" signature="2787:2808" ph="SELECT * FRO... Entries" />
-                    <marker date="1513881356027" expanded="true" signature="3216:3245" ph="DELETE FROM Entries... " />
-                    <marker date="1513881356027" expanded="true" signature="3462:3481" ph="DELETE FROM Entries... " />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="sqlmanager.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/manager/sqlmanager.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+              <folding>
+                <marker date="1513881356027" expanded="true" signature="635:668" ph="SELECT * FRO... Entries" />
+                <marker date="1513881356027" expanded="true" signature="1076:1249" ph="CREATE TABLE... Entries" />
+                <marker date="1513881356027" expanded="true" signature="1586:1642" ph="INSERT INTO Entries... " />
+                <marker date="1513881356027" expanded="true" signature="1829:1860" ph="SELECT * FRO... Entries" />
+                <marker date="1513881356027" expanded="true" signature="2383:2575" ph="UPDATE Entries... " />
+                <marker date="1513881356027" expanded="true" signature="2787:2808" ph="SELECT * FRO... Entries" />
+                <marker date="1513881356027" expanded="true" signature="3216:3245" ph="DELETE FROM Entries... " />
+                <marker date="1513881356027" expanded="true" signature="3462:3481" ph="DELETE FROM Entries... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="reference.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/reference/reference.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="14" column="25" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="all_handler.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ui_handler/all_handler.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="16" column="21" lean-forward="false" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="all.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ui/all.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1547">
+              <caret line="96" column="0" lean-forward="false" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
+              <folding>
+                <element signature="e#229#271#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test_area/test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1513">
+              <caret line="92" column="19" lean-forward="false" selection-start-line="92" selection-start-column="19" selection-end-line="92" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tray.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test_area/tray.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -227,9 +159,11 @@
       <find>init</find>
       <find>(Form)</find>
       <find>Heigh</find>
+      <find>QtGui.</find>
     </findStrings>
     <replaceStrings>
       <replace>(self)</replace>
+      <replace />
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -247,22 +181,26 @@
         <option value="$USER_HOME$/.PyCharm2017.3/system/python_stubs/-1968956070/_socket.py" />
         <option value="src:table:/1696d3db/45303de4-0e9d-47c7-b932-1cdd4fda1df0/main.Entries" />
         <option value="$PROJECT_DIR$/src/manager/sqlmanager.py" />
-        <option value="$PROJECT_DIR$/src/ui_handler/new_handler.py" />
-        <option value="$PROJECT_DIR$/src/reference/reference.py" />
-        <option value="$PROJECT_DIR$/src/ui_handler/main_handler.py" />
         <option value="$PROJECT_DIR$/src/entry_widget.py" />
         <option value="$PROJECT_DIR$/test/test2.py" />
         <option value="$PROJECT_DIR$/test/test.py" />
         <option value="$PROJECT_DIR$/test/test_widget.py" />
         <option value="$PROJECT_DIR$/test_area/test_widget.py" />
-        <option value="$PROJECT_DIR$/src/ui/new.py" />
         <option value="$PROJECT_DIR$/test_area/test.py" />
         <option value="$PROJECT_DIR$/test_area/test2.py" />
         <option value="$PROJECT_DIR$/src/line.py" />
-        <option value="$PROJECT_DIR$/src/ui/all.py" />
         <option value="$PROJECT_DIR$/src/ui/entry_widget.py" />
         <option value="$PROJECT_DIR$/src/ui_handler/all_handler.py" />
+        <option value="$PROJECT_DIR$/src/helper.py" />
+        <option value="$PROJECT_DIR$/src/helper/schedule_later.py" />
+        <option value="$PROJECT_DIR$/src/helper/threading_helper.py" />
+        <option value="$PROJECT_DIR$/src/ui_handler/new_handler.py" />
         <option value="$PROJECT_DIR$/src/ui/main.py" />
+        <option value="$PROJECT_DIR$/src/ui_handler/main_handler.py" />
+        <option value="$PROJECT_DIR$/src/reference/reference.py" />
+        <option value="$PROJECT_DIR$/src/ui/new.py" />
+        <option value="$PROJECT_DIR$/src/ui/all.py" />
+        <option value="$PROJECT_DIR$/test_area/tray.py" />
       </list>
     </option>
   </component>
@@ -273,8 +211,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-7" />
-    <option name="width" value="924" />
+    <option name="x" value="-4" />
+    <option name="y" value="-4" />
+    <option name="width" value="974" />
     <option name="height" value="1087" />
   </component>
   <component name="ProjectLevelVcsManager">
@@ -296,51 +235,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Taskmanager" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Taskmanager" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Taskmanager" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Taskmanager" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Taskmanager" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Taskmanager" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="db" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Taskmanager" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Taskmanager" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="manager" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Taskmanager" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Taskmanager" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="ui" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Taskmanager" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Taskmanager" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="ui_handler" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Taskmanager" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Taskmanager" type="462c0819:PsiDirectoryNode" />
-              <item name="test_area" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="Scratches" />
       <pane id="Scope">
         <subPane subId="Changed Files">
@@ -384,6 +278,63 @@
           <select />
         </subPane>
       </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Taskmanager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Taskmanager" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Taskmanager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Taskmanager" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Taskmanager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Taskmanager" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="db" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Taskmanager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Taskmanager" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="helper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Taskmanager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Taskmanager" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="manager" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Taskmanager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Taskmanager" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="reference" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Taskmanager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Taskmanager" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Taskmanager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Taskmanager" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="ui_handler" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Taskmanager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Taskmanager" type="462c0819:PsiDirectoryNode" />
+              <item name="test_area" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -418,7 +369,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python.tray">
     <configuration name="all" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -452,25 +403,6 @@
       <module name="Taskmanager" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/ui/entry_widget.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="line" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Taskmanager" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/line.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -514,7 +446,26 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="test2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="threading_helper" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/helper" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Taskmanager" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/helper/threading_helper.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="tray" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -527,7 +478,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Taskmanager" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_area/test2.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_area/tray.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -537,17 +488,17 @@
       <item index="0" class="java.lang.String" itemvalue="Python.sqlmanager" />
       <item index="1" class="java.lang.String" itemvalue="Python.main" />
       <item index="2" class="java.lang.String" itemvalue="Python.all" />
-      <item index="3" class="java.lang.String" itemvalue="Python.test2" />
-      <item index="4" class="java.lang.String" itemvalue="Python.line" />
-      <item index="5" class="java.lang.String" itemvalue="Python.entry_widget" />
+      <item index="3" class="java.lang.String" itemvalue="Python.entry_widget" />
+      <item index="4" class="java.lang.String" itemvalue="Python.threading_helper" />
+      <item index="5" class="java.lang.String" itemvalue="Python.tray" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.main" />
-        <item index="1" class="java.lang.String" itemvalue="Python.all" />
-        <item index="2" class="java.lang.String" itemvalue="Python.entry_widget" />
-        <item index="3" class="java.lang.String" itemvalue="Python.line" />
-        <item index="4" class="java.lang.String" itemvalue="Python.test2" />
+        <item index="0" class="java.lang.String" itemvalue="Python.tray" />
+        <item index="1" class="java.lang.String" itemvalue="Python.main" />
+        <item index="2" class="java.lang.String" itemvalue="Python.threading_helper" />
+        <item index="3" class="java.lang.String" itemvalue="Python.all" />
+        <item index="4" class="java.lang.String" itemvalue="Python.entry_widget" />
       </list>
     </recent_temporary>
   </component>
@@ -577,18 +528,18 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
+    <frame x="-4" y="-4" width="1928" height="1088" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="WINDOWED" visible="false" show_stripe_button="true" weight="0.3298647" sideWeight="0.49573562" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919955" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25078043" sideWeight="0.5021322" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25078043" sideWeight="0.5026652" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32778355" sideWeight="0.5031679" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298647" sideWeight="0.4978678" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.117803834" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49124727" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33742005" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32882413" sideWeight="0.4978678" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -600,6 +551,7 @@
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960325" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32878152" sideWeight="0.4968321" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -640,20 +592,17 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="6" />
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/ui_handler/new_handler.py</url>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="9" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="das://table:/1696d3db/02e4d316-d5e9-4f39-ad3d-14fae46cc7cd/main.sqlite_master" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/02e4d316-d5e9-4f39-ad3d-14fae46cc7cd/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/manager/ftpmanager.py" />
     <entry file="file://$PROJECT_DIR$/src/reference/__init__.py" />
     <entry file="file://$PROJECT_DIR$/src/notes/entry_data" />
     <entry file="file://$PROJECT_DIR$/src/ui-handler/new.py" />
@@ -817,40 +766,9 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/all.py" />
-    <entry file="file://$PROJECT_DIR$/src/ui_handler/new_handler.py" />
-    <entry file="file://$PROJECT_DIR$/src/reference/reference.py" />
-    <entry file="file://$PROJECT_DIR$/test/test_button.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="36" lean-forward="true" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_widget.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="21" lean-forward="true" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="72" column="30" lean-forward="false" selection-start-line="72" selection-start-column="30" selection-end-line="72" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ui/new.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="115" column="13" lean-forward="false" selection-start-line="115" selection-start-column="13" selection-end-line="115" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_button.py" />
+    <entry file="file://$PROJECT_DIR$/test/test_widget.py" />
+    <entry file="file://$PROJECT_DIR$/test/test.py" />
     <entry file="das://table:/1696d3db/45303de4-0e9d-47c7-b932-1cdd4fda1df0/main.Entries">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -858,10 +776,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test_area/test2.py" />
+    <entry file="file://$PROJECT_DIR$/src/line.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="26" column="43" lean-forward="true" selection-start-line="26" selection-start-column="43" selection-end-line="26" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_area/test_widget.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="8" column="8" lean-forward="false" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/manager/sqlmanager.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="119">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding>
             <marker date="1513881356027" expanded="true" signature="635:668" ph="SELECT * FRO... Entries" />
             <marker date="1513881356027" expanded="true" signature="1076:1249" ph="CREATE TABLE... Entries" />
@@ -875,86 +808,92 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_area/test2.py">
+    <entry file="file://$PROJECT_DIR$/src/helper.py" />
+    <entry file="file://$PROJECT_DIR$/src/ui_handler/new_handler.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="34" lean-forward="false" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
+        <state relative-caret-position="357">
+          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_area/test.py">
+    <entry file="file://$PROJECT_DIR$/src/ui/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="92" column="19" lean-forward="false" selection-start-line="92" selection-start-column="19" selection-end-line="92" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/line.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="26" column="43" lean-forward="true" selection-start-line="26" selection-start-column="43" selection-end-line="26" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_area/test_widget.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="8" lean-forward="true" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ui_handler/main_handler.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="14" lean-forward="true" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ui/all.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="72" column="47" lean-forward="false" selection-start-line="72" selection-start-column="47" selection-end-line="72" selection-end-column="47" />
-          <folding>
-            <element signature="e#229#271#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ui/entry_widget.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="15" column="40" lean-forward="false" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
-          <folding>
-            <element signature="e#213#255#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="224">
+          <caret line="59" column="50" lean-forward="false" selection-start-line="59" selection-start-column="50" selection-end-line="59" selection-end-column="50" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ui_handler/all_handler.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="50" column="46" lean-forward="false" selection-start-line="50" selection-start-column="46" selection-end-line="50" selection-end-column="46" />
+        <state relative-caret-position="238">
+          <caret line="16" column="21" lean-forward="false" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ui/main.py">
+    <entry file="file://$PROJECT_DIR$/src/ui_handler/main_handler.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="38" column="7" lean-forward="false" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="7" />
+        <state relative-caret-position="306">
+          <caret line="18" column="42" lean-forward="false" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reference/reference.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="14" column="25" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui/all.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1547">
+          <caret line="96" column="0" lean-forward="false" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
           <folding>
-            <element signature="e#230#272#0" expanded="true" />
+            <element signature="e#229#271#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_area/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1513">
+          <caret line="92" column="19" lean-forward="false" selection-start-line="92" selection-start-column="19" selection-end-line="92" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui/new.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="90" column="6" lean-forward="true" selection-start-line="90" selection-start-column="6" selection-end-line="90" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui/entry_widget.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-204">
+          <caret line="24" column="45" lean-forward="true" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/helper/threading_helper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_area/tray.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
           </folding>
         </state>
       </provider>

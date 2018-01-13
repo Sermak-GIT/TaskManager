@@ -8,15 +8,18 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 import PyQt5
+from src.reference.reference import *
 from PyQt5.QtCore import Qt
-from PyQt5.QtWidgets import QWidget
+from PyQt5.QtGui import QKeySequence
+from PyQt5.QtWidgets import QWidget, QShortcut
 
-from src.ui_handler.new_handler import save
+from src.ui_handler.new_handler import save, init_handler
 
 
 class Ui_New(QWidget):
     def __init__(self):
         QWidget.__init__(self)
+        init_handler(self)
         self.resize(1100, 817)
         self.gridLayout_2 = QtWidgets.QGridLayout(self)
         self.gridLayout_2.setObjectName("gridLayout_2")
@@ -81,6 +84,19 @@ class Ui_New(QWidget):
         self.timeEdit = QtWidgets.QTimeEdit(self)
         self.timeEdit.setObjectName("timeEdit")
         self.gridLayout_2.addWidget(self.timeEdit, 5, 0, 1, 1)
+
+        self.save_shortcut = QShortcut(QKeySequence(save_shortcut_keys), self)
+        self.save_shortcut.activated.connect(self.save_entry)
+
+        self.switch_right_shortcut = QShortcut(QKeySequence(switch_right_shortcut_keys), self)
+        from src.ui_handler.main_handler import change_ui_right, change_ui_left
+        self.switch_right_shortcut.activated.connect(change_ui_right)
+        self.switch_right_shortcut2 = QShortcut(QKeySequence(switch_right_shortcut_keys2), self)
+        self.switch_right_shortcut2.activated.connect(change_ui_right)
+        self.switch_left_shortcut = QShortcut(QKeySequence(switch_left_shortcut_keys), self)
+        self.switch_left_shortcut.activated.connect(change_ui_left)
+        self.switch_left_shortcut2 = QShortcut(QKeySequence(switch_left_shortcut_keys2), self)
+        self.switch_left_shortcut2.activated.connect(change_ui_left)
 
         self.retranslateUi(self)
 

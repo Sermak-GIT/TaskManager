@@ -9,14 +9,16 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtCore import Qt, pyqtSlot
 from PyQt5.QtGui import QKeySequence
-from PyQt5.QtWidgets import QShortcut, QWidget
+from PyQt5.QtWidgets import QShortcut, QWidget, QLabel
 
 from src.ui.all import Ui_All
 from src.ui.new import Ui_New
+from src.ui_handler.main_handler import init_handler
 
 
 class Ui_TaskManagerMainWindow(QWidget):
     def setupUi(self, TaskManagerMainWindow):
+        init_handler(self)
         TaskManagerMainWindow.setObjectName("TaskManagerMainWindow")
         TaskManagerMainWindow.resize(982, 473)
         self.centralwidget = QtWidgets.QWidget(TaskManagerMainWindow)
@@ -44,10 +46,18 @@ class Ui_TaskManagerMainWindow(QWidget):
         self.menubar = QtWidgets.QMenuBar(TaskManagerMainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 982, 21))
         self.menubar.setObjectName("menubar")
+
+        self.menubar.addMenu("Menu")
+        self.menubar.addSeparator()
+
+
         TaskManagerMainWindow.setMenuBar(self.menubar)
         self.statusBar = QtWidgets.QStatusBar(TaskManagerMainWindow)
         self.statusBar.setObjectName("statusBar")
         TaskManagerMainWindow.setStatusBar(self.statusBar)
+
+        self.statusLabel = QLabel()
+        self.statusBar.addWidget(self.statusLabel)
 
         self.retranslateUi(TaskManagerMainWindow)
         self.stackedWidget.setCurrentIndex(0)
@@ -56,17 +66,6 @@ class Ui_TaskManagerMainWindow(QWidget):
     def retranslateUi(self, TaskManagerMainWindow):
         _translate = QtCore.QCoreApplication.translate
         TaskManagerMainWindow.setWindowTitle(_translate("TaskManagerMainWindow", "TaskManager"))
-
-    def change_ui(self):
-        i = (self.stackedWidget.currentIndex() + 1) % (self.stackedWidget.count())
-        self.stackedWidget.setCurrentIndex(i)
-
-    def eventFilter(self, event):
-        if event.type() == QtCore.QEvent.KeyPress:
-            # do some stuff ...
-            return True  # means stop event propagation
-        else:
-            return QtGui.QDialog.eventFilter(self, event)
 
 
 if __name__ == "__main__":
