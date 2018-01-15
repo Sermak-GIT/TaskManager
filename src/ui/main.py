@@ -9,7 +9,7 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtCore import Qt, pyqtSlot
 from PyQt5.QtGui import QKeySequence
-from PyQt5.QtWidgets import QShortcut, QWidget, QLabel
+from PyQt5.QtWidgets import QShortcut, QWidget, QLabel, QSizePolicy
 
 from src.ui.all import Ui_All
 from src.ui.new import Ui_New
@@ -55,6 +55,10 @@ class Ui_TaskManagerMainWindow(QWidget):
         self.statusBar = QtWidgets.QStatusBar(TaskManagerMainWindow)
         self.statusBar.setObjectName("statusBar")
         TaskManagerMainWindow.setStatusBar(self.statusBar)
+
+        from src.ui.help import Ui_Help
+        self.helpWidget = Ui_Help()
+        self.statusBar.addWidget(self.helpWidget)
 
         self.statusLabel = QLabel()
         self.statusBar.addWidget(self.statusLabel)

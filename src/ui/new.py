@@ -14,6 +14,7 @@ from PyQt5.QtGui import QKeySequence
 from PyQt5.QtWidgets import QWidget, QShortcut
 
 from src.ui_handler.new_handler import save, init_handler
+from src.ui_handler.shortcuts import init_shortcuts
 
 
 class Ui_New(QWidget):
@@ -88,15 +89,7 @@ class Ui_New(QWidget):
         self.save_shortcut = QShortcut(QKeySequence(save_shortcut_keys), self)
         self.save_shortcut.activated.connect(self.save_entry)
 
-        self.switch_right_shortcut = QShortcut(QKeySequence(switch_right_shortcut_keys), self)
-        from src.ui_handler.main_handler import change_ui_right, change_ui_left
-        self.switch_right_shortcut.activated.connect(change_ui_right)
-        self.switch_right_shortcut2 = QShortcut(QKeySequence(switch_right_shortcut_keys2), self)
-        self.switch_right_shortcut2.activated.connect(change_ui_right)
-        self.switch_left_shortcut = QShortcut(QKeySequence(switch_left_shortcut_keys), self)
-        self.switch_left_shortcut.activated.connect(change_ui_left)
-        self.switch_left_shortcut2 = QShortcut(QKeySequence(switch_left_shortcut_keys2), self)
-        self.switch_left_shortcut2.activated.connect(change_ui_left)
+        init_shortcuts(self)
 
         self.retranslateUi(self)
 

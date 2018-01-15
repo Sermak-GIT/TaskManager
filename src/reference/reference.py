@@ -14,5 +14,16 @@ switch_right_shortcut_keys = "Ctrl+Right"
 switch_right_shortcut_keys2 = "Alt+Right"
 switch_left_shortcut_keys = "Ctrl+Left"
 switch_left_shortcut_keys2 = "Alt+Left"
+help_shortcut_keys = "Alt+h"
+help_screen_max_columns = 6
 
-save_shortcut_keys = "Ctrl+S"
+save_shortcut_keys = "Ctrl+S" # TODO: Replace
+
+master_level_shortcuts = ("M-h Help", # TODO: Do as below
+                          "C-▶ Switch Right",
+                          "M-▶ Switch Right",
+                          "M-◀ Switch Left",
+                          "C-◀ Switch Left")
+
+top_level_shortcuts = (("(m)aster shortcuts", 'm'),
+                       ("(n)ew note", 'n'))

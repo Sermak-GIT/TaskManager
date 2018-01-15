@@ -12,6 +12,7 @@ from PyQt5.QtWidgets import QFormLayout, QWidget, QScrollArea, QShortcut
 from src.reference.reference import *
 
 from src.ui_handler.all_handler import init_handler, search
+from src.ui_handler.shortcuts import init_shortcuts
 
 
 class Ui_All(QWidget):
@@ -85,15 +86,7 @@ class Ui_All(QWidget):
 
         self.verticalLayout.addWidget(self.scrollArea)
 
-        self.switch_right_shortcut = QShortcut(QKeySequence(switch_right_shortcut_keys), self)
-        from src.ui_handler.main_handler import change_ui_right, change_ui_left
-        self.switch_right_shortcut.activated.connect(change_ui_right)
-        self.switch_right_shortcut2 = QShortcut(QKeySequence(switch_right_shortcut_keys2), self)
-        self.switch_right_shortcut2.activated.connect(change_ui_right)
-        self.switch_left_shortcut = QShortcut(QKeySequence(switch_left_shortcut_keys), self)
-        self.switch_left_shortcut.activated.connect(change_ui_left)
-        self.switch_left_shortcut2 = QShortcut(QKeySequence(switch_left_shortcut_keys2), self)
-        self.switch_left_shortcut2.activated.connect(change_ui_left)
+        init_shortcuts(self)
 
         self.retranslateUi(self)
         from src.ui_handler.all_handler import init_from_db
