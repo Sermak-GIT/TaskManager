@@ -94,11 +94,6 @@ class Ui_New(QWidget):
 
         self.init_buttons()
 
-    def save_entry(self):
-        next_action = self.nextAction.text()
-        notes = self.textEdit.toPlainText()
-        save(next_action, notes)
-
     def retranslateUi(self, New):
         _translate = QtCore.QCoreApplication.translate
         New.setWindowTitle(_translate("New", "New"))
@@ -114,13 +109,13 @@ class Ui_New(QWidget):
         self.pushButton.setText(_translate("New", "Save"))
 
     def init_buttons(self):
-        self.pushButton.clicked.connect(self.save_entry)
+        self.pushButton.clicked.connect(save)
 
 
 if __name__ == "__main__":
     import sys
+
     app = QtWidgets.QApplication(sys.argv)
     ui = Ui_New()
     ui.show()
     sys.exit(app.exec_())
-

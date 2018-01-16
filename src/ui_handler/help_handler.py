@@ -1,7 +1,8 @@
 import gc
 from PyQt5 import QtWidgets
 
-from src.reference.reference import help_screen_max_columns, top_level_shortcuts, master_level_shortcuts, master_ui
+from src.reference.reference import help_screen_max_columns, top_level_shortcuts, master_level_shortcuts, master_ui, \
+    new_note_level_shortcuts
 from src.ui_handler.shortcuts import init_help_screen_shortcuts
 
 row = 0
@@ -50,16 +51,32 @@ def show_master_shortcuts():
     ui.setFocus()
     if mode == "master":
         return
-    mode = "master"
-    add_entries(master_level_shortcuts)
+    elif mode == "new_note":
+        add_entries(new_note_level_shortcuts)
+    else:
+        mode = "master"
+        add_entries(master_level_shortcuts)
     master_ui.helpWidget.show()
 
 
-def show_top_shortcuts():
+def show_top_shortcuts(force=False):
     global mode
     ui.setFocus()
     if mode == "top":
         return
-    mode = "top"
-    add_entries(top_level_shortcuts)
+    elif mode == "new_note" and not force:
+        add_entries(new_note_level_shortcuts)
+    else:
+        mode = "top"
+        add_entries(top_level_shortcuts)
     master_ui.helpWidget.show()
+
+
+def show_new_note_shortcuts():
+    global mode
+    if mode == "new_note":
+        return
+    mode = "new_note"
+    add_entries(new_note_level_shortcuts)
+    master_ui.helpWidget.show()
+

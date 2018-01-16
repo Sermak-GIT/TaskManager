@@ -38,5 +38,13 @@ def init_help_screen_shortcuts(ui):
     ui.new_note_shortcut.activated.connect(switch_to_new_note)
 
 
+def init_new_note_shortcuts(ui):
+    # Save
+    from src.reference.reference import new_note_level_shortcuts
+    ui.save_shortcut = QShortcut(QKeySequence(new_note_level_shortcuts[0][1]), ui)
+    from src.ui_handler.new_handler import save
+    ui.save_shortcut.activated.connect(save)
+
+
 """self.save_shortcut = QShortcut(QKeySequence(save_shortcut_keys), self)
         self.save_shortcut.activated.connect(self.save_entry)"""
