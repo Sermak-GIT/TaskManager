@@ -5,12 +5,14 @@
 # Created by: PyQt5 UI code generator 5.6
 #
 # WARNING! All changes made in this file will be lost!
+import logging
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtCore import Qt, pyqtSlot
 from PyQt5.QtGui import QKeySequence
 from PyQt5.QtWidgets import QShortcut, QWidget, QLabel, QSizePolicy
 
+from src.reference.reference import master_ui, init_master_ui
 from src.ui.all import Ui_All
 from src.ui.new import Ui_New
 from src.ui_handler.main_handler import init_handler
@@ -18,6 +20,7 @@ from src.ui_handler.main_handler import init_handler
 
 class Ui_TaskManagerMainWindow(QWidget):
     def setupUi(self, TaskManagerMainWindow):
+        init_master_ui(self)
         init_handler(self)
         TaskManagerMainWindow.setObjectName("TaskManagerMainWindow")
         TaskManagerMainWindow.resize(982, 473)

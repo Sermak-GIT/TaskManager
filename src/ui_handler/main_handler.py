@@ -6,8 +6,14 @@ def init_handler(ui_instance):
     ui = ui_instance
 
 
-def set_status_text(text=""):
+def set_status_text(text):
     ui.statusLabel.setText(text)
+    ui.helpWidget.hide()
+
+
+def reset_status_text():
+    ui.statusLabel.setText("")
+    ui.helpWidget.show()
 
 
 def change_ui_right():

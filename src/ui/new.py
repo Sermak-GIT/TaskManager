@@ -86,9 +86,6 @@ class Ui_New(QWidget):
         self.timeEdit.setObjectName("timeEdit")
         self.gridLayout_2.addWidget(self.timeEdit, 5, 0, 1, 1)
 
-        self.save_shortcut = QShortcut(QKeySequence(save_shortcut_keys), self)
-        self.save_shortcut.activated.connect(self.save_entry)
-
         init_shortcuts(self)
 
         self.retranslateUi(self)

@@ -1,6 +1,6 @@
 from PyQt5 import QtWidgets
 
-from src.reference.reference import help_screen_max_columns, top_level_shortcuts, master_level_shortcuts
+from src.reference.reference import help_screen_max_columns, top_level_shortcuts, master_level_shortcuts, master_ui
 from src.ui_handler.shortcuts import init_help_screen_shortcuts
 
 row = 0
@@ -29,6 +29,8 @@ def reset_layout():
     for i in reversed(range(ui.gridLayout.count())):
         ui.gridLayout.itemAt(i).widget().deleteLater()
     import gc
+    row = 0
+    column = 0
     gc.collect()
 
 
@@ -48,6 +50,7 @@ def show_master_shortcuts():
         return
     mode = "master"
     add_entries(master_level_shortcuts)
+    master_ui.helpWidget.show()
 
 
 def show_top_shortcuts():
@@ -56,3 +59,4 @@ def show_top_shortcuts():
         return
     mode = "top"
     add_entries(top_level_shortcuts)
+    master_ui.helpWidget.show()

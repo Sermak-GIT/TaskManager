@@ -17,9 +17,7 @@ switch_left_shortcut_keys2 = "Alt+Left"
 help_shortcut_keys = "Alt+h"
 help_screen_max_columns = 6
 
-save_shortcut_keys = "Ctrl+S" # TODO: Replace
-
-master_level_shortcuts = ("M-h Help", # TODO: Do as below
+master_level_shortcuts = ("M-h Help",  # TODO: Do as below
                           "C-▶ Switch Right",
                           "M-▶ Switch Right",
                           "M-◀ Switch Left",
@@ -27,3 +25,14 @@ master_level_shortcuts = ("M-h Help", # TODO: Do as below
 
 top_level_shortcuts = (("(m)aster shortcuts", 'm'),
                        ("(n)ew note", 'n'))
+
+new_note_level_shortcuts = (("(s)ave", 's'),
+                            )
+
+# master level vars
+master_ui = None
+
+
+def init_master_ui(ui):
+    global master_ui
+    master_ui = ui
