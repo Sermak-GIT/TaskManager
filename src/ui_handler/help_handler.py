@@ -1,3 +1,4 @@
+import gc
 from PyQt5 import QtWidgets
 
 from src.reference.reference import help_screen_max_columns, top_level_shortcuts, master_level_shortcuts, master_ui
@@ -26,9 +27,9 @@ def add_entry(entry):
 
 
 def reset_layout():
+    global column, row
     for i in reversed(range(ui.gridLayout.count())):
         ui.gridLayout.itemAt(i).widget().deleteLater()
-    import gc
     row = 0
     column = 0
     gc.collect()
