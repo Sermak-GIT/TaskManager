@@ -3,6 +3,7 @@ from PyQt5.QtWidgets import QShortcut
 
 
 def init_shortcuts(ui):
+    # Switch right and left
     from src.reference.reference import switch_right_shortcut_keys
     ui.switch_right_shortcut = QShortcut(QKeySequence(switch_right_shortcut_keys), ui)
     from src.ui_handler.main_handler import change_ui_right, change_ui_left
@@ -16,6 +17,8 @@ def init_shortcuts(ui):
     from src.reference.reference import switch_left_shortcut_keys2
     ui.switch_left_shortcut2 = QShortcut(QKeySequence(switch_left_shortcut_keys2), ui)
     ui.switch_left_shortcut2.activated.connect(change_ui_left)
+
+    # top shortcuts
     from src.reference.reference import help_shortcut_keys
     ui.show_top_shortcut = QShortcut(QKeySequence(help_shortcut_keys), ui)
     from src.ui_handler.help_handler import show_top_shortcuts

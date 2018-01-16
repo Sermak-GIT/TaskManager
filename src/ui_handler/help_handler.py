@@ -47,6 +47,7 @@ def add_entries(shortcuts):
 
 def show_master_shortcuts():
     global mode
+    ui.setFocus()
     if mode == "master":
         return
     mode = "master"
@@ -56,6 +57,7 @@ def show_master_shortcuts():
 
 def show_top_shortcuts():
     global mode
+    ui.setFocus()
     if mode == "top":
         return
     mode = "top"
