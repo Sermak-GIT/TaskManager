@@ -7,6 +7,7 @@
 # WARNING! All changes made in this file will be lost!
 import logging
 
+import qdarkstyle as qdarkstyle
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtCore import Qt, pyqtSlot
 from PyQt5.QtGui import QKeySequence
@@ -23,7 +24,7 @@ class Ui_TaskManagerMainWindow(QWidget):
         init_master_ui(self)
         init_handler(self)
         TaskManagerMainWindow.setObjectName("TaskManagerMainWindow")
-        TaskManagerMainWindow.resize(982, 473)
+        TaskManagerMainWindow.resize(960, 540)
         self.centralwidget = QtWidgets.QWidget(TaskManagerMainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.gridLayout = QtWidgets.QGridLayout(self.centralwidget)
@@ -52,6 +53,7 @@ class Ui_TaskManagerMainWindow(QWidget):
 
         self.menubar.addMenu("Menu")
         self.menubar.addSeparator()
+        self.menubar.hide()
 
 
         TaskManagerMainWindow.setMenuBar(self.menubar)
@@ -79,6 +81,7 @@ if __name__ == "__main__":
     import sys
 
     app = QtWidgets.QApplication(sys.argv)
+    app.setStyleSheet(qdarkstyle.load_stylesheet_pyqt5())
     TaskManagerMainWindow = QtWidgets.QMainWindow()
     ui = Ui_TaskManagerMainWindow()
     ui.setupUi(TaskManagerMainWindow)
