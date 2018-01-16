@@ -24,3 +24,8 @@ def change_ui_right():
 def change_ui_left():
     i = (ui.stackedWidget.currentIndex() - 1) % (ui.stackedWidget.count())
     ui.stackedWidget.setCurrentIndex(i)
+
+
+def switch_to_new_note():
+    ui.stackedWidget.setCurrentWidget(ui.new_page)
+    ui.new_page.nextAction.setFocus()

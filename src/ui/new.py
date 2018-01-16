@@ -86,6 +86,8 @@ class Ui_New(QWidget):
         self.timeEdit.setObjectName("timeEdit")
         self.gridLayout_2.addWidget(self.timeEdit, 5, 0, 1, 1)
 
+        self.setTabOrder(self.nextAction, self.textEdit)
+
         init_shortcuts(self)
 
         self.retranslateUi(self)

@@ -39,10 +39,10 @@ class Ui_TaskManagerMainWindow(QWidget):
         self.stackedWidget.setAutoFillBackground(False)
         self.stackedWidget.setObjectName("stackedWidget")
 
-        self.page = Ui_New()
+        self.new_page = Ui_New()
         self.page_2 = Ui_All()
 
-        self.stackedWidget.addWidget(self.page)
+        self.stackedWidget.addWidget(self.new_page)
         self.stackedWidget.addWidget(self.page_2)
 
         self.gridLayout.addWidget(self.stackedWidget, 0, 0, 1, 1)

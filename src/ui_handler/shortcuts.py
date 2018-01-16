@@ -25,12 +25,17 @@ def init_shortcuts(ui):
     ui.show_top_shortcut.activated.connect(show_top_shortcuts)
 
 
-
 def init_help_screen_shortcuts(ui):
+    # Show master Shortcuts
     from src.reference.reference import top_level_shortcuts
     ui.show_master_shortcut = QShortcut(QKeySequence(top_level_shortcuts[0][1]), ui)
     from src.ui_handler.help_handler import show_master_shortcuts
     ui.show_master_shortcut.activated.connect(show_master_shortcuts)
+
+    # New note
+    ui.new_note_shortcut = QShortcut(QKeySequence(top_level_shortcuts[1][1]), ui)
+    from src.ui_handler.main_handler import switch_to_new_note
+    ui.new_note_shortcut.activated.connect(switch_to_new_note)
 
 
 """self.save_shortcut = QShortcut(QKeySequence(save_shortcut_keys), self)
