@@ -10,29 +10,39 @@ logging.basicConfig(level=logging.INFO, format=' %(asctime)s - %(levelname)s- %(
 
 db_path = os.path.abspath("")[:-2] + "db\\taskmanager.db"
 
-switch_right_shortcut_keys = "Ctrl+Right"
-switch_right_shortcut_keys2 = "Alt+Right"
-switch_left_shortcut_keys = "Ctrl+Left"
-switch_left_shortcut_keys2 = "Alt+Left"
-help_shortcut_keys = "Alt+h"
 help_screen_max_columns = 6
 
-master_level_shortcuts = ("M-h Help",  # TODO: Do as below
-                          "C-▶ Switch Right",
-                          "M-▶ Switch Right",
-                          "M-◀ Switch Left",
-                          "C-◀ Switch Left")
+# Shortcuts
+master_level_shortcuts = (("M-h Help", "Alt+h"),
+                          ("C-▶ Switch Right", "Ctrl+Right"),
+                          ("M-▶ Switch Right", "Alt+Right"),
+                          ("M-◀ Switch Left", "Alt+Left"),
+                          ("C-◀ Switch Left", "Ctrl+Left"))
 
 top_level_shortcuts = (("(m)aster shortcuts", 'm'),
                        ("(n)ew note", 'n'))
 
 new_note_level_shortcuts = (("(s)ave", 's'),
-                            )
+                            ("(a)ction", 'a'),
+                            ("(n)otes", 'n'),
+                            ("(r)eset", 'n'),
+                            ("(b)ack", 'b'))
 
 # master level vars
 master_ui = None
+shortcut_mode = None
 
 
 def init_master_ui(ui):
     global master_ui
     master_ui = ui
+
+
+def set_shortcut_mode(mode):
+    global shortcut_mode
+    shortcut_mode = mode
+
+
+def get_shortcut_mode():
+    global shortcut_mode
+    return shortcut_mode

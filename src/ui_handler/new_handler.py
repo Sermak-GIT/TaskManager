@@ -1,6 +1,6 @@
 from src.helper.threading_helper import schedule_later
 from src.manager.sqlmanager import *
-from src.reference.reference import entry
+from src.reference.reference import entry, get_shortcut_mode
 import logging
 
 from src.ui_handler.main_handler import reset_status_text, set_status_text
@@ -19,9 +19,16 @@ def clear_ui():
 
 
 def save():
+    print(1)
+    mode = get_shortcut_mode()
+    if mode != "new_note":
+        return
     global ui
     next_action = ui.nextAction.text()
     notes = ui.textEdit.toPlainText()
+    if next_action.strip() == "":
+        set_status_text("Please enter a next action")
+        return
     logging.debug("Saved: " + next_action + ", " + notes)
     init()
     add_entry(entry(issue_new_id(), next_action, notes, None, None, None, None, None, None, None))
