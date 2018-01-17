@@ -19,7 +19,6 @@ def clear_ui():
 
 
 def save():
-    print(1)
     mode = get_shortcut_mode()
     if mode != "new_note":
         return

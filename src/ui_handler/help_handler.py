@@ -44,10 +44,8 @@ def add_entries(shortcuts):
 def show_master_shortcuts():
     mode = get_shortcut_mode()
     ui.setFocus()
-    if mode == "master":
+    if mode != "top":
         return
-    elif mode == "new_note":
-        add_entries(new_note_level_shortcuts)
     else:
         set_shortcut_mode("master")
         add_entries(master_level_shortcuts)
