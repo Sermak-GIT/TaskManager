@@ -73,3 +73,6 @@ def show_new_note_shortcuts():
     add_entries(new_note_level_shortcuts)
     master_ui.helpWidget.show()
 
+
+def force_show_top_shortcuts():
+    show_top_shortcuts(True)

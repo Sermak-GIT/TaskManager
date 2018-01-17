@@ -31,9 +31,8 @@ def init_help_screen_shortcuts(ui):
     ui.show_master_shortcut.activated.connect(show_master_shortcuts)
 
     # New note
-    ui.new_note_shortcut = QShortcut(QKeySequence(top_level_shortcuts[1][1]), ui)
-    from src.ui_handler.main_handler import switch_to_new_note
-    ui.new_note_shortcut.activated.connect(switch_to_new_note)
+    ui.n_shortcut = QShortcut(QKeySequence(top_level_shortcuts[1][1]), ui)
+    ui.n_shortcut.activated.connect(n_shortcuts)
 
 
 def init_new_note_shortcuts(ui):
@@ -42,3 +41,29 @@ def init_new_note_shortcuts(ui):
     ui.save_shortcut = QShortcut(QKeySequence(new_note_level_shortcuts[0][1]), ui)
     from src.ui_handler.new_handler import save
     ui.save_shortcut.activated.connect(save)
+
+    ui.focus_action_shortcut = QShortcut(QKeySequence(new_note_level_shortcuts[1][1]), ui)
+    from src.ui_handler.new_handler import focus_next_action
+    ui.focus_action_shortcut.activated.connect(focus_next_action)
+
+    ui.reset_notes_shortcut = QShortcut(QKeySequence(new_note_level_shortcuts[3][1]), ui)
+    from src.ui_handler.new_handler import reset
+    ui.reset_notes_shortcut.activated.connect(reset)
+
+    ui.notes_back_shortcut = QShortcut(QKeySequence(new_note_level_shortcuts[4][1]), ui)
+    from src.ui_handler.help_handler import force_show_top_shortcuts
+    ui.notes_back_shortcut.activated.connect(force_show_top_shortcuts)
+
+
+def n_shortcuts():
+    from src.reference.reference import get_shortcut_mode
+    from src.ui_handler.main_handler import switch_to_new_note
+    mode = get_shortcut_mode()
+    print(mode)
+    if mode == "new_note":
+        from src.ui_handler.new_handler import focus_notes
+        focus_notes()
+    elif mode == "top":
+        switch_to_new_note()
+    else:
+        return

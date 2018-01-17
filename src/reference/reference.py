@@ -25,7 +25,7 @@ top_level_shortcuts = (("(m)aster shortcuts", 'm'),
 new_note_level_shortcuts = (("(s)ave", 's'),
                             ("(a)ction", 'a'),
                             ("(n)otes", 'n'),
-                            ("(r)eset", 'n'),
+                            ("(r)eset", 'r'),
                             ("(b)ack", 'b'))
 
 # master level vars

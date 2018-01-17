@@ -29,8 +29,9 @@ def change_ui_left():
 def switch_to_new_note():
     from src.reference.reference import get_shortcut_mode
     mode = get_shortcut_mode()
+    print(mode)
     if mode != "top":
-        return 
+        return
     ui.stackedWidget.setCurrentWidget(ui.new_page)
     ui.new_page.nextAction.setFocus()
     from src.ui_handler.help_handler import show_new_note_shortcuts

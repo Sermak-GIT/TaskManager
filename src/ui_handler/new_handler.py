@@ -36,3 +36,26 @@ def save():
     clear_ui()
     from src.ui_handler.help_handler import show_top_shortcuts
     show_top_shortcuts(force=True)
+
+
+def focus_next_action():
+    mode = get_shortcut_mode()
+    if mode != "new_note":
+        return
+    ui.nextAction.setFocus()
+
+
+def focus_notes():
+    mode = get_shortcut_mode()
+    if mode != "new_note":
+        return
+    ui.textEdit.setFocus()
+
+
+def reset():
+    mode = get_shortcut_mode()
+    if mode != "new_note":
+        return
+    ui.nextAction.setText("")
+    ui.textEdit.setText("")
+    focus_next_action()
