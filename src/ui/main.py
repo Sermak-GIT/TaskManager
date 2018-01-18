@@ -40,10 +40,10 @@ class Ui_TaskManagerMainWindow(QWidget):
         self.stackedWidget.setObjectName("stackedWidget")
 
         self.new_page = Ui_New()
-        self.page_2 = Ui_All()
+        self.all_page = Ui_All()
 
         self.stackedWidget.addWidget(self.new_page)
-        self.stackedWidget.addWidget(self.page_2)
+        self.stackedWidget.addWidget(self.all_page)
 
         self.gridLayout.addWidget(self.stackedWidget, 0, 0, 1, 1)
         TaskManagerMainWindow.setCentralWidget(self.centralwidget)
@@ -67,9 +67,10 @@ class Ui_TaskManagerMainWindow(QWidget):
 
         self.statusLabel = QLabel()
         self.statusBar.addWidget(self.statusLabel)
-
         self.retranslateUi(TaskManagerMainWindow)
-        self.stackedWidget.setCurrentIndex(0)
+
+        self.stackedWidget.setCurrentWidget(self.all_page)
+
         QtCore.QMetaObject.connectSlotsByName(TaskManagerMainWindow)
 
     def retranslateUi(self, TaskManagerMainWindow):

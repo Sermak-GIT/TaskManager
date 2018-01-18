@@ -1,9 +1,9 @@
 from src.helper.threading_helper import schedule_later
 from src.manager.sqlmanager import *
-from src.reference.reference import entry, get_shortcut_mode
+from src.reference.reference import entry, get_shortcut_mode, master_ui
 import logging
 
-from src.ui_handler.main_handler import reset_status_text, set_status_text
+from src.ui_handler.main_handler import reset_status_text, set_status_text, select_pane
 
 
 def init_handler(ui_instance):
@@ -36,7 +36,7 @@ def save():
     clear_ui()
     from src.ui_handler.help_handler import show_top_shortcuts
     show_top_shortcuts(force=True)
-
+    select_pane("all")
 
 def focus_next_action():
     mode = get_shortcut_mode()
