@@ -53,12 +53,31 @@ def color_alternate():
     #     print(i)
 
 
+def handle_settings(text):
+    new_text = ""
+    for word in text.split(" "):
+        if word.startswith("-"):
+            if word[1:] == "IC":
+                ui.check_ignore_case.toggle()
+            else:
+                new_text += word + " "
+        else:
+            new_text += word + " "
+    ui.search_bar.setText(new_text[:-1])
+    return new_text[:-1]
+
+
 def search(text):
     color_alternate()
+    text = handle_settings(text)
     for entry_pair in entry_list:
         entry = entry_pair[0]
         next_action = entry[1]
-        if text.replace(" ", "") in next_action.replace(" ", ""):
+        if ui.check_ignore_case.isChecked():
+            matches = text.replace(" ", "").casefold() in next_action.replace(" ", "").casefold()
+        else:
+            matches = text.replace(" ", "") in next_action.replace(" ", "")
+        if matches:
             entry_pair[1].setMaximumHeight(100)
             entry_pair[1].show()
             entry_pair[1].setVisible(True)
@@ -78,3 +97,7 @@ def search(text):
             entry_pair[3].hide()
             entry_pair[3].setVisible(False)
             entry_pair[3].resize(0, 0)
+
+
+def set_location_text(text):
+    ui.groupBox.setTitle(text)

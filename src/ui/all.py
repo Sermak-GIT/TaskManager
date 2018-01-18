@@ -11,7 +11,7 @@ from PyQt5.QtGui import QKeySequence
 from PyQt5.QtWidgets import QFormLayout, QWidget, QScrollArea, QShortcut
 from src.reference.reference import *
 
-from src.ui_handler.all_handler import init_handler, search
+from src.ui_handler.all_handler import init_handler, search, set_location_text
 from src.ui_handler.shortcuts import init_shortcuts
 
 
@@ -70,6 +70,15 @@ class Ui_All(QWidget):
         self.gridLayout.addWidget(self.groupBox, 1, 0, 1, 1)
         self.verticalLayout.addLayout(self.gridLayout)
 
+        # Checkboxes in groupBox
+        self.gridLayout_2 = QtWidgets.QGridLayout(self.groupBox)
+        self.gridLayout_2.setObjectName("gridLayout_2")
+
+        self.check_ignore_case = QtWidgets.QCheckBox(self.groupBox)
+        self.check_ignore_case.setText("(I)gnore (C)ase")
+        self.check_ignore_case.setChecked(True)
+        self.gridLayout_2.addWidget(self.check_ignore_case, 0, 0, 1, 1)
+
         # scroll area widget
         self.scrollLayout = QFormLayout()
         self.scrollLayout.setSpacing(0)
@@ -89,6 +98,7 @@ class Ui_All(QWidget):
         init_shortcuts(self)
 
         self.retranslateUi(self)
+        set_location_text("Inbox")
         from src.ui_handler.all_handler import init_from_db
         init_from_db()
 

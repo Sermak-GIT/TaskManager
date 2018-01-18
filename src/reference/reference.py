@@ -14,6 +14,7 @@ help_screen_max_columns = 6
 
 # Shortcuts
 master_level_shortcuts = (("M-h Help", "Alt+h"),
+                          ("C-h Help", "Ctrl+h"),
                           ("C-▶ Switch Right", "Ctrl+Right"),
                           ("M-▶ Switch Right", "Alt+Right"),
                           ("M-◀ Switch Left", "Alt+Left"),

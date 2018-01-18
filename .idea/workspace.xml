@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="81e7f3b0-ebf6-4028-ae76-2d6b41f523c2" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/UI/all.ui" afterPath="$PROJECT_DIR$/UI/all.ui" />
       <change beforePath="$PROJECT_DIR$/src/db/taskmanager.db" afterPath="$PROJECT_DIR$/src/db/taskmanager.db" />
-      <change beforePath="$PROJECT_DIR$/src/ui/main.py" afterPath="$PROJECT_DIR$/src/ui/main.py" />
-      <change beforePath="$PROJECT_DIR$/src/ui_handler/main_handler.py" afterPath="$PROJECT_DIR$/src/ui_handler/main_handler.py" />
-      <change beforePath="$PROJECT_DIR$/src/ui_handler/new_handler.py" afterPath="$PROJECT_DIR$/src/ui_handler/new_handler.py" />
+      <change beforePath="$PROJECT_DIR$/src/reference/reference.py" afterPath="$PROJECT_DIR$/src/reference/reference.py" />
+      <change beforePath="$PROJECT_DIR$/src/ui/all.py" afterPath="$PROJECT_DIR$/src/ui/all.py" />
+      <change beforePath="$PROJECT_DIR$/src/ui_handler/all_handler.py" afterPath="$PROJECT_DIR$/src/ui_handler/all_handler.py" />
+      <change beforePath="$PROJECT_DIR$/src/ui_handler/shortcuts.py" afterPath="$PROJECT_DIR$/src/ui_handler/shortcuts.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,7 +30,7 @@
     <SUITE FILE_PATH="coverage/Taskmanager$sqlmanager.coverage" NAME="sqlmanager Coverage Results" MODIFIED="1512687601180" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/manager" />
     <SUITE FILE_PATH="coverage/Taskmanager$test2.coverage" NAME="test2 Coverage Results" MODIFIED="1513902055503" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_area" />
     <SUITE FILE_PATH="coverage/Taskmanager$new.coverage" NAME="new Coverage Results" MODIFIED="1513895761802" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/ui" />
-    <SUITE FILE_PATH="coverage/Taskmanager$main.coverage" NAME="main Coverage Results" MODIFIED="1516308362755" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/ui" />
+    <SUITE FILE_PATH="coverage/Taskmanager$main.coverage" NAME="main Coverage Results" MODIFIED="1516312855424" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/ui" />
     <SUITE FILE_PATH="coverage/Taskmanager$help.coverage" NAME="help Coverage Results" MODIFIED="1516054200307" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/ui" />
     <SUITE FILE_PATH="coverage/Taskmanager$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1513211282555" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/ui" />
     <SUITE FILE_PATH="coverage/Taskmanager$tray.coverage" NAME="tray Coverage Results" MODIFIED="1515810475939" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_area" />
@@ -54,46 +57,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="shortcuts.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="shortcuts.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ui_handler/shortcuts.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="40" column="63" lean-forward="false" selection-start-line="40" selection-start-column="63" selection-end-line="40" selection-end-column="63" />
-              <folding>
-                <element signature="e#0#36#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main_handler.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/ui_handler/main_handler.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="34" column="37" lean-forward="true" selection-start-line="34" selection-start-column="37" selection-end-line="34" selection-end-column="37" />
+            <state relative-caret-position="340">
+              <caret line="21" column="62" lean-forward="true" selection-start-line="21" selection-start-column="62" selection-end-line="21" selection-end-column="62" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ui/main.py">
+      <file leaf-file-name="all.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ui/all.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
-              <caret line="41" column="21" lean-forward="false" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="21" />
+              <caret line="67" column="31" lean-forward="true" selection-start-line="67" selection-start-column="31" selection-end-line="67" selection-end-column="31" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="help_handler.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ui_handler/help_handler.py">
+      <file leaf-file-name="all_handler.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ui_handler/all_handler.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="867">
-              <caret line="51" column="13" lean-forward="false" selection-start-line="51" selection-start-column="4" selection-end-line="51" selection-end-column="13" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="323">
+              <caret line="64" column="34" lean-forward="true" selection-start-line="64" selection-start-column="34" selection-end-line="64" selection-end-column="34" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -101,21 +90,9 @@
       <file leaf-file-name="reference.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/reference/reference.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="31" column="6" lean-forward="false" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
+            <state relative-caret-position="240">
+              <caret line="17" column="52" lean-forward="false" selection-start-line="17" selection-start-column="52" selection-end-line="17" selection-end-column="52" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="new_handler.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ui_handler/new_handler.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="376">
-              <caret line="38" column="12" lean-forward="true" selection-start-line="38" selection-start-column="12" selection-end-line="38" selection-end-column="12" />
-              <folding>
-                <element signature="e#0#54#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -138,6 +115,7 @@
       <find>(Form)</find>
       <find>Heigh</find>
       <find>QtGui.</find>
+      <find>Filter</find>
     </findStrings>
     <replaceStrings>
       <replace>(self)</replace>
@@ -167,22 +145,22 @@
         <option value="$PROJECT_DIR$/test_area/test.py" />
         <option value="$PROJECT_DIR$/test_area/test2.py" />
         <option value="$PROJECT_DIR$/src/ui/entry_widget.py" />
-        <option value="$PROJECT_DIR$/src/ui_handler/all_handler.py" />
         <option value="$PROJECT_DIR$/src/helper.py" />
         <option value="$PROJECT_DIR$/src/helper/schedule_later.py" />
         <option value="$PROJECT_DIR$/src/helper/threading_helper.py" />
         <option value="$PROJECT_DIR$/test_area/tray.py" />
         <option value="$PROJECT_DIR$/src/untitled.py" />
-        <option value="$PROJECT_DIR$/src/ui/all.py" />
         <option value="$PROJECT_DIR$/src/ui/help.py" />
         <option value="$PROJECT_DIR$/src/line.py" />
         <option value="$PROJECT_DIR$/src/ui/new.py" />
         <option value="$PROJECT_DIR$/src/ui_handler/help_handler.py" />
-        <option value="$PROJECT_DIR$/src/reference/reference.py" />
-        <option value="$PROJECT_DIR$/src/ui_handler/shortcuts.py" />
         <option value="$PROJECT_DIR$/src/ui/main.py" />
         <option value="$PROJECT_DIR$/src/ui_handler/new_handler.py" />
         <option value="$PROJECT_DIR$/src/ui_handler/main_handler.py" />
+        <option value="$PROJECT_DIR$/src/ui_handler/all_handler.py" />
+        <option value="$PROJECT_DIR$/src/ui/all.py" />
+        <option value="$PROJECT_DIR$/src/reference/reference.py" />
+        <option value="$PROJECT_DIR$/src/ui_handler/shortcuts.py" />
       </list>
     </option>
   </component>
@@ -216,6 +194,48 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Changed Files">
+          <expand>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="Taskmanager" type="cbb8eebc:String" user="Taskmanager" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="Taskmanager" type="cbb8eebc:String" user="Taskmanager" />
+              <item name="src" type="cbb8eebc:String" user="src" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="Taskmanager" type="cbb8eebc:String" user="Taskmanager" />
+              <item name="src" type="cbb8eebc:String" user="src" />
+              <item name="manager" type="cbb8eebc:String" user="manager" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+        <subPane subId="Project Files">
+          <expand>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="Taskmanager" type="cbb8eebc:String" user="Taskmanager" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="Taskmanager" type="cbb8eebc:String" user="Taskmanager" />
+              <item name="src" type="cbb8eebc:String" user="src" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="Taskmanager" type="cbb8eebc:String" user="Taskmanager" />
+              <item name="src" type="cbb8eebc:String" user="src" />
+              <item name="manager" type="cbb8eebc:String" user="manager" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -268,48 +288,6 @@
               <item name="Taskmanager" type="b2602c69:ProjectViewProjectNode" />
               <item name="Taskmanager" type="462c0819:PsiDirectoryNode" />
               <item name="test_area" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Changed Files">
-          <expand>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="Taskmanager" type="cbb8eebc:String" user="Taskmanager" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="Taskmanager" type="cbb8eebc:String" user="Taskmanager" />
-              <item name="src" type="cbb8eebc:String" user="src" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="Taskmanager" type="cbb8eebc:String" user="Taskmanager" />
-              <item name="src" type="cbb8eebc:String" user="src" />
-              <item name="manager" type="cbb8eebc:String" user="manager" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-        <subPane subId="Project Files">
-          <expand>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="Taskmanager" type="cbb8eebc:String" user="Taskmanager" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="Taskmanager" type="cbb8eebc:String" user="Taskmanager" />
-              <item name="src" type="cbb8eebc:String" user="src" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="Taskmanager" type="cbb8eebc:String" user="Taskmanager" />
-              <item name="src" type="cbb8eebc:String" user="src" />
-              <item name="manager" type="cbb8eebc:String" user="manager" />
             </path>
           </expand>
           <select />
@@ -518,7 +496,7 @@
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25078043" sideWeight="0.5021322" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32882413" sideWeight="0.5053305" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298647" sideWeight="0.4978678" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17110874" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17430703" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33742005" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -697,7 +675,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/all.py" />
     <entry file="file://$PROJECT_DIR$/test/test_button.py" />
     <entry file="file://$PROJECT_DIR$/test/test_widget.py" />
     <entry file="file://$PROJECT_DIR$/test/test.py" />
@@ -717,13 +694,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/helper.py" />
-    <entry file="file://$PROJECT_DIR$/src/helper/threading_helper.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/manager/sqlmanager.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -759,20 +729,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="27" lean-forward="true" selection-start-line="0" selection-start-column="27" selection-end-line="0" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ui_handler/all_handler.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-626">
-          <caret line="14" column="31" lean-forward="true" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ui/all.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="88" column="8" lean-forward="false" selection-start-line="88" selection-start-column="8" selection-end-line="88" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -818,56 +774,86 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ui_handler/shortcuts.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="40" column="63" lean-forward="false" selection-start-line="40" selection-start-column="63" selection-end-line="40" selection-end-column="63" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/reference/reference.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="31" column="6" lean-forward="false" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ui_handler/help_handler.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="867">
+        <state relative-caret-position="782">
           <caret line="51" column="13" lean-forward="false" selection-start-line="51" selection-start-column="4" selection-end-line="51" selection-end-column="13" />
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#0#9#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ui/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
+        <state relative-caret-position="510">
           <caret line="41" column="21" lean-forward="false" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui_handler/main_handler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="24" lean-forward="false" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/helper/threading_helper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ui_handler/new_handler.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="38" column="12" lean-forward="true" selection-start-line="38" selection-start-column="12" selection-end-line="38" selection-end-column="12" />
+        <state relative-caret-position="221">
+          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding>
-            <element signature="e#0#54#0" expanded="true" />
+            <element signature="e#0#54#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ui_handler/main_handler.py">
+    <entry file="file://$PROJECT_DIR$/src/all.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="34" column="37" lean-forward="true" selection-start-line="34" selection-start-column="37" selection-end-line="34" selection-end-column="37" />
+        <state relative-caret-position="314">
+          <caret line="109" column="36" lean-forward="false" selection-start-line="58" selection-start-column="8" selection-end-line="113" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui_handler/all_handler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="64" column="34" lean-forward="true" selection-start-line="64" selection-start-column="34" selection-end-line="64" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui/all.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="67" column="31" lean-forward="true" selection-start-line="67" selection-start-column="31" selection-end-line="67" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reference/reference.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="17" column="52" lean-forward="false" selection-start-line="17" selection-start-column="52" selection-end-line="17" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui_handler/shortcuts.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="21" column="62" lean-forward="true" selection-start-line="21" selection-start-column="62" selection-end-line="21" selection-end-column="62" />
           <folding />
         </state>
       </provider>

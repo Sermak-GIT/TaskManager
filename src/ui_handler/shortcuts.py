@@ -5,21 +5,22 @@ from PyQt5.QtWidgets import QShortcut
 def init_shortcuts(ui):
     # Switch right and left
     from src.reference.reference import master_level_shortcuts
-    ui.switch_right_shortcut = QShortcut(QKeySequence(master_level_shortcuts[1][1]), ui)
+    ui.switch_right_shortcut = QShortcut(QKeySequence(master_level_shortcuts[2][1]), ui)
     from src.ui_handler.main_handler import change_ui_right, change_ui_left
     ui.switch_right_shortcut.activated.connect(change_ui_right)
-    ui.switch_right_shortcut2 = QShortcut(QKeySequence(master_level_shortcuts[2][1]), ui)
+    ui.switch_right_shortcut2 = QShortcut(QKeySequence(master_level_shortcuts[3][1]), ui)
     ui.switch_right_shortcut2.activated.connect(change_ui_right)
-    ui.switch_left_shortcut = QShortcut(QKeySequence(master_level_shortcuts[3][1]), ui)
+    ui.switch_left_shortcut = QShortcut(QKeySequence(master_level_shortcuts[4][1]), ui)
     ui.switch_left_shortcut.activated.connect(change_ui_left)
-    ui.switch_left_shortcut2 = QShortcut(QKeySequence(master_level_shortcuts[4][1]), ui)
+    ui.switch_left_shortcut2 = QShortcut(QKeySequence(master_level_shortcuts[5][1]), ui)
     ui.switch_left_shortcut2.activated.connect(change_ui_left)
 
     # show top_level shortcuts
-    from src.reference.reference import master_level_shortcuts
     ui.show_top_shortcut = QShortcut(QKeySequence(master_level_shortcuts[0][1]), ui)
+    ui.show_top_shortcut2 = QShortcut(QKeySequence(master_level_shortcuts[1][1]), ui)
     from src.ui_handler.help_handler import show_top_shortcuts
     ui.show_top_shortcut.activated.connect(show_top_shortcuts)
+    ui.show_top_shortcut2.activated.connect(show_top_shortcuts)
 
 
 def init_help_screen_shortcuts(ui):
