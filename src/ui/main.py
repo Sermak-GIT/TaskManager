@@ -16,7 +16,7 @@ from PyQt5.QtWidgets import QShortcut, QWidget, QLabel, QSizePolicy
 from src.reference.reference import master_ui, init_master_ui
 from src.ui.all import Ui_All
 from src.ui.new import Ui_New
-from src.ui_handler.main_handler import init_handler
+from src.ui_handler.main_handler import init_handler, add_taskbar_icon
 
 
 class Ui_TaskManagerMainWindow(QWidget):
@@ -82,6 +82,7 @@ if __name__ == "__main__":
     import sys
 
     app = QtWidgets.QApplication(sys.argv)
+    add_taskbar_icon(app)
     app.setStyleSheet(qdarkstyle.load_stylesheet_pyqt5())
     TaskManagerMainWindow = QtWidgets.QMainWindow()
     ui = Ui_TaskManagerMainWindow()

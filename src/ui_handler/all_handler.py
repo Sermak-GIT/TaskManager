@@ -55,15 +55,19 @@ def color_alternate():
 
 def handle_settings(text):
     new_text = ""
+    old_cursor_position = ui.search_bar.cursorPosition()
     for word in text.split(" "):
         if word.startswith("-"):
-            if word[1:] == "IC":
+            if word[1:].upper() == "I":
                 ui.check_ignore_case.toggle()
+                old_cursor_position -= 2
+                new_text += " "
             else:
                 new_text += word + " "
         else:
             new_text += word + " "
     ui.search_bar.setText(new_text[:-1])
+    ui.search_bar.setCursorPosition(old_cursor_position)
     return new_text[:-1]
 
 

@@ -42,3 +42,11 @@ def select_pane(pane):
         ui.stackedWidget.setCurrentWidget(ui.all_page)
     elif pane == "new":
         ui.stackedWidget.setCurrentWidget(ui.new_page)
+
+
+def add_taskbar_icon(app):
+    from PyQt5.QtGui import QIcon
+    app_icon = QIcon()
+    from PyQt5.QtCore import QSize
+    app_icon.addFile('images/main_icon.png', QSize(1600, 1600))
+    app.setWindowIcon(app_icon)

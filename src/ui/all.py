@@ -75,7 +75,7 @@ class Ui_All(QWidget):
         self.gridLayout_2.setObjectName("gridLayout_2")
 
         self.check_ignore_case = QtWidgets.QCheckBox(self.groupBox)
-        self.check_ignore_case.setText("(I)gnore (C)ase")
+        self.check_ignore_case.setText("(i)gnore case")
         self.check_ignore_case.setChecked(True)
         self.gridLayout_2.addWidget(self.check_ignore_case, 0, 0, 1, 1)
 
