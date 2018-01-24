@@ -1,8 +1,10 @@
+import pyautogui as pyautogui
 from PyQt5 import QtCore, QtWidgets
 
 from src.manager.sqlmanager import *
 
 entry_list = ()
+shown_entries = ()
 
 
 def init_handler(ui_instance):
@@ -17,6 +19,7 @@ def init_from_db():
     entries = get_all_entries()
     for e in entries:
         add_widget(e)
+    set_shown_entries()
 
 
 def add_widget(entry):
@@ -37,22 +40,26 @@ def add_widget(entry):
     ui.scrollLayout.addRow(new_entry)
     ui.scrollLayout.addRow(lineBot)
 
-    entry_list = entry_list + ((entry, new_entry, lineTop, lineBot),)
+    entry_list += ((entry, new_entry, lineTop, lineBot),)
 
 
 def color_alternate():
-    pass
-    # TODO
+    pass  # TODO
     # i = 0
     # while ui.scrollLayout.takeAt(i) is not None:
-    #     if i % 2 == 0:
-    #         pass
-    #         ui.scrollLayout.takeAt(i).setStyleSheet("background-color:#999999;")
-    #     else:
-    #         pass
-    #        # ui.scrollLayout.takeAt(i).setStyleSheet("background-color:#ffffff;")
-    #     i += 1
-    #     print(i)
+    #    if i % 2 == 0:
+    #        pass
+    #        ui.scrollLayout.takeAt(i).setStyleSheet("background-color:#999999;")
+    #    else:
+    #        pass
+    #    # ui.scrollLayout.takeAt(i).setStyleSheet("background-color:#ffffff;")
+    #    i += 1
+    #    print(i)
+    #
+    # for entry in shown_entries:
+    #    if i % 2 == 0:
+    #        ui.scrollLayout.takeAt(i).setStyleSheet("background-color:#999999;")
+    #    i += 1
 
 
 def handle_settings(text):
@@ -72,7 +79,16 @@ def handle_settings(text):
     return new_text[:-1]
 
 
+def set_shown_entries():
+    global shown_entries
+    shown_entries = ()
+    for entry_pair in entry_list:
+        if entry_pair[1].isVisible():
+            shown_entries += (entry_pair,)
+
+
 def search(text):
+    global entry_list
     color_alternate()
     text = handle_settings(text)
     for entry_pair in entry_list:
@@ -102,6 +118,7 @@ def search(text):
             entry_pair[3].hide()
             entry_pair[3].setVisible(False)
             entry_pair[3].resize(0, 0)
+    set_shown_entries()
 
 
 def set_location_text(text):
@@ -114,3 +131,38 @@ def clear_search_bar():
 
 def set_search_bar_focus():
     ui.search_bar.setFocus()
+
+
+def select_next():
+    global shown_entries
+    set_shown_entries()
+    next_needs_focus = False
+    for entry in shown_entries:
+        if next_needs_focus:
+            entry[1].label.setStyleSheet("background-color:#999999;")
+            ui.scrollWidget.scroll(0, 100)
+            return
+        elif "background-color:#999999;" in entry[1].label.styleSheet():
+            next_needs_focus = True
+            entry[1].label.setStyleSheet("")
+    if next_needs_focus:
+        shown_entries[-1][1].label.setStyleSheet("background-color:#999999;")
+    else:
+        shown_entries[0][1].label.setStyleSheet("background-color:#999999;")
+
+
+def select_prev():
+    global shown_entries
+    set_shown_entries()
+    prev = None
+    for entry in shown_entries:
+        if "background-color:#999999;" in entry[1].label.styleSheet():
+            if prev:
+                prev[1].label.setStyleSheet("background-color:#999999;")
+                entry[1].label.setStyleSheet("")
+            else:
+                shown_entries[0][1].label.setStyleSheet("background-color:#999999;")
+                ui.scrollWidget.scroll(0, 100)
+            return
+        else:
+            prev = entry

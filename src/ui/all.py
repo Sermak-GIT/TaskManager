@@ -102,6 +102,8 @@ class Ui_All(QWidget):
         from src.ui_handler.all_handler import init_from_db
         init_from_db()
 
+        self.scrollArea.scroll(100,100)
+
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Form"))
