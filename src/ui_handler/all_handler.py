@@ -7,7 +7,9 @@ entry_list = ()
 
 def init_handler(ui_instance):
     global ui
+    from src.ui_handler.shortcuts import init_all_shortcuts
     ui = ui_instance
+    init_all_shortcuts(ui)
 
 
 def init_from_db():
@@ -60,8 +62,7 @@ def handle_settings(text):
         if word.startswith("-"):
             if word[1:].upper() == "I":
                 ui.check_ignore_case.toggle()
-                old_cursor_position -= 2
-                new_text += " "
+                old_cursor_position -= 3
             else:
                 new_text += word + " "
         else:
@@ -105,3 +106,11 @@ def search(text):
 
 def set_location_text(text):
     ui.groupBox.setTitle(text)
+
+
+def clear_search_bar():
+    ui.search_bar.setText("")
+
+
+def set_search_bar_focus():
+    ui.search_bar.setFocus()

@@ -21,13 +21,18 @@ master_level_shortcuts = (("M-h Help", "Alt+h"),
                           ("C-◀ Switch Left", "Ctrl+Left"))
 
 top_level_shortcuts = (("(m)aster shortcuts", 'm'),
-                       ("(n)ew note", 'n'))
+                       ("(n)ew note", 'n'),
+                       ("(a)ll notes", 'a'))
 
 new_note_level_shortcuts = (("(s)ave", 's'),
                             ("(a)ction", 'a'),
                             ("(n)otes", 'n'),
                             ("(r)eset", 'r'),
                             ("(b)ack", 'b'))
+
+all_level_shortcuts = (("(c)lear", 'c'),
+                       ("(s)earch bar", 's'),
+                       ("(b)ack", 'b'))
 
 # master level vars
 master_ui = None

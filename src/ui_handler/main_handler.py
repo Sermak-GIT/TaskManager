@@ -37,6 +37,18 @@ def switch_to_new_note():
     show_new_note_shortcuts()
 
 
+def switch_to_all():
+    from src.reference.reference import get_shortcut_mode
+    mode = get_shortcut_mode()
+    if mode != "top":
+        return
+    ui.stackedWidget.setCurrentWidget(ui.all_page)
+    from src.ui_handler.all_handler import set_search_bar_focus
+    set_search_bar_focus()
+    from src.ui_handler.help_handler import show_all_shortcuts
+    show_all_shortcuts()
+
+
 def select_pane(pane):
     if pane == "all":
         ui.stackedWidget.setCurrentWidget(ui.all_page)

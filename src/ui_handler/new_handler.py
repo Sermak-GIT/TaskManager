@@ -38,6 +38,7 @@ def save():
     show_top_shortcuts(force=True)
     select_pane("all")
 
+
 def focus_next_action():
     mode = get_shortcut_mode()
     if mode != "new_note":
