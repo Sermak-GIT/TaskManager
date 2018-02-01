@@ -7,7 +7,7 @@
 # WARNING! All changes made in this file will be lost!
 import logging
 
-import qdarkstyle as qdarkstyle
+import qdarkstyle
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtCore import Qt, pyqtSlot
 from PyQt5.QtGui import QKeySequence

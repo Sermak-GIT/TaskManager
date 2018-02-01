@@ -140,7 +140,7 @@ def select_next():
     for entry in shown_entries:
         if next_needs_focus:
             entry[1].label.setStyleSheet("background-color:#999999;")
-            ui.scrollWidget.scroll(0, 100)
+            ui. scrollArea.ensureWidgetVisible(self.scrollArea)
             return
         elif "background-color:#999999;" in entry[1].label.styleSheet():
             next_needs_focus = True
