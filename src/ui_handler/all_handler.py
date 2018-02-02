@@ -99,26 +99,34 @@ def search(text):
         else:
             matches = text.replace(" ", "") in next_action.replace(" ", "")
         if matches:
-            entry_pair[1].setMaximumHeight(100)
-            entry_pair[1].show()
-            entry_pair[1].setVisible(True)
-            entry_pair[2].setMaximumHeight(3)
-            entry_pair[2].setVisible(True)
-            entry_pair[2].show()
-            entry_pair[3].setMaximumHeight(3)
-            entry_pair[3].setVisible(True)
-            entry_pair[3].show()
+            show(entry_pair)
         else:
-            entry_pair[1].hide()
-            entry_pair[1].resize(0, 0)
-            entry_pair[1].setVisible(False)
-            entry_pair[2].hide()
-            entry_pair[2].setVisible(False)
-            entry_pair[2].resize(0, 0)
-            entry_pair[3].hide()
-            entry_pair[3].setVisible(False)
-            entry_pair[3].resize(0, 0)
+            hide(entry_pair)
     set_shown_entries()
+
+
+def show(entry):
+    entry[1].setMaximumHeight(100)
+    entry[1].show()
+    entry[1].setVisible(True)
+    entry[2].setMaximumHeight(3)
+    entry[2].setVisible(True)
+    entry[2].show()
+    entry[3].setMaximumHeight(3)
+    entry[3].setVisible(True)
+    entry[3].show()
+
+
+def hide(entry):
+    entry[1].hide()
+    entry[1].resize(0, 0)
+    entry[1].setVisible(False)
+    entry[2].hide()
+    entry[2].setVisible(False)
+    entry[2].resize(0, 0)
+    entry[3].hide()
+    entry[3].setVisible(False)
+    entry[3].resize(0, 0)
 
 
 def set_location_text(text):
@@ -171,12 +179,19 @@ def select_prev():
             prev = entry
 
 
+def refresh():
+    pass
+    #init_from_db()
+
+
 def delete():
     for entry in shown_entries:
         if "background-color:#999999;" in entry[1].label.styleSheet():
-            select_next()
             print(entry[0][0])
+            for entry2 in shown_entries:
+                hide(entry2)
             delete_entry(entry[0][0])
             init_from_db()
+            #select_next()
             #refresh from db, handle search_bar
             return

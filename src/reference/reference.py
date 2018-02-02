@@ -8,7 +8,9 @@ def entry(id, next_action, notes, icon, deadline, time, Setting, Willpower, audi
 
 logging.basicConfig(level=logging.INFO, format=' %(asctime)s - %(levelname)s- %(message)s')
 
-db_path = os.path.abspath("")[:-2] + "db\\taskmanager.db"
+db_path = os.path.abspath("")[:-2] + os.path.join("db", "taskmanager.db")
+
+
 
 help_screen_max_columns = 6
 

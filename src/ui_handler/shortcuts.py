@@ -110,7 +110,7 @@ def c_shortcuts():
 def d_shortcuts():
     from src.reference.reference import get_shortcut_mode
     mode = get_shortcut_mode()
-    logging.info(mode + "d")
+    logging.info(mode + " d")
     if mode == "all":
         from src.ui_handler.all_handler import delete
         delete()
