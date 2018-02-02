@@ -140,15 +140,17 @@ def select_next():
     for entry in shown_entries:
         if next_needs_focus:
             entry[1].label.setStyleSheet("background-color:#999999;")
-            ui. scrollArea.ensureWidgetVisible(self.scrollArea)
+            ui.scrollArea.ensureWidgetVisible(entry[1])
             return
         elif "background-color:#999999;" in entry[1].label.styleSheet():
             next_needs_focus = True
             entry[1].label.setStyleSheet("")
     if next_needs_focus:
         shown_entries[-1][1].label.setStyleSheet("background-color:#999999;")
+        ui.scrollArea.ensureWidgetVisible(shown_entries[-1][1])
     else:
         shown_entries[0][1].label.setStyleSheet("background-color:#999999;")
+        ui.scrollArea.ensureWidgetVisible(shown_entries[0][1])
 
 
 def select_prev():
@@ -159,10 +161,11 @@ def select_prev():
         if "background-color:#999999;" in entry[1].label.styleSheet():
             if prev:
                 prev[1].label.setStyleSheet("background-color:#999999;")
+                ui.scrollArea.ensureWidgetVisible(prev[1])
                 entry[1].label.setStyleSheet("")
             else:
                 shown_entries[0][1].label.setStyleSheet("background-color:#999999;")
-                ui.scrollWidget.scroll(0, 100)
+                ui.scrollArea.ensureWidgetVisible(shown_entries[0][1])
             return
         else:
             prev = entry
