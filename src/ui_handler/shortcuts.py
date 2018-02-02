@@ -70,6 +70,10 @@ def init_all_shortcuts(ui):
     ui.s_shortcut = QShortcut(QKeySequence('p'), ui)
     ui.s_shortcut.activated.connect(p_shortcuts)
 
+    # d Shortcuts
+    ui.d_shortcuts = QShortcut(QKeySequence('d'), ui)
+    ui.d_shortcuts.activated.connect(d_shortcuts)
+
 
 def b_shortcuts():
     from src.ui_handler.help_handler import force_show_top_shortcuts
@@ -100,6 +104,16 @@ def c_shortcuts():
     if mode == "all":
         from src.ui_handler.all_handler import clear_search_bar
         clear_search_bar()
+    return
+
+
+def d_shortcuts():
+    from src.reference.reference import get_shortcut_mode
+    mode = get_shortcut_mode()
+    logging.info(mode + "d")
+    if mode == "all":
+        from src.ui_handler.all_handler import delete
+        delete()
     return
 
 

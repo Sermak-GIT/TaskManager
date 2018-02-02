@@ -32,8 +32,8 @@ new_note_level_shortcuts = (("(s)ave", 's'),
 
 all_level_shortcuts = (("(c)lear", 'c'),
                        ("(s)earch bar", 's'),
-                       ("(n)ext", 'n'),  # TODO
-                       ("(p)revious", 'p'),  # TODO
+                       ("(n)ext", 'n'),
+                       ("(p)revious", 'p'),
                        ("(d)elete", 'd'),  # TODO
                        ("(b)ack", 'b'))
 

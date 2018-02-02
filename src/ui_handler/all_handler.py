@@ -169,3 +169,14 @@ def select_prev():
             return
         else:
             prev = entry
+
+
+def delete():
+    for entry in shown_entries:
+        if "background-color:#999999;" in entry[1].label.styleSheet():
+            select_next()
+            print(entry[0][0])
+            delete_entry(entry[0][0])
+            init_from_db()
+            #refresh from db, handle search_bar
+            return
