@@ -10,8 +10,6 @@ logging.basicConfig(level=logging.INFO, format=' %(asctime)s - %(levelname)s- %(
 
 db_path = os.path.abspath("")[:-2] + os.path.join("db", "taskmanager.db")
 
-
-
 help_screen_max_columns = 6
 
 # Shortcuts

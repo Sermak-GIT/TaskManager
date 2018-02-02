@@ -1,4 +1,3 @@
-import pyautogui as pyautogui
 from PyQt5 import QtCore, QtWidgets
 
 from src.manager.sqlmanager import *
@@ -43,23 +42,13 @@ def add_widget(entry):
     entry_list += ((entry, new_entry, lineTop, lineBot),)
 
 
-def color_alternate():
-    pass  # TODO
-    # i = 0
-    # while ui.scrollLayout.takeAt(i) is not None:
-    #    if i % 2 == 0:
-    #        pass
-    #        ui.scrollLayout.takeAt(i).setStyleSheet("background-color:#999999;")
-    #    else:
-    #        pass
-    #    # ui.scrollLayout.takeAt(i).setStyleSheet("background-color:#ffffff;")
-    #    i += 1
-    #    print(i)
-    #
-    # for entry in shown_entries:
-    #    if i % 2 == 0:
-    #        ui.scrollLayout.takeAt(i).setStyleSheet("background-color:#999999;")
-    #    i += 1
+def remove_widget(entry):
+    ui.scrollLayout.removeRow(entry[1])
+    ui.scrollLayout.removeRow(entry[2])
+    ui.scrollLayout.removeRow(entry[3])
+    del entry
+    print("Afterwards: ")
+    pprint.pprint(entry_list)
 
 
 def handle_settings(text):
@@ -81,15 +70,17 @@ def handle_settings(text):
 
 def set_shown_entries():
     global shown_entries
+    entry_amount = 0
     shown_entries = ()
     for entry_pair in entry_list:
         if entry_pair[1].isVisible():
             shown_entries += (entry_pair,)
+            entry_amount += 1
+    print("Amount: " + entry_amount.__str__())
 
 
 def search(text):
     global entry_list
-    color_alternate()
     text = handle_settings(text)
     for entry_pair in entry_list:
         entry = entry_pair[0]
@@ -180,18 +171,15 @@ def select_prev():
 
 
 def refresh():
-    pass
-    #init_from_db()
+    global shown_entries
+    for entry2 in shown_entries:
+        hide(entry2)
+    init_from_db()
 
 
 def delete():
     for entry in shown_entries:
         if "background-color:#999999;" in entry[1].label.styleSheet():
-            print(entry[0][0])
-            for entry2 in shown_entries:
-                hide(entry2)
             delete_entry(entry[0][0])
-            init_from_db()
-            #select_next()
-            #refresh from db, handle search_bar
+            remove_widget(entry)
             return
