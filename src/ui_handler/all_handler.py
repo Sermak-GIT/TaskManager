@@ -51,7 +51,7 @@ def remove_widget(entry):
 
 
 def remove_all_widgets():
-    for i in range (10):
+    for i in range(10):
         for entry_element in entry_list:
             ui.scrollLayout.removeRow(entry_element[1])
             ui.scrollLayout.removeRow(entry_element[2])
@@ -117,17 +117,21 @@ def select_next():
     for entry in entry_list:
         if next_needs_focus:
             entry[1].label.setStyleSheet("background-color:#999999;")
+            entry[1].big_mode()
             ui.scrollArea.ensureWidgetVisible(entry[1])
             return
         elif "background-color:#999999;" in entry[1].label.styleSheet():
             next_needs_focus = True
             entry[1].label.setStyleSheet("")
+            entry[1].small_mode()
     if next_needs_focus:
         entry_list[-1][1].label.setStyleSheet("background-color:#999999;")
+        entry_list[-1][1].big_mode()
         ui.scrollArea.ensureWidgetVisible(entry_list[-1][1])
     else:
         if entry_list.__len__() > 0:
             entry_list[0][1].label.setStyleSheet("background-color:#999999;")
+            entry_list[0][1].big_mode()
             ui.scrollArea.ensureWidgetVisible(entry_list[0][1])
 
 
@@ -137,10 +141,13 @@ def select_prev():
         if "background-color:#999999;" in entry[1].label.styleSheet():
             if prev:
                 prev[1].label.setStyleSheet("background-color:#999999;")
+                prev[1].big_mode()
                 ui.scrollArea.ensureWidgetVisible(prev[1])
                 entry[1].label.setStyleSheet("")
+                entry[1].small_mode()
             else:
                 entry_list[0][1].label.setStyleSheet("background-color:#999999;")
+                entry_list[0][1].big_mode()
                 ui.scrollArea.ensureWidgetVisible(entry_list[0][1])
             return
         else:

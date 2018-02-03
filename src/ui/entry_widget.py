@@ -63,6 +63,8 @@ class Ui_EntryWidget(QWidget):
 
         self.retranslateUi(self)
 
+        self.small_mode()
+
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Form"))
@@ -70,6 +72,28 @@ class Ui_EntryWidget(QWidget):
 
     def init_content(self, next_action):
         self.label.setText(next_action)
+
+    def small_mode(self):
+        font = QtGui.QFont()
+        font.setFamily("Cambria")
+        font.setPointSize(18)
+        self.label.setFont(font)
+        self.setMaximumHeight(50)
+        self.graphicsView.setMaximumWidth(35)
+        self.graphicsView.setMaximumHeight(35)
+        self.graphicsView.setMinimumHeight(35)
+        self.graphicsView.setMinimumWidth(35)
+
+    def big_mode(self):
+        font = QtGui.QFont()
+        font.setFamily("Cambria")
+        font.setPointSize(36)
+        self.label.setFont(font)
+        self.setMaximumHeight(100)
+        self.graphicsView.setMaximumWidth(80)
+        self.graphicsView.setMaximumHeight(80)
+        self.graphicsView.setMinimumHeight(80)
+        self.graphicsView.setMinimumWidth(80)
 
 
 if __name__ == "__main__":
