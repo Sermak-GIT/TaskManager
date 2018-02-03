@@ -2,8 +2,7 @@ from PyQt5 import QtCore, QtWidgets
 
 from src.manager.sqlmanager import *
 
-entry_list = ()
-shown_entries = ()
+entry_list = []
 
 
 def init_handler(ui_instance):
@@ -18,7 +17,6 @@ def init_from_db():
     entries = get_all_entries()
     for e in entries:
         add_widget(e)
-    set_shown_entries()
 
 
 def add_widget(entry):
@@ -39,16 +37,27 @@ def add_widget(entry):
     ui.scrollLayout.addRow(new_entry)
     ui.scrollLayout.addRow(lineBot)
 
-    entry_list += ((entry, new_entry, lineTop, lineBot),)
+    entry_list += [[entry, new_entry, lineTop, lineBot], ]
 
 
 def remove_widget(entry):
-    ui.scrollLayout.removeRow(entry[1])
-    ui.scrollLayout.removeRow(entry[2])
-    ui.scrollLayout.removeRow(entry[3])
-    del entry
-    print("Afterwards: ")
-    pprint.pprint(entry_list)
+    for entry_element in entry_list:
+        if entry[0] == entry_element[0][0]:
+            ui.scrollLayout.removeRow(entry_element[1])
+            ui.scrollLayout.removeRow(entry_element[2])
+            ui.scrollLayout.removeRow(entry_element[3])
+            entry_list.remove(entry_element)
+            return
+
+
+def show_widget(entry):
+    for entry_element in entry_list:
+        if entry[0] == entry_element[0][0]:
+            ui.scrollLayout.addRow(entry_element[1])
+            ui.scrollLayout.addRow(entry_element[2])
+            ui.scrollLayout.addRow(entry_element[3])
+            return
+    add_widget(entry)
 
 
 def handle_settings(text):
@@ -68,56 +77,19 @@ def handle_settings(text):
     return new_text[:-1]
 
 
-def set_shown_entries():
-    global shown_entries
-    entry_amount = 0
-    shown_entries = ()
-    for entry_pair in entry_list:
-        if entry_pair[1].isVisible():
-            shown_entries += (entry_pair,)
-            entry_amount += 1
-    print("Amount: " + entry_amount.__str__())
-
-
 def search(text):
     global entry_list
     text = handle_settings(text)
-    for entry_pair in entry_list:
-        entry = entry_pair[0]
-        next_action = entry[1]
+    for entry_pair in get_all_entries():
+        next_action = entry_pair[1]
         if ui.check_ignore_case.isChecked():
             matches = text.replace(" ", "").casefold() in next_action.replace(" ", "").casefold()
         else:
             matches = text.replace(" ", "") in next_action.replace(" ", "")
         if matches:
-            show(entry_pair)
+            show_widget(entry_pair)
         else:
-            hide(entry_pair)
-    set_shown_entries()
-
-
-def show(entry):
-    entry[1].setMaximumHeight(100)
-    entry[1].show()
-    entry[1].setVisible(True)
-    entry[2].setMaximumHeight(3)
-    entry[2].setVisible(True)
-    entry[2].show()
-    entry[3].setMaximumHeight(3)
-    entry[3].setVisible(True)
-    entry[3].show()
-
-
-def hide(entry):
-    entry[1].hide()
-    entry[1].resize(0, 0)
-    entry[1].setVisible(False)
-    entry[2].hide()
-    entry[2].setVisible(False)
-    entry[2].resize(0, 0)
-    entry[3].hide()
-    entry[3].setVisible(False)
-    entry[3].resize(0, 0)
+            remove_widget(entry_pair)
 
 
 def set_location_text(text):
@@ -133,6 +105,7 @@ def set_search_bar_focus():
 
 
 def select_next():
+    return
     global shown_entries
     set_shown_entries()
     next_needs_focus = False
@@ -153,6 +126,7 @@ def select_next():
 
 
 def select_prev():
+    return
     global shown_entries
     set_shown_entries()
     prev = None
@@ -171,6 +145,7 @@ def select_prev():
 
 
 def refresh():
+    return
     global shown_entries
     for entry2 in shown_entries:
         hide(entry2)
