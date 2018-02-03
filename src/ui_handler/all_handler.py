@@ -126,8 +126,9 @@ def select_next():
         entry_list[-1][1].label.setStyleSheet("background-color:#999999;")
         ui.scrollArea.ensureWidgetVisible(entry_list[-1][1])
     else:
-        entry_list[0][1].label.setStyleSheet("background-color:#999999;")
-        ui.scrollArea.ensureWidgetVisible(entry_list[0][1])
+        if entry_list.__len__() > 0:
+            entry_list[0][1].label.setStyleSheet("background-color:#999999;")
+            ui.scrollArea.ensureWidgetVisible(entry_list[0][1])
 
 
 def select_prev():
@@ -148,9 +149,10 @@ def select_prev():
 
 def delete():
     for entry in entry_list:
-        #TODO
         if "background-color:#999999;" in entry[1].label.styleSheet():
-            select_next()
+            select_prev()
             delete_entry(entry[0][0])
             remove_widget(entry)
+            search(ui.search_bar.text())
+            select_next()
             return
