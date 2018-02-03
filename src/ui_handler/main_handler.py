@@ -1,5 +1,7 @@
 import logging
 
+import os
+
 
 def init_handler(ui_instance):
     global ui
@@ -40,13 +42,22 @@ def switch_to_new_note():
 def switch_to_all():
     from src.reference.reference import get_shortcut_mode
     mode = get_shortcut_mode()
-    if mode != "top":
+    if mode != "top" and mode != "confirm":
         return
     ui.stackedWidget.setCurrentWidget(ui.all_page)
     from src.ui_handler.all_handler import set_search_bar_focus
     set_search_bar_focus()
     from src.ui_handler.help_handler import show_all_shortcuts
     show_all_shortcuts()
+
+
+def confirm_message():
+    from src.reference.reference import get_shortcut_mode
+    mode = get_shortcut_mode()
+    if mode == "confirm":
+        return
+    from src.ui_handler.help_handler import show_confirm_shortcuts
+    show_confirm_shortcuts()
 
 
 def select_pane(pane):
@@ -62,5 +73,6 @@ def add_taskbar_icon(app):
     from PyQt5.QtGui import QIcon
     app_icon = QIcon()
     from PyQt5.QtCore import QSize
-    app_icon.addFile('images/main_icon.png', QSize(1600, 1600))
+    icon_path = os.path.join(os.path.abspath(""), "src", "ui", "images", "main_icon.png")
+    app_icon.addFile(icon_path, QSize(1600, 1600))
     app.setWindowIcon(app_icon)

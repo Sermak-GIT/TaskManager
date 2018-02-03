@@ -74,6 +74,10 @@ def init_all_shortcuts(ui):
     ui.d_shortcuts = QShortcut(QKeySequence('d'), ui)
     ui.d_shortcuts.activated.connect(d_shortcuts)
 
+    # y Shortcuts
+    ui.y_shortcuts = QShortcut(QKeySequence('y'), ui)
+    ui.y_shortcuts.activated.connect(y_shortcuts)
+
 
 def b_shortcuts():
     from src.ui_handler.help_handler import force_show_top_shortcuts
@@ -112,8 +116,28 @@ def d_shortcuts():
     mode = get_shortcut_mode()
     logging.info(mode + " d")
     if mode == "all":
+        from src.ui_handler.main_handler import confirm_message
+        from src.ui_handler.main_handler import set_status_text
+        set_status_text("Really delete?")
+        confirm_message()
+        from src.reference.reference import master_ui
+        master_ui.helpWidget.setFocus(True)
+    return
+
+
+def y_shortcuts():
+    from src.reference.reference import get_shortcut_mode
+    mode = get_shortcut_mode()
+    logging.info(mode + " y")
+    if mode == "confirm":
         from src.ui_handler.all_handler import delete
+        from src.ui_handler.main_handler import switch_to_all
+        from src.ui_handler.main_handler import set_status_text
+        set_status_text("")
+        switch_to_all()
         delete()
+        from src.reference.reference import master_ui
+        master_ui.helpWidget.setFocus(True)
     return
 
 
@@ -178,4 +202,11 @@ def n_shortcuts():
     elif mode == "all":
         from src.ui_handler.all_handler import select_next
         select_next()
+    elif mode == "confirm":
+        from src.ui_handler.main_handler import switch_to_all
+        from src.ui_handler.main_handler import set_status_text
+        set_status_text("")
+        switch_to_all()
+        from src.reference.reference import master_ui
+        master_ui.helpWidget.setFocus(True)
     return

@@ -76,16 +76,3 @@ class Ui_TaskManagerMainWindow(QWidget):
     def retranslateUi(self, TaskManagerMainWindow):
         _translate = QtCore.QCoreApplication.translate
         TaskManagerMainWindow.setWindowTitle(_translate("TaskManagerMainWindow", "TaskManager"))
-
-
-if __name__ == "__main__":
-    import sys
-
-    app = QtWidgets.QApplication(sys.argv)
-    add_taskbar_icon(app)
-    app.setStyleSheet(qdarkstyle.load_stylesheet_pyqt5())
-    TaskManagerMainWindow = QtWidgets.QMainWindow()
-    ui = Ui_TaskManagerMainWindow()
-    ui.setupUi(TaskManagerMainWindow)
-    TaskManagerMainWindow.show()
-    sys.exit(app.exec_())

@@ -8,7 +8,9 @@ def entry(id, next_action, notes, icon, deadline, time, Setting, Willpower, audi
 
 logging.basicConfig(level=logging.INFO, format=' %(asctime)s - %(levelname)s- %(message)s')
 
-db_path = os.path.abspath("")[:-2] + os.path.join("db", "taskmanager.db")
+db_path = os.path.join(os.path.abspath(""), "src", "db", "taskmanager.db")
+
+print(db_path)
 
 help_screen_max_columns = 6
 
@@ -34,8 +36,11 @@ all_level_shortcuts = (("(c)lear", 'c'),
                        ("(s)earch bar", 's'),
                        ("(n)ext", 'n'),
                        ("(p)revious", 'p'),
-                       ("(d)elete", 'd'),  # TODO
+                       ("(d)elete", 'd'),
                        ("(b)ack", 'b'))
+
+confirm_level_shortcuts = (("(y)es", 'y'),
+                           ("(n)o", 'n'))
 
 # master level vars
 master_ui = None
