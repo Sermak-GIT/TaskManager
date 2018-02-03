@@ -51,8 +51,8 @@ def switch_to_all():
 
 def select_pane(pane):
     if pane == "all":
-        from src.ui_handler.all_handler import init_from_db
-        # TODO: init_from_db()
+        from src.ui_handler.all_handler import search
+        search(ui.all_page.search_bar.text())
         ui.stackedWidget.setCurrentWidget(ui.all_page)
     elif pane == "new":
         ui.stackedWidget.setCurrentWidget(ui.new_page)

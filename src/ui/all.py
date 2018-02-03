@@ -95,6 +95,8 @@ class Ui_All(QWidget):
 
         self.verticalLayout.addWidget(self.scrollArea)
 
+        #self.scrollLayout.itemAt()
+
         init_shortcuts(self)
 
         self.retranslateUi(self)

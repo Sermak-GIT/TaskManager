@@ -50,6 +50,15 @@ def remove_widget(entry):
             return
 
 
+def remove_all_widgets():
+    for i in range (10):
+        for entry_element in entry_list:
+            ui.scrollLayout.removeRow(entry_element[1])
+            ui.scrollLayout.removeRow(entry_element[2])
+            ui.scrollLayout.removeRow(entry_element[3])
+            entry_list.remove(entry_element)
+
+
 def show_widget(entry):
     for entry_element in entry_list:
         if entry[0] == entry_element[0][0]:
@@ -80,6 +89,7 @@ def handle_settings(text):
 def search(text):
     global entry_list
     text = handle_settings(text)
+    remove_all_widgets()
     for entry_pair in get_all_entries():
         next_action = entry_pair[1]
         if ui.check_ignore_case.isChecked():
@@ -88,8 +98,6 @@ def search(text):
             matches = text.replace(" ", "") in next_action.replace(" ", "")
         if matches:
             show_widget(entry_pair)
-        else:
-            remove_widget(entry_pair)
 
 
 def set_location_text(text):
@@ -105,11 +113,8 @@ def set_search_bar_focus():
 
 
 def select_next():
-    return
-    global shown_entries
-    set_shown_entries()
     next_needs_focus = False
-    for entry in shown_entries:
+    for entry in entry_list:
         if next_needs_focus:
             entry[1].label.setStyleSheet("background-color:#999999;")
             ui.scrollArea.ensureWidgetVisible(entry[1])
@@ -118,43 +123,34 @@ def select_next():
             next_needs_focus = True
             entry[1].label.setStyleSheet("")
     if next_needs_focus:
-        shown_entries[-1][1].label.setStyleSheet("background-color:#999999;")
-        ui.scrollArea.ensureWidgetVisible(shown_entries[-1][1])
+        entry_list[-1][1].label.setStyleSheet("background-color:#999999;")
+        ui.scrollArea.ensureWidgetVisible(entry_list[-1][1])
     else:
-        shown_entries[0][1].label.setStyleSheet("background-color:#999999;")
-        ui.scrollArea.ensureWidgetVisible(shown_entries[0][1])
+        entry_list[0][1].label.setStyleSheet("background-color:#999999;")
+        ui.scrollArea.ensureWidgetVisible(entry_list[0][1])
 
 
 def select_prev():
-    return
-    global shown_entries
-    set_shown_entries()
     prev = None
-    for entry in shown_entries:
+    for entry in entry_list:
         if "background-color:#999999;" in entry[1].label.styleSheet():
             if prev:
                 prev[1].label.setStyleSheet("background-color:#999999;")
                 ui.scrollArea.ensureWidgetVisible(prev[1])
                 entry[1].label.setStyleSheet("")
             else:
-                shown_entries[0][1].label.setStyleSheet("background-color:#999999;")
-                ui.scrollArea.ensureWidgetVisible(shown_entries[0][1])
+                entry_list[0][1].label.setStyleSheet("background-color:#999999;")
+                ui.scrollArea.ensureWidgetVisible(entry_list[0][1])
             return
         else:
             prev = entry
 
 
-def refresh():
-    return
-    global shown_entries
-    for entry2 in shown_entries:
-        hide(entry2)
-    init_from_db()
-
-
 def delete():
-    for entry in shown_entries:
+    for entry in entry_list:
+        #TODO
         if "background-color:#999999;" in entry[1].label.styleSheet():
+            select_next()
             delete_entry(entry[0][0])
             remove_widget(entry)
             return
