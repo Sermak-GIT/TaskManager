@@ -10,8 +10,6 @@ logging.basicConfig(level=logging.INFO, format=' %(asctime)s - %(levelname)s- %(
 
 db_path = os.path.join(os.path.abspath(""), "src", "db", "taskmanager.db")
 
-print(db_path)
-
 help_screen_max_columns = 6
 
 # Shortcuts
@@ -37,6 +35,7 @@ all_level_shortcuts = (("(c)lear", 'c'),
                        ("(n)ext", 'n'),
                        ("(p)revious", 'p'),
                        ("(d)elete", 'd'),
+                       ("(i)nfo", 'i'),  # TODO
                        ("(b)ack", 'b'))
 
 confirm_level_shortcuts = (("(y)es", 'y'),

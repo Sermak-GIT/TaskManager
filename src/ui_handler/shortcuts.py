@@ -91,6 +91,15 @@ def b_shortcuts():
     return
 
 
+def i_shortcuts():
+    from src.reference.reference import get_shortcut_mode
+    mode = get_shortcut_mode()
+    logging.info(mode + " i")
+    if mode == "all":
+        # TODO
+    return
+
+
 def r_shortcuts():
     from src.ui_handler.new_handler import reset
     from src.reference.reference import get_shortcut_mode
