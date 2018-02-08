@@ -5,12 +5,15 @@ import sqlite3 as lite
 import sys
 import logging
 import pprint
+
+from src.manager.ftpmanager import pulldb, pushdb
 from src.reference.reference import db_path
 
 logging.basicConfig(level=logging.INFO, format=' %(asctime)s - %(levelname)s- %(message)s')
 
 
 def issue_new_id():
+    pulldb()
     logging.debug("issue_new_id() called")
     i = 0
     while is_id_in_use(i):
@@ -21,6 +24,7 @@ def issue_new_id():
 
 
 def is_id_in_use(to_check_id):
+    pulldb()
     logging.debug("is_id_in_use() checks id " + to_check_id.__str__())
     con = lite.connect(db_path)
     with con:
@@ -33,6 +37,7 @@ def is_id_in_use(to_check_id):
 
 
 def init():
+    pulldb()
     connection = lite.connect(db_path)
     with connection:
         cursor = connection.cursor()
@@ -45,14 +50,17 @@ def init():
 
 
 def add_entry(entry):
+    pulldb()
     logging.info("Adding entry: " + entry.__str__())
     connection = lite.connect(db_path)
     with connection:
         cursor = connection.cursor()
         cursor.execute("INSERT INTO Entries VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", entry)
+    pushdb()
 
 
 def read_entry(entryid):
+    pulldb()
     logging.info("Reading entry: " + entryid.__str__())
     con = lite.connect(db_path)
     with con:
@@ -68,6 +76,7 @@ def read_entry(entryid):
 
 
 def update_entry(entry):
+    pulldb()
     entryid = entry[0]
     entry = entry[1:]
     logging.info("Updating entry: " + entryid.__str__())
@@ -79,9 +88,11 @@ def update_entry(entry):
                     "Setting=?, Willpower=?, Audio=?, Prio=? "
                     "WHERE Id = " + entryid.__str__(), entry)
         cur.fetchall()
+    pushdb()
 
 
 def get_all_entries():
+    pulldb()
     logging.info("Reading all entries")
     con = lite.connect(db_path)
     with con:
@@ -97,21 +108,25 @@ def get_all_entries():
 
 
 def delete_entry(entryid):
+    pulldb()
     logging.info("Deleting entry " + entryid.__str__())
     con = lite.connect(db_path)
     with con:
         cur = con.cursor()
         cur.execute("DELETE FROM Entries WHERE Id=" + entryid.__str__())
         rows = cur.fetchall()
+    pushdb()
 
 
 def delete_everything():
+    pulldb()
     logging.warning("Deleting EVERYTHING")
     con = lite.connect(db_path)
     with con:
         cur = con.cursor()
         cur.execute("DELETE FROM Entries")
         rows = cur.fetchall()
+    pushdb()
 
 
 init()

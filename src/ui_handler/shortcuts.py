@@ -96,6 +96,7 @@ def i_shortcuts():
     mode = get_shortcut_mode()
     logging.info(mode + " i")
     if mode == "all":
+        pass
         # TODO
     return
 

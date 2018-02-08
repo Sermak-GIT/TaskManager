@@ -1,5 +1,12 @@
 import logging
 import os
+import getpass
+
+import msvcrt
+
+import sys
+
+from src.helper.aes_helper import string_encrypt
 
 
 def entry(id, next_action, notes, icon, deadline, time, Setting, Willpower, audio, prio):
@@ -11,6 +18,12 @@ logging.basicConfig(level=logging.INFO, format=' %(asctime)s - %(levelname)s- %(
 db_path = os.path.join(os.path.abspath(""), "src", "db", "taskmanager.db")
 
 help_screen_max_columns = 6
+
+master_pass = getpass.getpass("Master password: ")
+server_pass = string_encrypt("<remote_server_password>" + master_pass + "</remote_server_password>", 64)
+server = "sermak-v.goip.de"
+server_user = "taskmanager"
+server_path = "/home/taskmanager/"
 
 # Shortcuts
 master_level_shortcuts = (("M-h Help", "Alt+h"),
