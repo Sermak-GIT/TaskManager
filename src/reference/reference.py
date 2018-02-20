@@ -1,17 +1,14 @@
 import logging
 import os
 import getpass
-
-import msvcrt
-
-import sys
-
 from src.helper.aes_helper import string_encrypt
 
 
 def entry(id, next_action, notes, icon, deadline, time, Setting, Willpower, audio, prio):
     return id, next_action, notes, icon, deadline, time, Setting, Willpower, audio, prio
 
+
+db_push_pull_timeout = 30
 
 logging.basicConfig(level=logging.INFO, format=' %(asctime)s - %(levelname)s- %(message)s')
 

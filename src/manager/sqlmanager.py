@@ -38,7 +38,7 @@ def is_id_in_use(to_check_id):
 
 def init():
     pulldb()
-    connection = lite.connect(db_path)
+    connection = lite.connect(db_path.replace("/manager/src", ""))
     with connection:
         cursor = connection.cursor()
         try:
