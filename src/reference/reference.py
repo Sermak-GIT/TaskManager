@@ -32,7 +32,8 @@ master_level_shortcuts = (("M-h Help", "Alt+h"),
 
 top_level_shortcuts = (("(m)aster shortcuts", 'm'),
                        ("(n)ew note", 'n'),
-                       ("(a)ll notes", 'a'))
+                       ("(a)ll notes", 'a'),
+                       ("(q)uit", 'q'))
 
 new_note_level_shortcuts = (("(s)ave", 's'),
                             ("(a)ction", 'a'),

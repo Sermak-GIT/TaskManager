@@ -25,10 +25,7 @@ def pushdb():
         if currtime - last_push_access < db_push_pull_timeout:
             return
         last_push_access = currtime
-    with connect(server, server_user, server_pass, 22) as con:
-        con.cd(server_path)
-        con.put(os.path.join(os.getcwd()[:], "src", "db", "taskmanager.db"))
-        logging.info("Pushed db successfully")
+    force_pushdb()
 
 
 def pulldb():
@@ -45,3 +42,9 @@ def pulldb():
         con.get("taskmanager.db", os.path.join(os.getcwd()[:], "src", "db", "taskmanager.db"))
         logging.info("Pushed db successfully")
 
+
+def force_pushdb():
+    with connect(server, server_user, server_pass, 22) as con:
+        con.cd(server_path)
+        con.put(os.path.join(os.getcwd()[:], "src", "db", "taskmanager.db"))
+        logging.info("Pushed db successfully")

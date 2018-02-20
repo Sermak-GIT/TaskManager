@@ -69,6 +69,12 @@ def select_pane(pane):
         ui.stackedWidget.setCurrentWidget(ui.new_page)
 
 
+def quit_tmgr():
+    from src.manager.ftpmanager import force_pushdb
+    force_pushdb()
+    quit()
+
+
 def add_taskbar_icon(app):
     from PyQt5.QtGui import QIcon
     app_icon = QIcon()

@@ -78,6 +78,10 @@ def init_all_shortcuts(ui):
     ui.y_shortcuts = QShortcut(QKeySequence('y'), ui)
     ui.y_shortcuts.activated.connect(y_shortcuts)
 
+    # q Shortcuts
+    ui.q_shortcuts = QShortcut(QKeySequence('q'), ui)
+    ui.q_shortcuts.activated.connect(q_shortcuts)
+
 
 def b_shortcuts():
     from src.ui_handler.help_handler import force_show_top_shortcuts
@@ -161,6 +165,16 @@ def a_shortcuts():
         switch_to_all()
     elif mode == "new_note":
         focus_next_action()
+    return
+
+
+def q_shortcuts():
+    from src.reference.reference import get_shortcut_mode
+    mode = get_shortcut_mode()
+    logging.info(mode + " q")
+    if mode == "top":
+        from src.ui_handler.main_handler import quit_tmgr
+        quit_tmgr()
     return
 
 
