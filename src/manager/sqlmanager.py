@@ -37,7 +37,11 @@ def is_id_in_use(to_check_id):
 
 
 def init():
-    pulldb()
+    db_exists = True
+    try:
+        pulldb()
+    except Exception:
+        db_exists = False
     connection = lite.connect(db_path.replace("/manager/src", ""))
     with connection:
         cursor = connection.cursor()
@@ -47,6 +51,8 @@ def init():
             logging.info("Table Entries created")
         except lite.OperationalError:
             logging.info("Table Entries found")
+    if not db_exists:
+        pushdb()
 
 
 def add_entry(entry):
@@ -55,7 +61,7 @@ def add_entry(entry):
     connection = lite.connect(db_path)
     with connection:
         cursor = connection.cursor()
-        cursor.execute("INSERT INTO Entries VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", entry)
+        cursor.execute("INSERT INTO Entries VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", entry)
     pushdb()
 
 
