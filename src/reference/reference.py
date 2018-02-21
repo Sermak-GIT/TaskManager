@@ -52,7 +52,7 @@ all_level_shortcuts = (("(c)lear", 'c'),
 confirm_level_shortcuts = (("(y)es", 'y'),
                            ("(n)o", 'n'))
 
-info_level_shortcuts = (("(s)ave", 's'),
+info_level_shortcuts = (("(s)ave", 's'),  # TODO
                         ("(a)ction", 'a'),
                         ("(n)otes", 'n'),
                         ("(r)eset", 'r'),

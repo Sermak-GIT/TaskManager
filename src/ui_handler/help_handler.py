@@ -86,7 +86,6 @@ def show_info_shortcuts():
     set_shortcut_mode("info")
     add_entries(info_level_shortcuts)
     master_ui.helpWidget.show()
-    print(get_shortcut_mode())
 
 
 def show_all_shortcuts():

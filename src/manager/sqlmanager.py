@@ -55,7 +55,7 @@ def add_entry(entry):
     connection = lite.connect(db_path)
     with connection:
         cursor = connection.cursor()
-        cursor.execute("INSERT INTO Entries VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", entry)
+        cursor.execute("INSERT INTO Entries VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", entry)
     pushdb()
 
 

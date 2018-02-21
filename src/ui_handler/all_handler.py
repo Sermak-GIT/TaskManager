@@ -112,6 +112,12 @@ def set_search_bar_focus():
     ui.search_bar.setFocus()
 
 
+def get_selected_entry_data():
+    for entry in entry_list:
+        if "background-color:#999999;" in entry[1].label.styleSheet():
+            return entry[0]
+
+
 def select_next():
     next_needs_focus = False
     for entry in entry_list:

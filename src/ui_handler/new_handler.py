@@ -43,21 +43,21 @@ def save():
 
 def focus_next_action():
     mode = get_shortcut_mode()
-    if mode != "new_note":
+    if mode != "new_note" and mode != "info":
         return
     ui.nextAction.setFocus()
 
 
 def focus_notes():
     mode = get_shortcut_mode()
-    if mode != "new_note":
+    if mode != "new_note" and mode != "info":
         return
     ui.textEdit.setFocus()
 
 
 def reset():
     mode = get_shortcut_mode()
-    if mode != "new_note":
+    if mode != "new_note" and mode != "info":
         return
     ui.nextAction.setText("")
     ui.textEdit.setText("")

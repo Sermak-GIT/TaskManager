@@ -96,6 +96,8 @@ def b_shortcuts():
         force_show_top_shortcuts()
     elif mode == "all":
         force_show_top_shortcuts()
+    elif mode == "info":
+        force_show_top_shortcuts()
     return
 
 
@@ -115,6 +117,8 @@ def r_shortcuts():
     mode = get_shortcut_mode()
     logging.info(mode + " r")
     if mode == "new_note":
+        reset()
+    elif mode == "info":
         reset()
     return
 
@@ -169,6 +173,8 @@ def a_shortcuts():
         switch_to_all()
     elif mode == "new_note":
         focus_next_action()
+    elif mode == "info":
+        focus_next_action()
     return
 
 
@@ -220,9 +226,11 @@ def n_shortcuts():
     from src.ui_handler.main_handler import switch_to_new_note
     mode = get_shortcut_mode()
     logging.info(mode + " n")
+    from src.ui_handler.new_handler import focus_notes
     if mode == "new_note":
-        from src.ui_handler.new_handler import focus_notes
         # Focus notes edit from new_note_level
+        focus_notes()
+    elif mode == "info":
         focus_notes()
     elif mode == "top":
         # open new note screen from top_level

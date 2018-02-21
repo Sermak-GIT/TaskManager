@@ -44,12 +44,16 @@ def switch_to_info():
     mode = get_shortcut_mode()
     if mode != "all":
         return
+    from src.ui_handler.all_handler import get_selected_entry_data
+    if get_selected_entry_data() is None:
+        return
     ui.stackedWidget.setCurrentWidget(ui.new_page)
     ui.new_page.nextAction.setFocus()
     from src.ui_handler.help_handler import show_info_shortcuts
     show_info_shortcuts()
     from src.ui_handler.info_handler import populate
-    populate(("", "1", "2"))
+    entry = get_selected_entry_data()
+    populate(entry)
 
 
 def switch_to_all():
