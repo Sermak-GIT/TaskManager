@@ -875,5 +875,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://P:/Program Files/Python/Lib/site-packages/pysftp/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3927">
+          <caret line="248" column="0" lean-forward="false" selection-start-line="248" selection-start-column="0" selection-end-line="248" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>
