@@ -78,6 +78,10 @@ def init_all_shortcuts(ui):
     ui.y_shortcuts = QShortcut(QKeySequence('y'), ui)
     ui.y_shortcuts.activated.connect(y_shortcuts)
 
+    # i Shortcuts
+    ui.i_shortcuts = QShortcut(QKeySequence('i'), ui)
+    ui.i_shortcuts.activated.connect(i_shortcuts)
+
     # q Shortcuts
     ui.q_shortcuts = QShortcut(QKeySequence('q'), ui)
     ui.q_shortcuts.activated.connect(q_shortcuts)
@@ -100,8 +104,8 @@ def i_shortcuts():
     mode = get_shortcut_mode()
     logging.info(mode + " i")
     if mode == "all":
-        pass
-        # TODO
+        from src.ui_handler.main_handler import switch_to_info
+        switch_to_info()
     return
 
 

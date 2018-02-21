@@ -21,6 +21,7 @@ class Ui_New(QWidget):
     def __init__(self):
         QWidget.__init__(self)
         init_handler(self)
+
         self.resize(1100, 817)
         self.gridLayout_2 = QtWidgets.QGridLayout(self)
         self.gridLayout_2.setObjectName("gridLayout_2")

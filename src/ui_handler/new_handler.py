@@ -1,6 +1,7 @@
 from src.helper.threading_helper import schedule_later
 from src.manager.sqlmanager import *
 from src.reference.reference import entry, get_shortcut_mode, master_ui
+import src.ui_handler.info_handler as ih
 import logging
 
 from src.ui_handler.main_handler import reset_status_text, set_status_text, select_pane
@@ -11,6 +12,7 @@ def init_handler(ui_instance):
     ui = ui_instance
     from src.ui_handler.shortcuts import init_new_note_shortcuts
     init_new_note_shortcuts(ui)
+    ih.init_handler(ui)
 
 
 def clear_ui():

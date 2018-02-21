@@ -39,6 +39,19 @@ def switch_to_new_note():
     show_new_note_shortcuts()
 
 
+def switch_to_info():
+    from src.reference.reference import get_shortcut_mode
+    mode = get_shortcut_mode()
+    if mode != "all":
+        return
+    ui.stackedWidget.setCurrentWidget(ui.new_page)
+    ui.new_page.nextAction.setFocus()
+    from src.ui_handler.help_handler import show_info_shortcuts
+    show_info_shortcuts()
+    from src.ui_handler.info_handler import populate
+    populate(("", "1", "2"))
+
+
 def switch_to_all():
     from src.reference.reference import get_shortcut_mode
     mode = get_shortcut_mode()

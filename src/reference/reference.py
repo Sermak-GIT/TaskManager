@@ -52,6 +52,12 @@ all_level_shortcuts = (("(c)lear", 'c'),
 confirm_level_shortcuts = (("(y)es", 'y'),
                            ("(n)o", 'n'))
 
+info_level_shortcuts = (("(s)ave", 's'),
+                        ("(a)ction", 'a'),
+                        ("(n)otes", 'n'),
+                        ("(r)eset", 'r'),
+                        ("(b)ack", 'b'))
+
 # master level vars
 master_ui = None
 shortcut_mode = None
