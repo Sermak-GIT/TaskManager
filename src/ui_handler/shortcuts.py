@@ -195,6 +195,10 @@ def s_shortcuts():
     logging.info(mode + " s")
     if mode == "new_note":
         save()
+    elif mode == "info":
+        from src.ui_handler.info_handler import overwrite
+        from src.ui_handler.all_handler import get_selected_entry_data
+        overwrite(get_selected_entry_data())
     elif mode == "all":
         from src.ui_handler.all_handler import set_search_bar_focus
         set_search_bar_focus()

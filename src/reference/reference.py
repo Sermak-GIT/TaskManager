@@ -16,7 +16,7 @@ db_path = os.path.join(os.path.abspath(""), "src", "db", "taskmanager.db")
 
 help_screen_max_columns = 6
 
-master_pass = getpass.getpass("Master password: ")
+master_pass = "mM32582657!" #getpass.getpass("Master password: ")
 server_pass = string_encrypt("<remote_server_password>" + master_pass + "</remote_server_password>", 64)
 server = "sermak-v.goip.de"
 server_user = "taskmanager"
