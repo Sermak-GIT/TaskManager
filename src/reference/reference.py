@@ -47,6 +47,8 @@ all_level_shortcuts = (("(c)lear", 'c'),
                        ("(k) previous", 'k'),
                        ("(d)elete", 'd'),
                        ("(i)nfo", 'i'),
+                       ("e(x)ecute", 'x'),
+                       ("(u)ndo", 'u'),
                        ("(b)ack", 'b'))
 
 confirm_level_shortcuts = (("(y)es", 'y'),

@@ -37,7 +37,9 @@ def add_widget(entry):
     ui.scrollLayout.addRow(new_entry)
     ui.scrollLayout.addRow(lineBot)
 
-    entry_list += [[entry, new_entry, lineTop, lineBot], ]
+    added_entry = [entry, new_entry, lineTop, lineBot]
+    entry_list += [added_entry, ]
+    reset_style_sheet(added_entry)
 
 
 def remove_widget(entry):
@@ -118,25 +120,45 @@ def get_selected_entry_data():
             return entry[0]
 
 
+def set_selected_entry(entry):
+    for e in entry_list:
+        if e[0][0] == entry[0]:
+            select_style_sheet(e)
+
+
+def reset_style_sheet(entry):
+    if entry[0][10] == 1:
+        entry[1].label.setStyleSheet("color:#ffff00;")
+    elif entry[0][10] == 2:
+        entry[1].label.setStyleSheet("color:#00cc00;")
+    else:
+        entry[1].label.setStyleSheet("")
+
+
+def select_style_sheet(entry):
+    ss = entry[1].label.styleSheet()
+    entry[1].label.setStyleSheet(ss + "background-color:#999999;")
+
+
 def select_next():
     next_needs_focus = False
     for entry in entry_list:
         if next_needs_focus:
-            entry[1].label.setStyleSheet("background-color:#999999;")
+            select_style_sheet(entry)
             entry[1].big_mode()
             ui.scrollArea.ensureWidgetVisible(entry[1])
             return
         elif "background-color:#999999;" in entry[1].label.styleSheet():
             next_needs_focus = True
-            entry[1].label.setStyleSheet("")
+            reset_style_sheet(entry)
             entry[1].small_mode()
     if next_needs_focus:
-        entry_list[-1][1].label.setStyleSheet("background-color:#999999;")
+        select_style_sheet(entry_list[-1])
         entry_list[-1][1].big_mode()
         ui.scrollArea.ensureWidgetVisible(entry_list[-1][1])
     else:
         if entry_list.__len__() > 0:
-            entry_list[0][1].label.setStyleSheet("background-color:#999999;")
+            select_style_sheet(entry_list[0])
             entry_list[0][1].big_mode()
             ui.scrollArea.ensureWidgetVisible(entry_list[0][1])
 
@@ -146,13 +168,13 @@ def select_prev():
     for entry in entry_list:
         if "background-color:#999999;" in entry[1].label.styleSheet():
             if prev:
-                prev[1].label.setStyleSheet("background-color:#999999;")
+                select_style_sheet(prev)
                 prev[1].big_mode()
                 ui.scrollArea.ensureWidgetVisible(prev[1])
-                entry[1].label.setStyleSheet("")
+                reset_style_sheet(entry)
                 entry[1].small_mode()
             else:
-                entry_list[0][1].label.setStyleSheet("background-color:#999999;")
+                select_style_sheet(entry_list[0])
                 entry_list[0][1].big_mode()
                 ui.scrollArea.ensureWidgetVisible(entry_list[0][1])
             return
@@ -169,3 +191,52 @@ def delete():
             search(ui.search_bar.text())
             select_next()
             return
+
+
+def add_state(i, j):
+    if i is None:
+        i = 0
+    i += j
+    if i < 0:
+        i = 0
+    elif i > 2:
+        i = 2
+    return i
+
+
+def execute():
+    from src.reference.reference import get_shortcut_mode
+    mode = get_shortcut_mode()
+    if mode != "all":
+        return
+    entry = get_selected_entry_data()
+    init()
+    from src.reference.reference import entry as create_entry
+    entry = create_entry(entry[0], entry[1], entry[2], entry[3], entry[4], entry[5], entry[6], entry[7], entry[8],
+                         entry[9], add_state(entry[10], 1))
+    from src.manager.sqlmanager import update_entry
+    update_entry(entry)
+    remove_all_widgets()
+    init_from_db()
+    set_selected_entry(entry)
+    import logging
+    logging.debug("Executed action:" + entry[1])
+
+
+def undo_execution():
+    from src.reference.reference import get_shortcut_mode
+    mode = get_shortcut_mode()
+    if mode != "all":
+        return
+    entry = get_selected_entry_data()
+    init()
+    from src.reference.reference import entry as create_entry
+    entry = create_entry(entry[0], entry[1], entry[2], entry[3], entry[4], entry[5], entry[6], entry[7], entry[8],
+                         entry[9], add_state(entry[10], -1))
+    from src.manager.sqlmanager import update_entry
+    update_entry(entry)
+    remove_all_widgets()
+    init_from_db()
+    set_selected_entry(entry)
+    import logging
+    logging.debug("Un-Executed action:" + entry[1])

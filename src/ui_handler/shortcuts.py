@@ -90,7 +90,15 @@ def init_all_shortcuts(ui):
     ui.j_shortcuts = QShortcut(QKeySequence('j'), ui)
     ui.j_shortcuts.activated.connect(j_shortcuts)
 
-    # j Shortcuts
+    # x Shortcuts
+    ui.x_shortcuts = QShortcut(QKeySequence('x'), ui)
+    ui.x_shortcuts.activated.connect(x_shortcuts)
+
+    # u Shortcuts
+    ui.u_shortcuts = QShortcut(QKeySequence('u'), ui)
+    ui.u_shortcuts.activated.connect(u_shortcuts)
+
+    # k Shortcuts
     ui.k_shortcuts = QShortcut(QKeySequence('k'), ui)
     ui.k_shortcuts.activated.connect(k_shortcuts)
 
@@ -126,6 +134,24 @@ def j_shortcuts():
     if mode == "all":
         from src.ui_handler.all_handler import select_next
         select_next()
+
+
+def x_shortcuts():
+    from src.reference.reference import get_shortcut_mode
+    mode = get_shortcut_mode()
+    logging.info(mode + " x")
+    if mode == "all":
+        from src.ui_handler.all_handler import execute
+        execute()
+
+
+def u_shortcuts():
+    from src.reference.reference import get_shortcut_mode
+    mode = get_shortcut_mode()
+    logging.info(mode + "u")
+    if mode == "all":
+        from src.ui_handler.all_handler import undo_execution
+        undo_execution()
 
 
 def k_shortcuts():
