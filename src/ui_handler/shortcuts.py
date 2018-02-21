@@ -86,6 +86,14 @@ def init_all_shortcuts(ui):
     ui.q_shortcuts = QShortcut(QKeySequence('q'), ui)
     ui.q_shortcuts.activated.connect(q_shortcuts)
 
+    # j Shortcuts
+    ui.j_shortcuts = QShortcut(QKeySequence('j'), ui)
+    ui.j_shortcuts.activated.connect(j_shortcuts)
+
+    # j Shortcuts
+    ui.k_shortcuts = QShortcut(QKeySequence('k'), ui)
+    ui.k_shortcuts.activated.connect(k_shortcuts)
+
 
 def b_shortcuts():
     from src.ui_handler.help_handler import force_show_top_shortcuts
@@ -108,6 +116,25 @@ def i_shortcuts():
     if mode == "all":
         from src.ui_handler.main_handler import switch_to_info
         switch_to_info()
+    return
+
+
+def j_shortcuts():
+    from src.reference.reference import get_shortcut_mode
+    mode = get_shortcut_mode()
+    logging.info(mode + " j")
+    if mode == "all":
+        from src.ui_handler.all_handler import select_next
+        select_next()
+
+
+def k_shortcuts():
+    from src.reference.reference import get_shortcut_mode
+    mode = get_shortcut_mode()
+    logging.info(mode + " k")
+    if mode == "all":
+        from src.ui_handler.all_handler import select_prev
+        select_prev()
     return
 
 
@@ -219,10 +246,6 @@ def p_shortcuts():
     from src.reference.reference import get_shortcut_mode
     mode = get_shortcut_mode()
     logging.info(mode + " p")
-    if mode == "all":
-        from src.ui_handler.all_handler import select_prev
-        select_prev()
-    return
 
 
 def n_shortcuts():
@@ -239,9 +262,6 @@ def n_shortcuts():
     elif mode == "top":
         # open new note screen from top_level
         switch_to_new_note()
-    elif mode == "all":
-        from src.ui_handler.all_handler import select_next
-        select_next()
     elif mode == "confirm":
         from src.ui_handler.main_handler import switch_to_all
         from src.ui_handler.main_handler import set_status_text

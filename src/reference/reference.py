@@ -16,7 +16,7 @@ db_path = os.path.join(os.path.abspath(""), "src", "db", "taskmanager.db")
 
 help_screen_max_columns = 6
 
-master_pass = "mM32582657!" #getpass.getpass("Master password: ")
+master_pass = getpass.getpass("Master password: ")
 server_pass = string_encrypt("<remote_server_password>" + master_pass + "</remote_server_password>", 64)
 server = "sermak-v.goip.de"
 server_user = "taskmanager"
@@ -43,16 +43,16 @@ new_note_level_shortcuts = (("(s)ave", 's'),
 
 all_level_shortcuts = (("(c)lear", 'c'),
                        ("(s)earch bar", 's'),
-                       ("(n)ext", 'n'),
-                       ("(p)revious", 'p'),
+                       ("(j) next", 'j'),
+                       ("(k) previous", 'k'),
                        ("(d)elete", 'd'),
-                       ("(i)nfo", 'i'),  # TODO
+                       ("(i)nfo", 'i'),
                        ("(b)ack", 'b'))
 
 confirm_level_shortcuts = (("(y)es", 'y'),
                            ("(n)o", 'n'))
 
-info_level_shortcuts = (("(s)ave", 's'),  # TODO
+info_level_shortcuts = (("(s)ave", 's'),
                         ("(a)ction", 'a'),
                         ("(n)otes", 'n'),
                         ("(r)eset", 'r'),
