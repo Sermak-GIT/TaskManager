@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="81e7f3b0-ebf6-4028-ae76-2d6b41f523c2" name="Default" comment="" />
+    <list default="true" id="81e7f3b0-ebf6-4028-ae76-2d6b41f523c2" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/src/db/taskmanager.db" afterPath="$PROJECT_DIR$/src/db/taskmanager.db" />
+      <change beforePath="$PROJECT_DIR$/src/manager/sqlmanager.py" afterPath="$PROJECT_DIR$/src/manager/sqlmanager.py" />
+      <change beforePath="$PROJECT_DIR$/src/notes/entry_data" afterPath="$PROJECT_DIR$/src/notes/entry_data" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,7 +37,7 @@
     <SUITE FILE_PATH="coverage/Taskmanager$shortcuts.coverage" NAME="shortcuts Coverage Results" MODIFIED="1518006026539" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/ui_handler" />
     <SUITE FILE_PATH="coverage/Taskmanager$untitled.coverage" NAME="untitled Coverage Results" MODIFIED="1516043028381" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/Taskmanager$test_widget__1_.coverage" NAME="test_widget (1) Coverage Results" MODIFIED="1513883724598" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_area" />
-    <SUITE FILE_PATH="coverage/TaskManager$start.coverage" NAME="start Coverage Results" MODIFIED="1519165671964" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/TaskManager$start.coverage" NAME="start Coverage Results" MODIFIED="1519218580175" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Taskmanager$test_widget.coverage" NAME="test_widget Coverage Results" MODIFIED="1513883503936" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/Taskmanager$reference.coverage" NAME="reference Coverage Results" MODIFIED="1518092936547" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/reference" />
     <SUITE FILE_PATH="coverage/Taskmanager$line.coverage" NAME="line Coverage Results" MODIFIED="1516222042604" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
@@ -80,11 +85,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="shortcuts.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="shortcuts.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ui_handler/shortcuts.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="84" column="0" lean-forward="true" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
+            <state relative-caret-position="1462">
+              <caret line="89" column="29" lean-forward="false" selection-start-line="89" selection-start-column="29" selection-end-line="89" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -94,7 +99,49 @@
         <entry file="file://$PROJECT_DIR$/src/ui_handler/new_handler.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
-              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="all_handler.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ui_handler/all_handler.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="7" column="18" lean-forward="true" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="start.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/start.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#17#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="all.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ui/all.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1241">
+              <caret line="79" column="47" lean-forward="false" selection-start-line="79" selection-start-column="47" selection-end-line="79" selection-end-column="47" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="entry_data" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/notes/entry_data">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -103,8 +150,8 @@
       <file leaf-file-name="main_handler.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ui_handler/main_handler.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="73" column="18" lean-forward="true" selection-start-line="73" selection-start-column="18" selection-end-line="73" selection-end-column="18" />
+            <state relative-caret-position="578">
+              <caret line="73" column="18" lean-forward="false" selection-start-line="73" selection-start-column="18" selection-end-line="73" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -113,10 +160,22 @@
       <file leaf-file-name="aes_helper.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/helper/aes_helper.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="577">
-              <caret line="53" column="4" lean-forward="false" selection-start-line="53" selection-start-column="4" selection-end-line="53" selection-end-column="4" />
+            <state relative-caret-position="323">
+              <caret line="19" column="29" lean-forward="false" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
               <folding>
                 <element signature="e#4582#4595#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="reference.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/reference/reference.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="18" column="14" lean-forward="true" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+              <folding>
+                <element signature="e#0#14#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -125,71 +184,17 @@
       <file leaf-file-name="sqlmanager.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/manager/sqlmanager.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+            <state relative-caret-position="746">
+              <caret line="148" column="61" lean-forward="true" selection-start-line="148" selection-start-column="61" selection-end-line="148" selection-end-column="61" />
               <folding>
-                <marker date="1519164358505" expanded="true" signature="712:745" ph="SELECT * FRO... Entries" />
-                <marker date="1519164358505" expanded="true" signature="1194:1367" ph="CREATE TABLE... Entries" />
-                <marker date="1519164358505" expanded="true" signature="1717:1773" ph="INSERT INTO Entries... " />
-                <marker date="1519164358505" expanded="true" signature="1986:2017" ph="SELECT * FRO... Entries" />
-                <marker date="1519164358505" expanded="true" signature="2553:2745" ph="UPDATE Entries... " />
-                <marker date="1519164358505" expanded="true" signature="2983:3004" ph="SELECT * FRO... Entries" />
-                <marker date="1519164358505" expanded="true" signature="3425:3454" ph="DELETE FROM Entries... " />
-                <marker date="1519164358505" expanded="true" signature="3697:3716" ph="DELETE FROM Entries... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="start.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/start.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="10" column="16" lean-forward="true" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sftp_client.py" pinned="false" current-in-tab="false">
-        <entry file="file:///usr/lib/python3.6/site-packages/paramiko/sftp_client.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="768" column="0" lean-forward="false" selection-start-line="768" selection-start-column="0" selection-end-line="768" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
-        <entry file="file:///usr/lib/python3.6/site-packages/pysftp/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="248" column="0" lean-forward="false" selection-start-line="248" selection-start-column="0" selection-end-line="248" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="reference.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/reference/reference.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="32" column="17" lean-forward="false" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
-              <folding>
-                <element signature="e#0#14#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ftpmanager.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/manager/ftpmanager.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="492">
-              <caret line="45" column="16" lean-forward="false" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="16" />
-              <folding>
-                <element signature="e#0#14#0" expanded="true" />
+                <marker date="1519218431693" expanded="true" signature="712:745" ph="SELECT * FRO... Entries" />
+                <marker date="1519218431693" expanded="true" signature="1194:1378" ph="CREATE TABLE... Entries" />
+                <marker date="1519218431693" expanded="true" signature="1728:1787" ph="INSERT INTO Entries... " />
+                <marker date="1519218431693" expanded="true" signature="2000:2031" ph="SELECT * FRO... Entries" />
+                <marker date="1519218431693" expanded="true" signature="2567:2768" ph="UPDATE Entries... " />
+                <marker date="1519218431693" expanded="true" signature="3006:3027" ph="SELECT * FRO... Entries" />
+                <marker date="1519218431693" expanded="true" signature="3448:3477" ph="DELETE FROM Entries... " />
+                <marker date="1519218431693" expanded="true" signature="3720:3739" ph="DELETE FROM Entries... " />
               </folding>
             </state>
           </provider>
@@ -233,7 +238,6 @@
         <option value="$PROJECT_DIR$/src/ftpmanager.py" />
         <option value="$PROJECT_DIR$/src/ftpconnect.py" />
         <option value="$PROJECT_DIR$/src/sqlmanager.py" />
-        <option value="$PROJECT_DIR$/src/notes/entry_data" />
         <option value="$PROJECT_DIR$/src/ui-handlers/new-handler.py" />
         <option value="$USER_HOME$/.PyCharm2017.3/system/python_stubs/-1968956070/_socket.py" />
         <option value="src:table:/1696d3db/45303de4-0e9d-47c7-b932-1cdd4fda1df0/main.Entries" />
@@ -263,11 +267,12 @@
         <option value="$PROJECT_DIR$/src/ui/main.py" />
         <option value="$PROJECT_DIR$/start.py" />
         <option value="$PROJECT_DIR$/src/helper/aes_helper.py" />
-        <option value="$PROJECT_DIR$/src/manager/sqlmanager.py" />
-        <option value="$PROJECT_DIR$/src/reference/reference.py" />
         <option value="$PROJECT_DIR$/src/ui_handler/shortcuts.py" />
         <option value="$PROJECT_DIR$/src/manager/ftpmanager.py" />
         <option value="$PROJECT_DIR$/src/ui_handler/main_handler.py" />
+        <option value="$PROJECT_DIR$/src/notes/entry_data" />
+        <option value="$PROJECT_DIR$/src/manager/sqlmanager.py" />
+        <option value="$PROJECT_DIR$/src/reference/reference.py" />
       </list>
     </option>
   </component>
@@ -320,34 +325,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="TaskManager" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TaskManager" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TaskManager" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TaskManager" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TaskManager" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TaskManager" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="manager" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TaskManager" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TaskManager" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="ui_handler" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="Scratches" />
       <pane id="Scope">
         <subPane subId="Changed Files">
           <expand>
@@ -390,7 +368,46 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="TaskManager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TaskManager" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TaskManager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TaskManager" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TaskManager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TaskManager" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="manager" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TaskManager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TaskManager" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="notes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TaskManager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TaskManager" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="reference" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TaskManager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TaskManager" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="ui_handler" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -590,17 +607,17 @@
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="WINDOWED" visible="false" show_stripe_button="true" weight="0.3298647" sideWeight="0.49573562" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32887974" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33832335" sideWeight="0.5046875" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973767" sideWeight="0.5021322" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33732533" sideWeight="0.5046875" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934132" sideWeight="0.4978678" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19270833" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33697918" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33832335" sideWeight="0.4953125" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33832335" sideWeight="0.4953125" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -629,7 +646,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://P:/Program Files/Python/Lib/ssl.py" />
     <entry file="das://table:/1696d3db/02e4d316-d5e9-4f39-ad3d-14fae46cc7cd/main.Entries" />
     <entry file="file://$PROJECT_DIR$/src/ui/taskmanager.db" />
     <entry file="file://$PROJECT_DIR$/src/db/taskmanager2.db" />
@@ -715,13 +731,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ui/all.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="95" column="54" lean-forward="false" selection-start-line="95" selection-start-column="54" selection-end-line="95" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ui/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="502">
@@ -743,81 +752,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ui_handler/all_handler.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="541">
-          <caret line="163" column="16" lean-forward="true" selection-start-line="163" selection-start-column="16" selection-end-line="163" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://P:/Program Files/Python/Lib/site-packages/Crypto/__init__.py" />
     <entry file="file://P:/Program Files/Python/Lib/base64.py" />
     <entry file="file://P:/Program Files/Python/Lib/site-packages/paramiko/sftp_client.py" />
     <entry file="file://P:/Program Files/Python/Lib/site-packages/pysftp/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/start.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="10" column="16" lean-forward="true" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/lib/python3.6/site-packages/paramiko/sftp_client.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
+        <state relative-caret-position="12648">
           <caret line="768" column="0" lean-forward="false" selection-start-line="768" selection-start-column="0" selection-end-line="768" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file:///usr/lib/python3.6/site-packages/pysftp/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
+        <state relative-caret-position="3927">
           <caret line="248" column="0" lean-forward="false" selection-start-line="248" selection-start-column="0" selection-end-line="248" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/manager/sqlmanager.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-          <folding>
-            <marker date="1519164358505" expanded="true" signature="712:745" ph="SELECT * FRO... Entries" />
-            <marker date="1519164358505" expanded="true" signature="1194:1367" ph="CREATE TABLE... Entries" />
-            <marker date="1519164358505" expanded="true" signature="1717:1773" ph="INSERT INTO Entries... " />
-            <marker date="1519164358505" expanded="true" signature="1986:2017" ph="SELECT * FRO... Entries" />
-            <marker date="1519164358505" expanded="true" signature="2553:2745" ph="UPDATE Entries... " />
-            <marker date="1519164358505" expanded="true" signature="2983:3004" ph="SELECT * FRO... Entries" />
-            <marker date="1519164358505" expanded="true" signature="3425:3454" ph="DELETE FROM Entries... " />
-            <marker date="1519164358505" expanded="true" signature="3697:3716" ph="DELETE FROM Entries... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/helper/aes_helper.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="577">
-          <caret line="53" column="4" lean-forward="false" selection-start-line="53" selection-start-column="4" selection-end-line="53" selection-end-column="4" />
-          <folding>
-            <element signature="e#4582#4595#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/reference/reference.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="32" column="17" lean-forward="false" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/manager/ftpmanager.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="492">
+        <state relative-caret-position="680">
           <caret line="45" column="16" lean-forward="false" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="16" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
@@ -825,10 +780,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ui_handler/main_handler.py">
+    <entry file="file://$PROJECT_DIR$/src/ui_handler/shortcuts.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="73" column="18" lean-forward="true" selection-start-line="73" selection-start-column="18" selection-end-line="73" selection-end-column="18" />
+        <state relative-caret-position="1462">
+          <caret line="89" column="29" lean-forward="false" selection-start-line="89" selection-start-column="29" selection-end-line="89" selection-end-column="29" />
           <folding />
         </state>
       </provider>
@@ -836,16 +791,87 @@
     <entry file="file://$PROJECT_DIR$/src/ui_handler/new_handler.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ui_handler/shortcuts.py">
+    <entry file="file://$PROJECT_DIR$/src/ui/all.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="84" column="0" lean-forward="true" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
+        <state relative-caret-position="1241">
+          <caret line="79" column="47" lean-forward="false" selection-start-line="79" selection-start-column="47" selection-end-line="79" selection-end-column="47" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/manager/sqlmanager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="746">
+          <caret line="148" column="61" lean-forward="true" selection-start-line="148" selection-start-column="61" selection-end-line="148" selection-end-column="61" />
+          <folding>
+            <marker date="1519218431693" expanded="true" signature="712:745" ph="SELECT * FRO... Entries" />
+            <marker date="1519218431693" expanded="true" signature="1194:1378" ph="CREATE TABLE... Entries" />
+            <marker date="1519218431693" expanded="true" signature="1728:1787" ph="INSERT INTO Entries... " />
+            <marker date="1519218431693" expanded="true" signature="2000:2031" ph="SELECT * FRO... Entries" />
+            <marker date="1519218431693" expanded="true" signature="2567:2768" ph="UPDATE Entries... " />
+            <marker date="1519218431693" expanded="true" signature="3006:3027" ph="SELECT * FRO... Entries" />
+            <marker date="1519218431693" expanded="true" signature="3448:3477" ph="DELETE FROM Entries... " />
+            <marker date="1519218431693" expanded="true" signature="3720:3739" ph="DELETE FROM Entries... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui_handler/all_handler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="7" column="18" lean-forward="true" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/start.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#17#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/helper/aes_helper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="29" lean-forward="false" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+          <folding>
+            <element signature="e#4582#4595#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui_handler/main_handler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="73" column="18" lean-forward="false" selection-start-line="73" selection-start-column="18" selection-end-line="73" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/notes/entry_data">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reference/reference.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="18" column="14" lean-forward="true" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

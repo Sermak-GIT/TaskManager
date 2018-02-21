@@ -1,4 +1,4 @@
 CREATE TABLE Entries(Id INT, NextAction TEXT, Notes INT, Icon BLOB, Deadline DATE, Time TIME, Setting TEXT,
-                        Willpower INT, Audio INT, Prio INT)
+                        Willpower INT, Audio INT, Prio INT, State INT) #State = {Todo, Inpro, Done}
 
 Setting = where can i do this action
