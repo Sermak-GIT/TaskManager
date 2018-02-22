@@ -79,6 +79,11 @@ class Ui_All(QWidget):
         self.check_ignore_case.setChecked(True)
         self.gridLayout_2.addWidget(self.check_ignore_case, 0, 0, 1, 1)
 
+        self.check_state = QtWidgets.QCheckBox(self.groupBox)
+        self.check_state.setText("(s)tate: all")
+        self.check_state.setChecked(True)
+        self.gridLayout_2.addWidget(self.check_state, 0, 0, 2, 1)
+
         # scroll area widget
         self.scrollLayout = QFormLayout()
         self.scrollLayout.setSpacing(0)

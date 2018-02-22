@@ -79,6 +79,18 @@ def handle_settings(text):
             if word[1:].upper() == "I":
                 ui.check_ignore_case.toggle()
                 old_cursor_position -= 3
+            elif word[1:].upper() == "S":
+                if "all" in ui.check_state.text():
+                    ui.check_state.toggle()
+                    ui.check_state.setText("(s)tate: todo")
+                elif "todo" in ui.check_state.text():
+                    ui.check_state.setText("(s)tate: inpro")
+                elif "inpro" in ui.check_state.text():
+                    ui.check_state.setText("(s)tate: done")
+                elif "done" in ui.check_state.text():
+                    ui.check_state.toggle()
+                    ui.check_state.setText("(s)tate: all")
+
             else:
                 new_text += word + " "
         else:
@@ -89,7 +101,6 @@ def handle_settings(text):
 
 
 def search(text):
-    global entry_list
     text = handle_settings(text)
     remove_all_widgets()
     for entry_pair in get_all_entries():
@@ -98,6 +109,18 @@ def search(text):
             matches = text.replace(" ", "").casefold() in next_action.replace(" ", "").casefold()
         else:
             matches = text.replace(" ", "") in next_action.replace(" ", "")
+
+        state = entry_pair[10]
+        if "todo" in ui.check_state.text():
+            if state != 0:
+                matches = False
+        elif "inpro" in ui.check_state.text():
+            if state != 1:
+                matches = False
+        elif "done" in ui.check_state.text():
+            if state != 2:
+                matches = False
+
         if matches:
             show_widget(entry_pair)
 
