@@ -84,6 +84,11 @@ class Ui_All(QWidget):
         self.check_state.setChecked(True)
         self.gridLayout_2.addWidget(self.check_state, 0, 0, 2, 1)
 
+        self.check_show_all = QtWidgets.QCheckBox(self.groupBox)
+        self.check_show_all.setText("show (a)ll")
+        self.check_show_all.setChecked(False)
+        self.gridLayout_2.addWidget(self.check_show_all, 0, 0, 3, 1)
+
         # scroll area widget
         self.scrollLayout = QFormLayout()
         self.scrollLayout.setSpacing(0)

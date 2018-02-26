@@ -95,7 +95,8 @@ def handle_settings(text):
                 elif "done" in ui.check_state.text():
                     ui.check_state.toggle()
                     ui.check_state.setText("(s)tate: all")
-
+            elif word[1:].upper() == "A":
+                ui.check_show_all.toggle()
             else:
                 new_text += word + " "
         else:
@@ -124,6 +125,10 @@ def search(text):
                 matches = False
         elif "done" in ui.check_state.text():
             if state != 2:
+                matches = False
+
+        if not ui.check_show_all.isChecked():
+            if entry_pair[11] != -1:
                 matches = False
 
         if matches:
@@ -326,7 +331,7 @@ def move_note_to_top():
     init_from_db()
     set_selected_entry(entry)
     import logging
-    logging.info(entry[1] + " is now a child of top")
+    logging.info(entry[1] + " is now in Inbox")
     from src.ui_handler.help_handler import show_all_shortcuts
     show_all_shortcuts(True)
 

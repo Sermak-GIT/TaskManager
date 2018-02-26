@@ -3,11 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="81e7f3b0-ebf6-4028-ae76-2d6b41f523c2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/db/taskmanager.db" afterPath="$PROJECT_DIR$/src/db/taskmanager.db" />
-      <change beforePath="$PROJECT_DIR$/src/reference/reference.py" afterPath="$PROJECT_DIR$/src/reference/reference.py" />
+      <change beforePath="$PROJECT_DIR$/src/ui/all.py" afterPath="$PROJECT_DIR$/src/ui/all.py" />
       <change beforePath="$PROJECT_DIR$/src/ui_handler/all_handler.py" afterPath="$PROJECT_DIR$/src/ui_handler/all_handler.py" />
-      <change beforePath="$PROJECT_DIR$/src/ui_handler/help_handler.py" afterPath="$PROJECT_DIR$/src/ui_handler/help_handler.py" />
-      <change beforePath="$PROJECT_DIR$/src/ui_handler/shortcuts.py" afterPath="$PROJECT_DIR$/src/ui_handler/shortcuts.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -43,7 +40,7 @@
     <SUITE FILE_PATH="coverage/Taskmanager$untitled.coverage" NAME="untitled Coverage Results" MODIFIED="1516043028381" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/TaskManager$reference.coverage" NAME="reference Coverage Results" MODIFIED="1519221861802" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/reference" />
     <SUITE FILE_PATH="coverage/Taskmanager$test_widget__1_.coverage" NAME="test_widget (1) Coverage Results" MODIFIED="1513883724598" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_area" />
-    <SUITE FILE_PATH="coverage/TaskManager$start.coverage" NAME="start Coverage Results" MODIFIED="1519686357884" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/TaskManager$start.coverage" NAME="start Coverage Results" MODIFIED="1519687098788" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Taskmanager$test_widget.coverage" NAME="test_widget Coverage Results" MODIFIED="1513883503936" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/Taskmanager$reference.coverage" NAME="reference Coverage Results" MODIFIED="1518092936547" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/reference" />
     <SUITE FILE_PATH="coverage/Taskmanager$line.coverage" NAME="line Coverage Results" MODIFIED="1516222042604" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
@@ -113,11 +110,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="all_handler.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="all_handler.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ui_handler/all_handler.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="337" column="14" lean-forward="false" selection-start-line="337" selection-start-column="14" selection-end-line="337" selection-end-column="14" />
+            <state relative-caret-position="202">
+              <caret line="130" column="28" lean-forward="false" selection-start-line="130" selection-start-column="28" selection-end-line="130" selection-end-column="28" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -140,6 +137,16 @@
                 <marker date="1519682346520" expanded="true" signature="3598:3627" ph="DELETE FROM Entries... " />
                 <marker date="1519682346520" expanded="true" signature="3870:3889" ph="DELETE FROM Entries... " />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="all.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ui/all.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="89" column="64" lean-forward="false" selection-start-line="89" selection-start-column="64" selection-end-line="89" selection-end-column="64" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -233,7 +240,6 @@
         <option value="$PROJECT_DIR$/src/ui/new.py" />
         <option value="$PROJECT_DIR$/src/ui/entry_widget.py" />
         <option value="$PROJECT_DIR$/src/ui_handler/main_handler.py" />
-        <option value="$PROJECT_DIR$/src/ui/all.py" />
         <option value="$PROJECT_DIR$/test_area/tray.py" />
         <option value="$PROJECT_DIR$/src/notes/entry_data" />
         <option value="$PROJECT_DIR$/src/ui_handler/info_handler.py" />
@@ -243,6 +249,7 @@
         <option value="$PROJECT_DIR$/src/ui_handler/help_handler.py" />
         <option value="$PROJECT_DIR$/src/ui_handler/shortcuts.py" />
         <option value="$PROJECT_DIR$/src/ui_handler/all_handler.py" />
+        <option value="$PROJECT_DIR$/src/ui/all.py" />
       </list>
     </option>
   </component>
@@ -253,9 +260,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="4">
-    <option name="y" value="-29" />
     <option name="width" value="1920" />
-    <option name="height" value="1109" />
+    <option name="height" value="1080" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -589,13 +595,13 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="-29" width="1920" height="1109" extended-state="4" />
+    <frame x="0" y="0" width="1920" height="1080" extended-state="4" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="WINDOWED" visible="false" show_stripe_button="true" weight="0.3298647" sideWeight="0.49573562" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32887974" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2492891" sideWeight="0.5021322" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34623015" sideWeight="0.5046875" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34623015" sideWeight="0.5046875" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934132" sideWeight="0.4978678" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.117395945" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -783,16 +789,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ui/all.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9">
-          <caret line="82" column="48" lean-forward="false" selection-start-line="82" selection-start-column="48" selection-end-line="82" selection-end-column="48" />
-          <folding>
-            <element signature="e#229#271#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ui/entry_widget.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1513">
@@ -878,11 +874,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ui_handler/all_handler.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="337" column="14" lean-forward="false" selection-start-line="337" selection-start-column="14" selection-end-line="337" selection-end-column="14" />
+        <state relative-caret-position="202">
+          <caret line="130" column="28" lean-forward="false" selection-start-line="130" selection-start-column="28" selection-end-line="130" selection-end-column="28" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui/all.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="89" column="64" lean-forward="false" selection-start-line="89" selection-start-column="64" selection-end-line="89" selection-end-column="64" />
+          <folding />
         </state>
       </provider>
     </entry>
