@@ -3,6 +3,7 @@ from PyQt5 import QtCore, QtWidgets
 from src.manager.sqlmanager import *
 
 entry_list = []
+moving_widget = None
 
 
 def init_handler(ui_instance):
@@ -40,6 +41,10 @@ def add_widget(entry):
     added_entry = [entry, new_entry, lineTop, lineBot]
     entry_list += [added_entry, ]
     reset_style_sheet(added_entry)
+
+    if moving_widget is not None:
+        if entry[0] == moving_widget[0][0]:
+            move_style_sheet(added_entry)
 
 
 def remove_widget(entry):
@@ -143,6 +148,18 @@ def get_selected_entry_data():
             return entry[0]
 
 
+def get_selected_entry():
+    for entry in entry_list:
+        if "background-color:#999999;" in entry[1].label.styleSheet():
+            return entry
+
+
+def get_moving_entry_data():
+    for entry in entry_list:
+        if "background-color:#003d99;" in entry[1].label.styleSheet():
+            return entry[0]
+
+
 def set_selected_entry(entry):
     for e in entry_list:
         if e[0][0] == entry[0]:
@@ -150,17 +167,31 @@ def set_selected_entry(entry):
 
 
 def reset_style_sheet(entry):
+    selected_entry = get_selected_entry_data()
     if entry[0][10] == 1:
         entry[1].label.setStyleSheet("color:#ffff00;")
     elif entry[0][10] == 2:
         entry[1].label.setStyleSheet("color:#00cc00;")
     else:
         entry[1].label.setStyleSheet("")
+    try:
+        if entry[0][0] == selected_entry[0][0]:
+            set_selected_entry(entry)
+    except Exception:
+        pass
+    if moving_widget is not None:
+        if entry[0][0] == moving_widget[0][0]:
+            move_style_sheet(entry)
 
 
 def select_style_sheet(entry):
     ss = entry[1].label.styleSheet()
     entry[1].label.setStyleSheet(ss + "background-color:#999999;")
+
+
+def move_style_sheet(entry):
+    ss = entry[1].label.styleSheet()
+    entry[1].label.setStyleSheet(ss + "background-color:#003d99;")
 
 
 def select_next():
@@ -241,7 +272,7 @@ def execute():
     update_entry(entry)
     remove_all_widgets()
     init_from_db()
-    set_selected_entry(entry)
+    selected_entry = set_selected_entry(entry)
     import logging
     logging.debug("Executed action:" + entry[1])
 
@@ -263,3 +294,78 @@ def undo_execution():
     set_selected_entry(entry)
     import logging
     logging.debug("Un-Executed action:" + entry[1])
+
+
+def move_note_init():
+    global moving_widget
+    moving_widget = get_selected_entry()
+    if moving_widget is None:
+        return
+    prev_moving_widget = moving_widget
+    move_style_sheet(moving_widget)
+    reset_style_sheet(prev_moving_widget)
+    from src.ui_handler.help_handler import show_move_shortcuts
+    show_move_shortcuts()
+
+
+def move_note_to_top():
+    from src.reference.reference import get_shortcut_mode
+    mode = get_shortcut_mode()
+    global moving_widget
+    if mode != "move":
+        return
+    init()
+    from src.reference.reference import entry as create_entry
+    entry = create_entry(moving_widget[0][0], moving_widget[0][1], moving_widget[0][2], moving_widget[0][3],
+                         moving_widget[0][4], moving_widget[0][5], moving_widget[0][6], moving_widget[0][7],
+                         moving_widget[0][8], moving_widget[0][9], moving_widget[0][10], -1)
+    from src.manager.sqlmanager import update_entry
+    update_entry(entry)
+    moving_widget = None
+    remove_all_widgets()
+    init_from_db()
+    set_selected_entry(entry)
+    import logging
+    logging.info(entry[1] + " is now a child of top")
+    from src.ui_handler.help_handler import show_all_shortcuts
+    show_all_shortcuts(True)
+
+
+def move_note():
+    from src.reference.reference import get_shortcut_mode
+    mode = get_shortcut_mode()
+    if mode != "move":
+        return
+    global moving_widget
+    entry_selected = get_selected_entry_data()
+    if entry_selected is None:
+        move_note_to_top()
+        return
+    entry_selected_id = entry_selected[0]
+    if entry_selected_id is None:
+        return
+    elif entry_selected_id == moving_widget[0][0]:
+        move_note_to_top()
+        return 
+    init()
+    from src.reference.reference import entry as create_entry
+    entry = create_entry(moving_widget[0][0], moving_widget[0][1], moving_widget[0][2], moving_widget[0][3],
+                         moving_widget[0][4], moving_widget[0][5], moving_widget[0][6], moving_widget[0][7],
+                         moving_widget[0][8], moving_widget[0][9], moving_widget[0][10], entry_selected_id)
+    from src.manager.sqlmanager import update_entry
+    update_entry(entry)
+    moving_widget = None
+    remove_all_widgets()
+    init_from_db()
+    set_selected_entry(entry)
+    import logging
+    logging.info(entry[1] + " is now a child of " + entry_selected[1])
+    from src.ui_handler.help_handler import show_all_shortcuts
+    show_all_shortcuts(True)
+
+
+def end_move():
+    global moving_widget
+    tmp = moving_widget
+    moving_widget = None
+    reset_style_sheet(tmp)

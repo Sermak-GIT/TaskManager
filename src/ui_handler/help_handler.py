@@ -3,7 +3,7 @@ from PyQt5 import QtWidgets
 
 from src.reference.reference import help_screen_max_columns, top_level_shortcuts, master_level_shortcuts, master_ui, \
     new_note_level_shortcuts, get_shortcut_mode, set_shortcut_mode, all_level_shortcuts, confirm_level_shortcuts, \
-    info_level_shortcuts
+    info_level_shortcuts, move_level_shortcuts
 from src.ui_handler.shortcuts import init_help_screen_shortcuts
 
 row = 0
@@ -88,9 +88,9 @@ def show_info_shortcuts():
     master_ui.helpWidget.show()
 
 
-def show_all_shortcuts():
+def show_all_shortcuts(force=False):
     mode = get_shortcut_mode()
-    if mode == "all":
+    if not force and mode == "all":
         return
     set_shortcut_mode("all")
     add_entries(all_level_shortcuts)
@@ -103,6 +103,15 @@ def show_confirm_shortcuts():
         return
     set_shortcut_mode("confirm")
     add_entries(confirm_level_shortcuts)
+    master_ui.helpWidget.show()
+
+
+def show_move_shortcuts():
+    mode = get_shortcut_mode()
+    if mode == "move":
+        return
+    set_shortcut_mode("move")
+    add_entries(move_level_shortcuts)
     master_ui.helpWidget.show()
 
 

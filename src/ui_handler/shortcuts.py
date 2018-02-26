@@ -102,6 +102,10 @@ def init_all_shortcuts(ui):
     ui.k_shortcuts = QShortcut(QKeySequence('k'), ui)
     ui.k_shortcuts.activated.connect(k_shortcuts)
 
+    # t Shortcuts
+    ui.t_shortcuts = QShortcut(QKeySequence('t'), ui)
+    ui.t_shortcuts.activated.connect(t_shortcuts)
+
 
 def b_shortcuts():
     from src.ui_handler.help_handler import force_show_top_shortcuts
@@ -127,11 +131,21 @@ def i_shortcuts():
     return
 
 
+def t_shortcuts():
+    from src.reference.reference import get_shortcut_mode
+    mode = get_shortcut_mode()
+    logging.info(mode + " t")
+    if mode == "move":
+        from src.ui_handler.all_handler import move_note_to_top
+        move_note_to_top()
+    return
+
+
 def j_shortcuts():
     from src.reference.reference import get_shortcut_mode
     mode = get_shortcut_mode()
     logging.info(mode + " j")
-    if mode == "all":
+    if mode == "all" or mode == "move":
         from src.ui_handler.all_handler import select_next
         select_next()
 
@@ -158,7 +172,7 @@ def k_shortcuts():
     from src.reference.reference import get_shortcut_mode
     mode = get_shortcut_mode()
     logging.info(mode + " k")
-    if mode == "all":
+    if mode == "all" or mode == "move":
         from src.ui_handler.all_handler import select_prev
         select_prev()
     return
@@ -183,6 +197,11 @@ def c_shortcuts():
     if mode == "all":
         from src.ui_handler.all_handler import clear_search_bar
         clear_search_bar()
+    if mode == "move":
+        from src.ui_handler.help_handler import show_all_shortcuts
+        show_all_shortcuts(True)
+        from src.ui_handler.all_handler import end_move
+        end_move()
     return
 
 
@@ -265,6 +284,12 @@ def m_shortcuts():
     from src.ui_handler.help_handler import show_master_shortcuts
     if mode == "top":
         show_master_shortcuts()
+    if mode == "all":
+        from src.ui_handler.all_handler import move_note_init
+        move_note_init()
+    if mode == "move":
+        from src.ui_handler.all_handler import move_note
+        move_note()
     return
 
 
