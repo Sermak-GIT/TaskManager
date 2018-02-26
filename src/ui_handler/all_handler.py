@@ -236,7 +236,7 @@ def execute():
     init()
     from src.reference.reference import entry as create_entry
     entry = create_entry(entry[0], entry[1], entry[2], entry[3], entry[4], entry[5], entry[6], entry[7], entry[8],
-                         entry[9], add_state(entry[10], 1))
+                         entry[9], add_state(entry[10], 1), entry[11])
     from src.manager.sqlmanager import update_entry
     update_entry(entry)
     remove_all_widgets()
@@ -255,7 +255,7 @@ def undo_execution():
     init()
     from src.reference.reference import entry as create_entry
     entry = create_entry(entry[0], entry[1], entry[2], entry[3], entry[4], entry[5], entry[6], entry[7], entry[8],
-                         entry[9], add_state(entry[10], -1))
+                         entry[9], add_state(entry[10], -1), entry[11])
     from src.manager.sqlmanager import update_entry
     update_entry(entry)
     remove_all_widgets()

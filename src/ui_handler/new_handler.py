@@ -32,7 +32,7 @@ def save():
         return
     logging.debug("Saved: " + next_action + ", " + notes)
     init()
-    add_entry(entry(issue_new_id(), next_action, notes, None, None, None, None, None, None, None, 0))
+    add_entry(entry(issue_new_id(), next_action, notes, None, None, None, None, None, None, None, 0, -1))
     set_status_text("Saved \"" + next_action + "\"")
     schedule_later(reset_status_text, 15.0)
     clear_ui()

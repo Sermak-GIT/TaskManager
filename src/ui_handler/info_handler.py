@@ -28,7 +28,7 @@ def overwrite(entry):
     from src.manager.sqlmanager import init
     init()
     from src.reference.reference import entry as create_entry
-    entry = create_entry(entry[0], next_action, notes, entry[3], entry[4], entry[5], entry[6], entry[7], entry[8], entry[9], entry[10])
+    entry = create_entry(entry[0], next_action, notes, entry[3], entry[4], entry[5], entry[6], entry[7], entry[8], entry[9], entry[10], entry[11])
     from src.manager.sqlmanager import update_entry
     update_entry(entry)
     set_status_text("Saved \"" + next_action + "\"")

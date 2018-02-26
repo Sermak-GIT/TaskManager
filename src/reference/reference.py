@@ -4,8 +4,8 @@ import getpass
 from src.helper.aes_helper import string_encrypt
 
 
-def entry(id, next_action, notes, icon, deadline, time, Setting, Willpower, audio, prio, state):
-    return id, next_action, notes, icon, deadline, time, Setting, Willpower, audio, prio, state
+def entry(id, next_action, notes, icon, deadline, time, Setting, Willpower, audio, prio, state, parentid):
+    return id, next_action, notes, icon, deadline, time, Setting, Willpower, audio, prio, state, parentid
 
 
 db_push_pull_timeout = 30

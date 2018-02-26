@@ -47,7 +47,7 @@ def init():
         cursor = connection.cursor()
         try:
             cursor.execute("CREATE TABLE Entries(Id INT, NextAction TEXT, Notes INT, Icon BLOB, Deadline DATE, "
-                           "Time TIME, Setting TEXT, Willpower INT, Audio INT, Prio INT, State INT)")
+                           "Time TIME, Setting TEXT, Willpower INT, Audio INT, Prio INT, State INT, ParentID INT)")
             logging.info("Table Entries created")
         except lite.OperationalError:
             logging.info("Table Entries found")
@@ -61,7 +61,7 @@ def add_entry(entry):
     connection = lite.connect(db_path)
     with connection:
         cursor = connection.cursor()
-        cursor.execute("INSERT INTO Entries VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", entry)
+        cursor.execute("INSERT INTO Entries VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", entry)
     pushdb()
 
 
@@ -91,7 +91,7 @@ def update_entry(entry):
         cur = con.cursor()
         cur.execute("UPDATE Entries "
                     "SET NextAction=?, Notes = ?, Icon=?, Deadline=?, Time=?, "
-                    "Setting=?, Willpower=?, Audio=?, Prio=?, State=? "
+                    "Setting=?, Willpower=?, Audio=?, Prio=?, State=?, ParentID=? "
                     "WHERE Id = " + entryid.__str__(), entry)
         cur.fetchall()
     pushdb()
