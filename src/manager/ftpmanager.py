@@ -7,6 +7,7 @@ from src.reference.reference import server_pass, server, server_user, server_pat
 
 last_push_access = 0
 last_pull_access = 0
+unsaved_changes = False
 
 
 def connect(host, user, passwd, port):
@@ -17,19 +18,21 @@ def connect(host, user, passwd, port):
 
 
 def pushdb():
-    global last_push_access
+    global last_push_access, unsaved_changes
     if last_push_access == 0:
         last_push_access = int(time.strftime("%M%S"))
     else:
         currtime = int(time.strftime("%M%S"))
         if currtime - last_push_access < db_push_pull_timeout:
+            unsaved_changes = True
             return
         last_push_access = currtime
     force_pushdb()
+    unsaved_changes = False
 
 
 def pulldb():
-    global last_pull_access
+    global last_pull_access, unsaved_changes
     if last_pull_access == 0:
         last_pull_access = int(time.strftime("%M%S"))
     else:
@@ -37,10 +40,12 @@ def pulldb():
         if currtime - last_pull_access < db_push_pull_timeout:
             return
         last_pull_access = currtime
+    if unsaved_changes:
+        force_pushdb()
     with connect(server, server_user, server_pass, 22) as con:
         con.cd(server_path)
         con.get("taskmanager.db", os.path.join(os.getcwd()[:], "src", "db", "taskmanager.db"))
-        logging.info("Pushed db successfully")
+        logging.info("Pulled db successfully")
 
 
 def force_pushdb():
