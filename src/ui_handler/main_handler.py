@@ -61,7 +61,6 @@ def switch_to_info():
 def switch_to_all():
     from src.reference.reference import get_shortcut_mode
     mode = get_shortcut_mode()
-    print(mode)
     if mode != "top" and mode != "confirm":
         return
     ui.stackedWidget.setCurrentWidget(ui.all_page)

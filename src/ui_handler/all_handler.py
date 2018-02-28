@@ -254,17 +254,23 @@ def step_into():
     if entry_data is None:
         return
     global current_dir_nr
-    current_dir_nr = entry_data[11]
+    current_dir_nr = entry_data[0]
     set_location_text(entry_data[1])
     search(ui.search_bar.text())
 
 
 def step_out():
     global current_dir_nr
-    for entry in entry_list:
-        if entry[0][0] == current_dir_nr:
-            current_dir_nr = entry[0][11]
-            set_location_text(entry[0][1])
+    for entry in get_all_entries():
+        if entry[0] == current_dir_nr:
+            current_dir_nr = entry[11]
+            grandfather_exists = False
+            for entry2 in get_all_entries():
+                if entry2[0] == current_dir_nr:
+                    grandfather_exists = True
+                    set_location_text(entry2[1])
+            if not grandfather_exists:
+                set_location_text("Inbox")
             search(ui.search_bar.text())
             return
     current_dir_nr = -1
