@@ -4,6 +4,7 @@ from src.manager.sqlmanager import *
 
 entry_list = []
 moving_widget = None
+current_dir_nr = -1
 
 
 def init_handler(ui_instance):
@@ -128,7 +129,8 @@ def search(text):
                 matches = False
 
         if not ui.check_show_all.isChecked():
-            if entry_pair[11] != -1:
+            global current_dir_nr
+            if entry_pair[11] != current_dir_nr:
                 matches = False
 
         if matches:
@@ -137,6 +139,10 @@ def search(text):
 
 def set_location_text(text):
     ui.groupBox.setTitle(text)
+
+
+def get_location_text():
+    return ui.groupBox.title()
 
 
 def clear_search_bar():
@@ -239,6 +245,24 @@ def select_prev():
             return
         else:
             prev = entry
+
+
+def step_into():
+    entry_data = get_selected_entry_data()
+    global current_dir_nr
+    current_dir_nr = entry_data[11]
+    set_location_text(entry_data[1])
+    search(ui.search_bar.text())
+
+
+def step_out():
+    global current_dir_nr
+    for entry in entry_list:
+        if entry[0][0] == current_dir_nr:
+            current_dir_nr = entry[0][11]
+            set_location_text(entry[0][1])
+            search(ui.search_bar.text())
+            return
 
 
 def delete():

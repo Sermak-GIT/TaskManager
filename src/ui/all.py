@@ -77,17 +77,17 @@ class Ui_All(QWidget):
         self.check_ignore_case = QtWidgets.QCheckBox(self.groupBox)
         self.check_ignore_case.setText("(i)gnore case")
         self.check_ignore_case.setChecked(True)
-        self.gridLayout_2.addWidget(self.check_ignore_case, 0, 0, 1, 1)
+        self.gridLayout_2.addWidget(self.check_ignore_case, 0, 0)
 
         self.check_state = QtWidgets.QCheckBox(self.groupBox)
         self.check_state.setText("(s)tate: all")
         self.check_state.setChecked(True)
-        self.gridLayout_2.addWidget(self.check_state, 0, 0, 2, 1)
+        self.gridLayout_2.addWidget(self.check_state, 1, 0)
 
         self.check_show_all = QtWidgets.QCheckBox(self.groupBox)
         self.check_show_all.setText("show (a)ll")
         self.check_show_all.setChecked(False)
-        self.gridLayout_2.addWidget(self.check_show_all, 0, 0, 3, 1)
+        self.gridLayout_2.addWidget(self.check_show_all, 0, 1)
 
         # scroll area widget
         self.scrollLayout = QFormLayout()
@@ -112,7 +112,7 @@ class Ui_All(QWidget):
         from src.ui_handler.all_handler import init_from_db
         init_from_db()
 
-        self.scrollArea.scroll(100,100)
+        self.scrollArea.scroll(100, 100)
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate

@@ -106,6 +106,14 @@ def init_all_shortcuts(ui):
     ui.t_shortcuts = QShortcut(QKeySequence('t'), ui)
     ui.t_shortcuts.activated.connect(t_shortcuts)
 
+    # h Shortcuts
+    ui.h_shortcuts = QShortcut(QKeySequence('h'), ui)
+    ui.h_shortcuts.activated.connect(h_shortcuts)
+
+    # l Shortcuts
+    ui.l_shortcuts = QShortcut(QKeySequence('l'), ui)
+    ui.l_shortcuts.activated.connect(l_shortcuts)
+
 
 def b_shortcuts():
     from src.ui_handler.help_handler import force_show_top_shortcuts
@@ -216,6 +224,26 @@ def d_shortcuts():
         confirm_message()
         from src.reference.reference import master_ui
         master_ui.helpWidget.setFocus(True)
+    return
+
+
+def h_shortcuts():
+    from src.reference.reference import get_shortcut_mode
+    mode = get_shortcut_mode()
+    logging.info(mode + " h")
+    if mode == "all":
+        from src.ui_handler.all_handler import step_out
+        step_out()
+    return
+
+
+def l_shortcuts():
+    from src.reference.reference import get_shortcut_mode
+    mode = get_shortcut_mode()
+    logging.info(mode + " l")
+    if mode == "all":
+        from src.ui_handler.all_handler import step_into
+        step_into()
     return
 
 
