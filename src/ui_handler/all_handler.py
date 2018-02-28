@@ -19,6 +19,7 @@ def init_from_db():
     entries = get_all_entries()
     for e in entries:
         add_widget(e)
+    search(ui.search_bar.text())
 
 
 def add_widget(entry):
@@ -130,6 +131,7 @@ def search(text):
 
         if not ui.check_show_all.isChecked():
             global current_dir_nr
+            logging.info("Current dir nr: " + str(current_dir_nr))
             if entry_pair[11] != current_dir_nr:
                 matches = False
 
@@ -249,6 +251,8 @@ def select_prev():
 
 def step_into():
     entry_data = get_selected_entry_data()
+    if entry_data is None:
+        return
     global current_dir_nr
     current_dir_nr = entry_data[11]
     set_location_text(entry_data[1])
@@ -263,6 +267,9 @@ def step_out():
             set_location_text(entry[0][1])
             search(ui.search_bar.text())
             return
+    current_dir_nr = -1
+    set_location_text("Inbox")
+    search(ui.search_bar.text())
 
 
 def delete():
@@ -358,6 +365,7 @@ def move_note_to_top():
     logging.info(entry[1] + " is now in Inbox")
     from src.ui_handler.help_handler import show_all_shortcuts
     show_all_shortcuts(True)
+    search(ui.search_bar.text())
 
 
 def move_note():
@@ -391,6 +399,7 @@ def move_note():
     logging.info(entry[1] + " is now a child of " + entry_selected[1])
     from src.ui_handler.help_handler import show_all_shortcuts
     show_all_shortcuts(True)
+    search(ui.search_bar.text())
 
 
 def end_move():
@@ -398,3 +407,4 @@ def end_move():
     tmp = moving_widget
     moving_widget = None
     reset_style_sheet(tmp)
+    search(ui.search_bar.text())

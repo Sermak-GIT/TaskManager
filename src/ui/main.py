@@ -16,7 +16,7 @@ from PyQt5.QtWidgets import QShortcut, QWidget, QLabel, QSizePolicy
 from src.reference.reference import master_ui, init_master_ui
 from src.ui.all import Ui_All
 from src.ui.new import Ui_New
-from src.ui_handler.main_handler import init_handler, add_taskbar_icon
+from src.ui_handler.main_handler import init_handler, add_taskbar_icon, switch_to_all
 
 
 class Ui_TaskManagerMainWindow(QWidget):
@@ -55,7 +55,6 @@ class Ui_TaskManagerMainWindow(QWidget):
         self.menubar.addSeparator()
         self.menubar.hide()
 
-
         TaskManagerMainWindow.setMenuBar(self.menubar)
         self.statusBar = QtWidgets.QStatusBar(TaskManagerMainWindow)
         self.statusBar.setObjectName("statusBar")
@@ -72,6 +71,8 @@ class Ui_TaskManagerMainWindow(QWidget):
         self.stackedWidget.setCurrentWidget(self.all_page)
 
         QtCore.QMetaObject.connectSlotsByName(TaskManagerMainWindow)
+
+        switch_to_all()
 
     def retranslateUi(self, TaskManagerMainWindow):
         _translate = QtCore.QCoreApplication.translate
