@@ -56,10 +56,10 @@ all_level_shortcuts = (("(c)lear", 'c'),
                        )
 
 move_level_shortcuts = (
-                       ("(m)ove", 'm'),
-                       ("(t)op", 't'),
-                       ("(c)ancel", 'c'),
-                       )
+    ("(m)ove", 'm'),
+    ("(t)op", 't'),
+    ("(c)ancel", 'c'),
+)
 
 confirm_level_shortcuts = (("(y)es", 'y'),
                            ("(n)o", 'n'))
@@ -73,6 +73,7 @@ info_level_shortcuts = (("(s)ave", 's'),
 # master level vars
 master_ui = None
 shortcut_mode = None
+global_app = None
 
 
 def init_master_ui(ui):
@@ -88,3 +89,16 @@ def set_shortcut_mode(mode):
 def get_shortcut_mode():
     global shortcut_mode
     return shortcut_mode
+
+
+def set_global_app(app):
+    global global_app
+    global_app = app
+
+
+def toggle_global_app():
+    global global_app
+    if global_app.isVisible():
+        global_app.hide()
+    else:
+        global_app.show()
