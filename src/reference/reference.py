@@ -96,6 +96,16 @@ def set_global_app(app):
     global_app = app
 
 
+def get_global_thread():
+    global global_thread
+    return global_thread
+
+
+def set_global_thread(thread):
+    global global_thread
+    global_thread = thread
+
+
 def toggle_global_app():
     global global_app
     if global_app.isVisible():

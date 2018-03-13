@@ -54,7 +54,6 @@ class SystemTrayIcon(QSystemTrayIcon):
             from src.reference.reference import master_ui
             from src.reference.reference import toggle_global_app
             #master_ui.setVisible(False)
-            #TODO
             toggle_global_app()
 
     def welcome(self):
