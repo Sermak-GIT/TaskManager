@@ -56,9 +56,8 @@ class SystemTrayIcon(QSystemTrayIcon):
             #master_ui.setVisible(False)
             toggle_global_app()
 
-    def welcome(self):
-        pass
-        #self.showMessage("Hello", "I should be aware of both buttons")
+    def tray_message_deadline(self, message):
+        self.showMessage("Alert!", message)
 
     def show(self):
         QSystemTrayIcon.show(self)

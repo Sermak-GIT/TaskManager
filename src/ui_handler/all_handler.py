@@ -20,6 +20,8 @@ def init_from_db():
     for e in entries:
         add_widget(e)
     search(ui.search_bar.text())
+    from src.manager.time_manager import deadline_tasks
+    deadline_tasks(entries)
 
 
 def add_widget(entry):

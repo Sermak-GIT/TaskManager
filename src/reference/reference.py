@@ -74,6 +74,7 @@ info_level_shortcuts = (("(s)ave", 's'),
 master_ui = None
 shortcut_mode = None
 global_app = None
+global_tray = None
 
 
 def init_master_ui(ui):
@@ -104,6 +105,16 @@ def get_global_thread():
 def set_global_thread(thread):
     global global_thread
     global_thread = thread
+
+
+def get_global_tray():
+    global global_tray
+    return global_tray
+
+
+def set_global_tray(tray):
+    global global_tray
+    global_tray = tray
 
 
 def toggle_global_app():

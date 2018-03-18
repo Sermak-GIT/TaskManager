@@ -32,7 +32,9 @@ def save():
         return
     logging.debug("Saved: " + next_action + ", " + notes)
     init()
-    add_entry(entry(issue_new_id(), next_action, notes, None, None, None, None, None, None, None, 0, -1))
+    print(ui.timeEdit.time())
+    print(ui.timeEdit.date())
+    add_entry(entry(issue_new_id(), next_action, notes, None, "2018-03-18 16:37:00", None, None, None, None, None, 0, -1))
     set_status_text("Saved \"" + next_action + "\"")
     schedule_later(reset_status_text, 15.0)
     clear_ui()

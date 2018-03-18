@@ -4,7 +4,7 @@ from PyQt5.QtCore import QThread
 
 from src.manager.global_hotkey_manager import Hotkey
 from src.manager.system_tray_manager import start_system_tray
-from src.reference.reference import set_global_app, set_global_thread
+from src.reference.reference import set_global_app, set_global_thread, set_global_tray
 from src.ui.main import Ui_TaskManagerMainWindow
 from src.ui_handler.main_handler import add_taskbar_icon
 
@@ -13,6 +13,7 @@ if __name__ == "__main__":
 
     app = (QtWidgets.QApplication(sys.argv))
     tray = start_system_tray(app)
+    set_global_tray(tray)
     add_taskbar_icon(app)
     app.setStyleSheet(qdarkstyle.load_stylesheet_pyqt5())
     TaskManagerMainWindow = QtWidgets.QMainWindow()
